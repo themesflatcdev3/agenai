@@ -26,49 +26,69 @@
     }
 }
 
-
-.accordion-action {
-    padding-top: 32px;
-    padding-bottom: 0;
-    margin-bottom: 24px;
-    @include transition3;
-
-    .icon {
-        @include transition3;
-        transform: rotate(180deg);
-    }
-
-    &.collapsed {
-        margin-bottom: 0px;
-        padding-bottom: 32px;
-
-        .icon {
-            transform: rotate(0deg);
-        }
-    }
-
-    @include res(lg) {
-        padding-top: 20px;
-
-        &.collapsed {
-            padding-bottom: 20px;
-        }
-    }
-}
-
 .accordion-faq_item {
-    border-bottom: 1px solid var(--white-16);
+    position: relative;
+    padding: 40px;
+    background-color: var(--neutral-100);
+    border-radius: 40px;
+    box-shadow: 
+    0px 7.77px 16px 0px #0000000F,
+    0px 3px 3px 0px #0000001A,
+    0px -8px 0px 0px #0000000D inset,
+    0px 4px 0px 0px #FFFFFF99 inset;
+    overflow: hidden;
+
+    .accordion-title {
+        width: 100%;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 48px;
+        letter-spacing: -0.01px;
+        color: var(--secondary);
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 1;
+        br {
+            display: none;
+        }
+    }
 
     .accordion-action {
         padding-top: 0;
-        padding-bottom: 24px;
         margin-bottom: 0;
         display: flex;
         align-items: center;
-        gap: 12px;
+        &::before {
+            position: absolute;
+            content: '';
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            box-shadow: 
+            0px -8px 0px 0px #2E2E2E inset,
+            0px 4px 0px 0px #FFFFFF4D inset,
+            0px 7.77px 2.21px 0px #0000000F,
+            0px 3px 3px 0px #0000001A;
+            @include transition3();
+            background: radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #18181B;
 
+        }
         &.collapsed {
-            padding-bottom: 31px;
+            &::before {
+                bottom: 110%;
+            }
+        }
+        &:not(.collapsed) {
+            .accordion-title {
+                br {
+                    display: block;
+                }
+            }
+            &::before {
+                bottom: 0;
+            }
         }
     }
 
@@ -78,7 +98,12 @@
     }
 
     .accordion-content {
-        padding-bottom: 31px;
+        position: relative;
+        z-index: 1;
+        .text {
+            padding-top: 24px;
+            padding-bottom: 96px;
+        }
     }
 
     .accordion-order,
@@ -121,76 +146,5 @@
 
 .accordion-faq_list {
     display: grid;
-    gap: 32px;
-
-    .accordion-faq_item {
-        &:last-child {
-            border: 0;
-
-            .accordion-action {
-                &.collapsed {
-                    padding-bottom: 0;
-                }
-            }
-
-            .accordion-content {
-                padding-bottom: 0;
-            }
-        }
-    }
-}
-
-.service-accordion_item {
-    .accordion-action {
-        padding-top: 0;
-        z-index: 2;
-        position: relative;
-        padding-bottom: 0;
-        margin-bottom: -24px;
-
-        &.collapsed {
-            color: var(--white-32);
-            margin-bottom: 0;
-        }
-    }
-
-    .accordion-content {
-        display: flex;
-        gap: 30px 12px;
-
-    }
-
-    .image-left {
-        box-shadow: 0px 0px 0px 1px #FFFFFF0D inset;
-
-        img {
-            object-fit: cover;
-            min-height: 350px;
-        }
-    }
-
-    .content-right {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        white-space: nowrap;
-        gap: 24px;
-    }
-
-    @include res(xl, min) {
-        .content-right {
-            padding-left: 28px;
-        }
-    }
-
-    @include res(sm) {
-        .accordion-content {
-            flex-wrap: wrap;
-        }
-    }
-}
-
-.service-accordion-main {
-    display: grid;
-    gap: 24px;
+    gap: 8px;
 }
