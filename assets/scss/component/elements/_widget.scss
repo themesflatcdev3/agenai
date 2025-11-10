@@ -725,3 +725,188 @@
         color: var(--primary);
     }
 }
+
+.benefits-box {
+    padding: 48px;
+    border-radius: 40px;
+    height: 100%;
+    background-color: var(--neutral-100);
+    box-shadow: 0px 7.77px 16px 0px #0000000F,
+    0px 3px 3px 0px #0000001A,
+    0px -8px 0px 0px #0000000D inset,
+    0px 4px 0px 0px #FFFFFF99 inset;
+    .content {
+        .title {
+            margin-bottom: 8px;
+        }
+    }
+}
+
+.benefits-progress-inner {
+    margin-bottom: 40px;
+    display: grid;
+    gap: 12px;
+    .benefits-progress-item {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        .progress-line {
+            height: 40px;
+            width: 0%;
+            background-color: var(--neutral-100);
+            position: relative;
+            border-radius: 12px;
+            box-shadow: 0px -4px 0px 0px #0000000D inset,
+            0px 4px 0px 0px #FFFFFF99 inset,
+            0px 7.77px 16px 0px #0000000F,
+            0px 3px 3px 0px #0000001A;
+        }
+        .progress-text {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            padding: 8px 16px;
+            border-radius: 12px;
+            background-color: var(--neutral-50);
+            box-shadow: 0px 7.77px 16px 0px #0000000F,
+            0px 3px 3px 0px #0000001A,
+            0px -4px 0px 0px #0000000D inset,
+            0px 4px 0px 0px #FFFFFF99 inset;
+            .icon {
+                font-size: 24px;
+                color: var(--neutral-500);
+            }
+        }
+    }
+}
+
+.benefits-step {
+    height: 100%;
+    .benefits-step-inner {
+        min-height: 236px;
+    }   
+}
+
+.benefits-step-inner {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .line-step {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 29px;
+        border-radius: 8px;
+        background-color: var(--neutral-100);
+        box-shadow: 0px -2px 0px 0px #0000000D inset,
+        0px 2px 0px 0px #FFFFFF99 inset,
+        0px 7.77px 16px 0px #0000000F,
+        0px 3px 3px 0px #0000001A;
+
+    }
+    .step-item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+        border-radius: 12px;
+        background-color: var(--neutral-50);
+        box-shadow: 0px 7.77px 16px 0px #0000000F,
+        0px 3px 3px 0px #0000001A,
+        0px -4px 0px 0px #0000000D inset,
+        0px 4px 0px 0px #FFFFFF99 inset;
+        @include transition3();
+        z-index: 1;
+        .icon {
+            font-size: 48px;
+            color: #151515;
+        }
+        &:hover {
+            box-shadow: 0px -4px 0px 0px #0000000D inset,
+            0px 4px 0px 0px #FFFFFF99 inset,
+            0px 2.77px 2.21px 0px #0000000F,
+            0px 6.65px 5.32px 0px #0000000F,
+            0px 12.52px 10.02px 0px #0000000F,
+            0px 22.34px 17.87px 0px #0000000F,
+            0px 41.78px 33.42px 0px #0000000F,
+            0px 100px 80px 0px #0000000F;
+        }
+
+    }
+}
+
+.benefits-design {
+    .benefits-design-inner {
+        text-align: end;
+        margin-right: -30px;
+    }
+    .content {
+        max-width: 423px;
+        margin-top: -88px;
+    }
+}
+
+.features-wrap {
+
+}
+
+.features-item {
+    padding: 32px;
+    border-radius: 32px;
+    background-color: var(--neutral-100);
+    box-shadow: 0px 7.77px 16px 0px #0000000F,
+    0px 3px 3px 0px #0000001A,
+    0px -8px 0px 0px #0000000D inset,
+    0px 4px 0px 0px #FFFFFF99 inset;
+    .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        font-size: 32px;
+        color: var(--white);
+        margin-bottom: 32px;
+        border-radius: 16px;
+        background-color: #272727;
+        box-shadow: 0px -3px 0px 0px #080808 inset,
+        0px 1px 0px 0px #FFFFFF4D inset,
+        0px 2.77px 2.21px 0px #0000001F,
+        0px 3px 3px 0px #00000024,
+        0px 12.52px 10.02px 0px #00000022,
+        0px 22.34px 17.87px 0px #00000024,
+        0px 41.78px 33.42px 0px #00000026,
+        0px 100px 80px 0px #00000026;
+    }
+    .title {
+        margin-bottom: 8px;
+    }
+}
+
+.features-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 208px;
+    height: 160px;
+    border-radius: 32px;
+    background: linear-gradient(180deg, #EA2B16 0%, #FF3B26 100%),
+    radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    box-shadow: 0px -3px 0px 0px #0000000F inset,
+    0px 1px 0px 0px #FFFFFF99 inset,
+    0px 3.44px 5.57px 0px #00000016,
+    0px 22.91px 37.08px 0px #FF3B002A,
+    0px 76px 123px 0px #FF3B000D,
+    0px 5.05px 8.18px 0px #FF3B001A,
+    0px 16.98px 27.47px 0px #FF3B000C,
+    0px 56px 83px 0px #FF3B0040,
+    0px 14px 34px 0px #FF3B0040,
+    0px 1px 2px 0px #FF3B0066;
+
+}

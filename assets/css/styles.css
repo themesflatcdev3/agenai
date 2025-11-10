@@ -42,10 +42,12 @@
   --neutral-200: #E4E4E7;
   --neutral-300: #D4D4D8;
   --neutral-400: #A1A1AA;
+  --neutral-500: #71717A;
   --neutral-600: #52525B;
   --neutral-700: #3F3F46;
   --neutral-800: #27272A;
   --neutral-900: #18181B;
+  --neutral-950: #09090B;
 }
 
 /*------------ Core CSS ---------------- */
@@ -4293,6 +4295,9 @@ button.animate-btn::after,
 .heading-section.mb-48 {
   margin-bottom: 48px;
 }
+.heading-section.mb-64 {
+  margin-bottom: 64px;
+}
 .heading-section.mb-70 {
   margin-bottom: 70px;
 }
@@ -5878,6 +5883,56 @@ button.animate-btn::after,
   }
 }
 
+.section-tools {
+  position: relative;
+  padding: 192px 0;
+}
+.section-tools .img-1 {
+  position: absolute;
+  top: 181px;
+  left: 320px;
+}
+.section-tools .img-2 {
+  position: absolute;
+  top: 357px;
+  left: 221px;
+}
+.section-tools .img-3 {
+  position: absolute;
+  top: 506px;
+  left: 327px;
+}
+.section-tools .img-4 {
+  position: absolute;
+  top: 235px;
+  right: 324px;
+}
+.section-tools .img-5 {
+  position: absolute;
+  top: 397px;
+  right: 244px;
+}
+.section-tools .img-6 {
+  position: absolute;
+  top: 505px;
+  right: 330px;
+}
+.section-tools .text {
+  margin-bottom: 32px;
+}
+@media (max-width: 1199px) {
+  .section-tools {
+    padding: 100px 0;
+  }
+}
+
+.box-black {
+  background-color: var(--neutral-950);
+  border-radius: 40px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
 /* ---------------------------------------------------------
     * Name: AgenAI - AI Agency
     * Version: 1.0.0
@@ -6917,6 +6972,142 @@ button.animate-btn::after,
 .logo-site .icon {
   font-size: 40px;
   color: var(--primary);
+}
+
+.benefits-box {
+  padding: 48px;
+  border-radius: 40px;
+  height: 100%;
+  background-color: var(--neutral-100);
+  box-shadow: 0px 7.77px 16px 0px rgba(0, 0, 0, 0.0588235294), 0px 3px 3px 0px rgba(0, 0, 0, 0.1019607843), 0px -8px 0px 0px rgba(0, 0, 0, 0.0509803922) inset, 0px 4px 0px 0px rgba(255, 255, 255, 0.6) inset;
+}
+.benefits-box .content .title {
+  margin-bottom: 8px;
+}
+
+.benefits-progress-inner {
+  margin-bottom: 40px;
+  display: grid;
+  gap: 12px;
+}
+.benefits-progress-inner .benefits-progress-item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.benefits-progress-inner .benefits-progress-item .progress-line {
+  height: 40px;
+  width: 0%;
+  background-color: var(--neutral-100);
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.0509803922) inset, 0px 4px 0px 0px rgba(255, 255, 255, 0.6) inset, 0px 7.77px 16px 0px rgba(0, 0, 0, 0.0588235294), 0px 3px 3px 0px rgba(0, 0, 0, 0.1019607843);
+}
+.benefits-progress-inner .benefits-progress-item .progress-text {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 12px;
+  background-color: var(--neutral-50);
+  box-shadow: 0px 7.77px 16px 0px rgba(0, 0, 0, 0.0588235294), 0px 3px 3px 0px rgba(0, 0, 0, 0.1019607843), 0px -4px 0px 0px rgba(0, 0, 0, 0.0509803922) inset, 0px 4px 0px 0px rgba(255, 255, 255, 0.6) inset;
+}
+.benefits-progress-inner .benefits-progress-item .progress-text .icon {
+  font-size: 24px;
+  color: var(--neutral-500);
+}
+
+.benefits-step {
+  height: 100%;
+}
+.benefits-step .benefits-step-inner {
+  min-height: 236px;
+}
+
+.benefits-step-inner {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.benefits-step-inner .line-step {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 29px;
+  border-radius: 8px;
+  background-color: var(--neutral-100);
+  box-shadow: 0px -2px 0px 0px rgba(0, 0, 0, 0.0509803922) inset, 0px 2px 0px 0px rgba(255, 255, 255, 0.6) inset, 0px 7.77px 16px 0px rgba(0, 0, 0, 0.0588235294), 0px 3px 3px 0px rgba(0, 0, 0, 0.1019607843);
+}
+.benefits-step-inner .step-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  background-color: var(--neutral-50);
+  box-shadow: 0px 7.77px 16px 0px rgba(0, 0, 0, 0.0588235294), 0px 3px 3px 0px rgba(0, 0, 0, 0.1019607843), 0px -4px 0px 0px rgba(0, 0, 0, 0.0509803922) inset, 0px 4px 0px 0px rgba(255, 255, 255, 0.6) inset;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+.benefits-step-inner .step-item .icon {
+  font-size: 48px;
+  color: #151515;
+}
+.benefits-step-inner .step-item:hover {
+  box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.0509803922) inset, 0px 4px 0px 0px rgba(255, 255, 255, 0.6) inset, 0px 2.77px 2.21px 0px rgba(0, 0, 0, 0.0588235294), 0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.0588235294), 0px 12.52px 10.02px 0px rgba(0, 0, 0, 0.0588235294), 0px 22.34px 17.87px 0px rgba(0, 0, 0, 0.0588235294), 0px 41.78px 33.42px 0px rgba(0, 0, 0, 0.0588235294), 0px 100px 80px 0px rgba(0, 0, 0, 0.0588235294);
+}
+
+.benefits-design .benefits-design-inner {
+  text-align: end;
+  margin-right: -30px;
+}
+.benefits-design .content {
+  max-width: 423px;
+  margin-top: -88px;
+}
+
+.features-item {
+  padding: 32px;
+  border-radius: 32px;
+  background-color: var(--neutral-100);
+  box-shadow: 0px 7.77px 16px 0px rgba(0, 0, 0, 0.0588235294), 0px 3px 3px 0px rgba(0, 0, 0, 0.1019607843), 0px -8px 0px 0px rgba(0, 0, 0, 0.0509803922) inset, 0px 4px 0px 0px rgba(255, 255, 255, 0.6) inset;
+}
+.features-item .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  font-size: 32px;
+  color: var(--white);
+  margin-bottom: 32px;
+  border-radius: 16px;
+  background-color: #272727;
+  box-shadow: 0px -3px 0px 0px #080808 inset, 0px 1px 0px 0px rgba(255, 255, 255, 0.3019607843) inset, 0px 2.77px 2.21px 0px rgba(0, 0, 0, 0.1215686275), 0px 3px 3px 0px rgba(0, 0, 0, 0.1411764706), 0px 12.52px 10.02px 0px rgba(0, 0, 0, 0.1333333333), 0px 22.34px 17.87px 0px rgba(0, 0, 0, 0.1411764706), 0px 41.78px 33.42px 0px rgba(0, 0, 0, 0.1490196078), 0px 100px 80px 0px rgba(0, 0, 0, 0.1490196078);
+}
+.features-item .title {
+  margin-bottom: 8px;
+}
+
+.features-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 208px;
+  height: 160px;
+  border-radius: 32px;
+  background: linear-gradient(180deg, #EA2B16 0%, #FF3B26 100%), radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0px -3px 0px 0px rgba(0, 0, 0, 0.0588235294) inset, 0px 1px 0px 0px rgba(255, 255, 255, 0.6) inset, 0px 3.44px 5.57px 0px rgba(0, 0, 0, 0.0862745098), 0px 22.91px 37.08px 0px rgba(255, 59, 0, 0.1647058824), 0px 76px 123px 0px rgba(255, 59, 0, 0.0509803922), 0px 5.05px 8.18px 0px rgba(255, 59, 0, 0.1019607843), 0px 16.98px 27.47px 0px rgba(255, 59, 0, 0.0470588235), 0px 56px 83px 0px rgba(255, 59, 0, 0.2509803922), 0px 14px 34px 0px rgba(255, 59, 0, 0.2509803922), 0px 1px 2px 0px rgba(255, 59, 0, 0.4);
 }
 
 /* ---------------------------------------------------------

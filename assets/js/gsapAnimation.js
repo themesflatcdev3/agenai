@@ -433,6 +433,29 @@
         }
     };
 
+    /* Tech Progress
+    ---------------------------------------------------------- */
+    var techProgress = () => {
+        gsap.utils.toArray(".progress-line").forEach((el) => {
+            const progress = el.dataset.progress;
+
+            gsap.fromTo(
+                el,
+                { width: "15%" },
+                {
+                    width: progress + "%",
+                    duration: 1.5,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 80%",
+                        toggleActions: "play none none none",
+                    },
+                }
+            );
+        });
+    };
+
     var runAnimations = () => {
         stackElement();
         scrollSmooth();
@@ -442,6 +465,7 @@
         scrollEffectFade();
         mouseHover();
         animateBox();
+        techProgress();
     };
 
     $(function () {

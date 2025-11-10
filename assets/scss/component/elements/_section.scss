@@ -43,6 +43,9 @@
     &.mb-48 {
         margin-bottom: 48px;
     }
+    &.mb-64 {
+        margin-bottom: 64px;
+    }
     &.mb-70 {
         margin-bottom: 70px;
     }
@@ -1978,4 +1981,53 @@
             overflow: hidden;
         }
     }
+}
+
+.section-tools {
+    position: relative;
+    padding: 192px 0;
+    .img-1 {
+        position: absolute;
+        top: 181px;
+        left: 320px;
+    }
+    .img-2 {
+        position: absolute;
+        top: 357px;
+        left: 221px;
+    }
+    .img-3 {
+        position: absolute;
+        top: 506px;
+        left: 327px;
+    }
+    .img-4 {
+        position: absolute;
+        top: 235px;
+        right: 324px;
+    }
+    .img-5 {
+        position: absolute;
+        top: 397px;
+        right: 244px;
+    }
+    .img-6 {
+        position: absolute;
+        top: 505px;
+        right: 330px;
+    }
+    .text {
+        margin-bottom: 32px;
+    }
+
+    @include res(xl) {
+        padding: 100px 0;
+    }
+}
+
+.box-black {
+    background-color: var(--neutral-950);
+    border-radius: 40px;
+    margin-left: 16px;
+    margin-right: 16px;
 }
