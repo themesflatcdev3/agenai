@@ -281,3 +281,33 @@
         }
     }
 }
+
+.group-slider {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    .swiper-pagination {
+        position: unset;
+        height: 2px;
+        background-color: #FFFFFF33;
+        .swiper-pagination-progressbar-fill {
+            background-color: var(--brand);
+            box-shadow: 0px 2px 12px 0px #FD3A25;
+        }
+    }
+    .group-btn-slider {
+        display: flex;
+        gap: 8px;
+        .btn-slider {
+            display: flex;
+        }
+        .icon {
+            font-size: 24px;
+            color: var(--white);
+            @include transition3;
+            &:hover {
+                color: var(--brand);
+            }
+        }
+    }
+}

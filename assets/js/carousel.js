@@ -140,75 +140,30 @@ $(window).on("load", function () {
     });
 });
 
-if ($(".swiper-process").length > 0) {
-    let swiper = null;
-
-    function initSwiper() {
-        if (window.innerWidth < 1200 && !swiper) {
-            swiper = new Swiper(".swiper-process", {
-                slidesPerView: 1,
-                spaceBetween: 16,
-                speed: 1000,
-                autoplay: {
-                    delay: 2000,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: ".tf-pag-nav",
-                    clickable: true,
-                },
-                breakpoints: {
-                    575: {
-                        slidesPerView: 2,
-                    },
-                },
-            });
-        } else if (window.innerWidth >= 1200 && swiper) {
-            swiper.destroy(true, true);
-            swiper = null;
-        }
-    }
-
-    initSwiper();
-
-    $(window).on("resize", function () {
-        initSwiper();
-    });
-}
-
-if ($(".slider-service-wrap").length > 0) {
-    const contentThumbSlider = new Swiper(".swiper-service-thumb", {
-        slidesPerView: 1,
-        grabCursor: true,
-        speed: 800,
-        effect: "fade",
-        fadeEffect: {
-            crossFade: true,
+if($('.swiper-progressbar').length > 0) {
+    var swiper = new Swiper(".swiper-progressbar", {
+        spaceBetween: 28,
+        slidesPerView: 'auto',
+        observer: true,
+        observeParents: true,
+        pagination: {
+          el: ".statistic-pagination",
+          type: "progressbar",
         },
         navigation: {
-            nextEl: ".slider-service-wrap .nav-next-swiper",
+          nextEl: ".statistic-next",
+          prevEl: ".statistic-prev",
         },
-        on: {
-            slideChange: function () {
-                const activeIndex = this.realIndex;
-                $(".img-thumbs").removeClass("active");
-                $(".img-thumbs").eq(activeIndex).addClass("active");
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
             },
+            600: {
+                slidesPerView: 'auto',
+            }
         },
     });
-    $(".swiper-service-thumb").on("click", ".action", function (e) {
-        e.preventDefault();
-
-        let currentIndex = contentThumbSlider.realIndex;
-        let total = contentThumbSlider.slides.length;
-
-        if (currentIndex < total - 1) {
-            contentThumbSlider.slideNext();
-        } else {
-            contentThumbSlider.slideTo(total - 2);
-        }
-    });
-}
+}    
 
 /*-- Slick Slide --*/
 window.onload = function () {

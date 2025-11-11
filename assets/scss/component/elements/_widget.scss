@@ -908,5 +908,94 @@
     0px 56px 83px 0px #FF3B0040,
     0px 14px 34px 0px #FF3B0040,
     0px 1px 2px 0px #FF3B0066;
+}
 
+.team-item {
+    padding: 40px;
+    border-radius: 40px;
+    text-align: center;
+    // background-color: var();
+    background: linear-gradient(0deg, var(--neutral-900, #18181B), var(--neutral-900, #18181B)),
+    radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    box-shadow: 0px 7.77px 2.21px 0px #0000000F,
+    0px 3px 3px 0px #0000001A,
+    0px -8px 0px 0px #111111 inset,
+    0px 4px 0px 0px #FFFFFF1A inset;
+    .image {
+        display: flex;
+        border: 1px solid #FFFFFF40;
+        border-radius: 24px;
+        box-shadow: 0px 2.77px 2.21px 0px #0000001F,
+        0px 6.65px 5.32px 0px #00000021,
+        0px 12.52px 10.02px 0px #00000022,
+        0px 22.34px 17.87px 0px #00000024,
+        0px 41.78px 33.42px 0px #00000026,
+        0px 100px 80px 0px #00000026;
+        margin-bottom: 28px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 24px;
+        }
+    }
+    .name {
+        display: flex;
+        justify-content: center;
+        color: var(--white);
+        margin-bottom: 4px;
+        &:hover {
+            color: var(--brand);
+        }
+    }
+    .sub {
+        color: var(--neutral-400);
+        margin-bottom: 36px;
+    }
+    &.style-1 {
+        text-align: start;
+        .top {
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            margin-bottom: 28px;
+            .image {
+                width: 126px;
+                height: 126px;
+                margin-bottom: 0;
+            }
+        }
+        .name {
+            justify-content: start;
+        }
+        .sub {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.awards-item {
+    display: flex;
+    border-radius: 24px;
+    border: 1px solid var(--neutral-800);
+    padding: 0 40px;
+    @include transition3;
+    > div {
+        width: 100%;
+        height: 100px;
+        align-content: center;
+    }
+    .year {
+        text-align: end;
+    }
+    &:hover {
+        background: 
+        linear-gradient(0deg, var(--neutral-900, #18181B), var(--Neutral-900, #18181B)),
+        radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+        box-shadow: 0px -4px 0px 0px #111111 inset,
+        0px 2px 0px 0px #FFFFFF1A inset,
+        0px 7.77px 2.21px 0px #0000000F,
+        0px 3px 3px 0px #0000001A;
+
+    }
 }
