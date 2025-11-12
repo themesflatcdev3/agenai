@@ -1208,64 +1208,6 @@
     }
 }
 
-.section-pricing {
-    position: relative;
-
-    .bg-img {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        z-index: -1;
-
-        display: flex;
-        justify-content: center;
-        align-items: end;
-
-        img {
-            width: 100%;
-            transform: translateY(25%);
-        }
-    }
-
-    .pricing-tab_btn {
-        margin-bottom: 88px;
-    }
-
-    .tf-grid-layout {
-        gap: 24px;
-    }
-
-    @include res(xxl, min) {
-        padding-top: 150px;
-        padding-bottom: 300px;
-
-        &.type-2 {
-            padding-bottom: 120px;
-        }
-    }
-
-    @include res(xl) {
-        .pricing-tab_btn {
-            margin-bottom: 40px;
-        }
-
-        .tf-grid-layout {
-            gap: 30px 12px;
-        }
-
-    }
-
-    @include res(lg) {
-        .wg-plan {
-            &:last-child {
-                grid-column: 1 / -1;
-            }
-        }
-    }
-}
-
 .section-cta {
     position: relative;
 

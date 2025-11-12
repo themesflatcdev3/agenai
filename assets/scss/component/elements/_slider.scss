@@ -300,14 +300,108 @@
         gap: 8px;
         .btn-slider {
             display: flex;
+            &:hover .icon {
+                color: var(--brand);
+            }
         }
         .icon {
             font-size: 24px;
             color: var(--white);
             @include transition3;
-            &:hover {
-                color: var(--brand);
+           
+        }
+    }
+}
+
+.swiper-testimonial_wrap {
+    .top-icon {
+        font-size: 20px;
+        color: var(--brand);
+        margin-bottom: 16px;
+    }
+    .desc {
+        margin-bottom: 24px;
+    }
+    .cite {
+        position: relative;
+        padding: 8px 16px;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        margin-bottom: 32px;
+        .line-left {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+        }
+        .line {
+            display: flex;
+            width: 1px;
+            height: 16px;
+            background-color: var(--neutral-600);
+        }
+    }
+    .group-slider {
+        position: relative;
+        padding: 24px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &::before {
+            position: absolute;
+            content: '';
+            left: 50%;
+            top: 0;
+            width: 100%;
+            max-width: 1324px;
+            transform: translateX(-50%);
+            height: 1px;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+        }
+        .group-btn-slider {
+            display: flex;
+            gap: 12px;
+        }
+        .icon {
+            color: var(--primary);
+        }
+        .btn-slider {
+            &:hover .icon {
+                color: var(--white);
             }
         }
+        .testimonials-pagination {
+            width: max-content;
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 48px;
+            letter-spacing: -0.01px;
+            color: var(--neutral-700);
+            .swiper-pagination-current {
+                color: var(--neutral-400);
+            }
+        }
+    }
+}
+
+.testimonial-image {
+    padding: 32px;
+    border-radius: 40px;
+    background: linear-gradient(0deg, var(--neutral-900, #18181B), var(--neutral-900, #18181B)),
+    radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    box-shadow: 0px 7.77px 2.21px 0px #0000000F,
+    0px 3px 3px 0px #0000001A,
+    0px -8px 0px 0px #111111 inset,
+    0px 4px 0px 0px #FFFFFF1A inset;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 24px;
+        border: 0.38px solid #FFFFFF40;
     }
 }

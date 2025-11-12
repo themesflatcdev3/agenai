@@ -999,3 +999,149 @@
 
     }
 }
+
+.pricing-item {
+    padding: 40px;
+    border-radius: 40px;
+    background: var(--neutral-100);
+    box-shadow: 0px 7.77px 16px 0px #0000000F,
+    0px 3px 3px 0px #0000001A,
+    0px -8px 0px 0px #0000000D inset,
+    0px 4px 0px 0px #FFFFFF99 inset;
+    .top {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 27px;
+        .line {
+            display: flex;
+            width: 1px;
+            height: 20px;
+            background-color: var(--neutral-300);
+        }
+    }
+    .heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        .price-number {
+            font-weight: 700;
+            font-size: 72px;
+            line-height: 72px;
+            letter-spacing: -0.03px;
+        }
+        .price-per {
+            color: var(--secondary);
+        }
+    }
+    >.line {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(90deg, rgba(212, 212, 216, 0) 0%, #D4D4D8 50%, rgba(212, 212, 216, 0) 100%);
+    }
+    .content {
+        display: flex;
+        gap: 40px;
+        .text {
+            color: var(--secondary);
+        }
+        > div {
+            max-width: 258px;
+        }
+    }
+    &.style-black {
+        background: linear-gradient(0deg, var(--neutral-900, #18181B), var(--neutral-900, #18181B)),
+        radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+        box-shadow: 0px -8px 0px 0px #2E2E2E inset,
+        0px 4px 0px 0px #FFFFFF4D inset,
+        0px 7.77px 2.21px 0px #0000000F,
+        0px 3px 3px 0px #0000001A;
+        .top {
+            .icon,
+            .text {
+                color: var(--white);
+            }
+        }
+        .heading {
+            .price-number {
+                color: var(--white);
+            }
+        }
+        .content {
+            .title {
+                color: var(--white);
+            }
+            .list-text {
+                li {
+                    .icon {
+                        background-color: var(--neutral-700);
+                    }
+                    color: var(--white);
+                }
+            }
+        }
+    }
+}
+
+.list-text {
+    &.type-check {
+        display: grid;
+        gap: 8px;
+        li {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            .icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 99px;
+                background-color: var(--neutral-200);
+                width: 20px;
+                height: 20px;
+                font-size: 10px;
+                flex-shrink: 0;
+            }
+        }
+    }
+}
+
+.tf-switch-check {
+    position: relative;
+    width: 160px;
+    height: 80px;
+    -webkit-appearance: none;
+    background-color: var(--neutral-300);
+    border-radius: 99px;
+    transition: 0.3s;
+    
+
+    &::before {
+        content: "";
+        border-radius: 99px;
+        width: 64px;
+        height: 64px;
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        background: var(--white);
+        box-shadow: 0px -3px 0px 0px #E9E9E9 inset,
+        0px 1px 0px 0px #FFFFFFB2 inset;
+        transition: 0.2s;
+    }
+    &:checked {
+        background: linear-gradient(180deg, #EA2B16 0%, #FF3B26 100%);
+        box-shadow: 0px 3.44px 5.57px 0px #00000016,
+        0px 22.91px 37.08px 0px #FF3B002A,
+        0px 76px 123px 0px #FF3B000D,
+        0px 5.05px 8.18px 0px #FF3B001A,
+        0px 16.98px 27.47px 0px #FF3B000C,
+        0px 56px 83px 0px #FF3B0040,
+        0px 14px 34px 0px #FF3B0040,
+        0px 1px 2px 0px #FF3B0066;
+        &::before {
+            left: 88px;
+        }
+    }
+}

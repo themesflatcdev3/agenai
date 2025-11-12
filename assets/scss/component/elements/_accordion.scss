@@ -148,3 +148,83 @@
     display: grid;
     gap: 8px;
 }
+
+.accordion-asked {
+    display: grid;
+    gap: 16px;
+    .accordion-asked-item {
+        padding: 24px 40px;
+        border-radius: 24px;
+        background-color: var(--neutral-100);
+        box-shadow: 0px 7.77px 16px 0px #0000000F,
+        0px 3px 3px 0px #0000001A,
+        0px -8px 0px 0px #0000000D inset,
+        0px 4px 0px 0px #FFFFFF99 inset;
+    }
+    .accordion-button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        &::after {
+            display: none;
+        }
+        span {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: linear-gradient(0deg, #272727, #272727),
+            radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+            box-shadow: 0px -3px 0px 0px #080808 inset,
+            0px 1px 0px 0px #FFFFFF4D inset,
+            0px 2.77px 2.21px 0px #0000001F,
+            0px 3px 3px 0px #00000024;
+            &::before {
+                position: absolute;
+                content: '';
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                width: 11px;
+                height: 1px;
+                background-color: var(--white);
+                @include transition3;
+            }
+            &::after {
+                position: absolute;
+                content: '';
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                width: 1px;
+                height: 11px;
+                background-color: var(--white);
+                @include transition3;
+            }
+        }
+        &.collapsed {
+            span {
+                &::after {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+    .accordion-body {
+        padding-top: 32px;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: '';
+            top: 16px;
+            left: 0;
+            right: 0;
+            height: 1px; 
+            background: linear-gradient(90deg, rgba(212, 212, 216, 0) 0%, #D4D4D8 50%, rgba(212, 212, 216, 0) 100%);
+        }
+    }
+}

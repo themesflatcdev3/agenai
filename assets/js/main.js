@@ -225,6 +225,32 @@
             }
         });
     };
+    /* switchprice
+    -------------------------------------------------------------------------*/
+    var switchPrice = () => {
+        function formatUSD(n) {
+            return '$' + Number(n).toLocaleString('en-US');
+        }
+
+        function updatePrices(isYearly) {
+            $('.price-number').each(function() {
+            const $p = $(this);
+            const val = isYearly ? $p.data('year') : $p.data('month');
+            $p.text(formatUSD(val));
+            $p.next('.price-per').text(isYearly ? '/ year' : '/ month');
+            });
+        }
+
+        $('#pricingSwitch').on('change', function() {
+            updatePrices(this.checked);
+        });
+
+        if ($('#pricingSwitch').is(':checked')) {
+            updatePrices(true);
+        } else {
+            updatePrices(false);
+        }
+    };
 
     // Dom Ready
     $(function () {
@@ -236,5 +262,6 @@
         counterOdo();
         openMbMenu();
         clickActive();
+        switchPrice();
     });
 })(jQuery);

@@ -165,6 +165,33 @@ if($('.swiper-progressbar').length > 0) {
     });
 }    
 
+if ($(".section-testimonials").length > 0) {
+    const thumbSwiper = new Swiper(".sw-main-image", {
+        slidesPerView: 1,
+        watchSlidesProgress: true,
+        watchSlidesVisibility: true,
+        // speed: 800,
+        spaceBetween: 10,
+        centeredSlides: true,
+    });
+
+    const mainSwiper = new Swiper(".swiper-testimonial", {
+        slidesPerView: 1,
+        // spaceBetween: 20,
+        pagination: {
+            el: ".testimonials-pagination",
+            type: "fraction",
+        },
+        navigation: {
+            nextEl: ".testimonials-next",
+            prevEl: ".testimonials-prev",
+        },
+    });
+
+    thumbSwiper.controller.control = mainSwiper;
+    mainSwiper.controller.control = thumbSwiper;
+}
+
 /*-- Slick Slide --*/
 window.onload = function () {
     if (window.jQuery) {
