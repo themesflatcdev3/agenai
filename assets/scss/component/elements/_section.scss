@@ -93,6 +93,13 @@
     .hero-image {
         position: absolute;
         inset: 16px 16px 0 16px;
+
+        border-radius: 40px;
+        background-image: url(./../images/section/hero-1.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
         img {
             width: 100%;
             height: 100%;
@@ -108,7 +115,8 @@
             align-items: center;
             justify-content: center;
             width: max-content;
-            padding: 8px 16px;
+            padding: 6px 16px;
+            color: var(--brand);
             border-radius: 8px;
             background: linear-gradient(0deg, #F5F5F5, #F5F5F5),
             radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
@@ -123,6 +131,9 @@
         }
         .title {
             margin-bottom: 33px;
+            .title2 {
+                margin-top: 13px;
+            }
         }
         .title-icon {
             position: relative;
@@ -219,10 +230,13 @@
 }
 
 .section-about-us {
+    .heading-section {
+        margin-bottom: -17px;
+    }
     .col-left {
         text-align: center;
         border-radius: 40px;
-        padding: 80px 0 8px;
+        padding: 80px 0 0px;
         background-color: var(--neutral-900);
         box-shadow: 
         0px 7.77px 2.21px 0px #0000000F,
@@ -269,12 +283,13 @@
         }
         img {
             border-radius: 38px;
+            margin-top: -25px;
         }
     }
     .review-box {
         background-color: var(--neutral-100);
         border-radius: 40px;
-        padding: 48px 40px;
+        padding: 48px 40px 34px;
         box-shadow: 
         0px 7.77px 2.21px 0px #0000000F,
         0px 3px 3px 0px #0000001A,
@@ -291,7 +306,12 @@
             line-height: 26px;
         }
         .number {
+            font-weight: 600;
+            font-size: 144px;
+            line-height: 144px;
+            letter-spacing: -0.03em;
             margin-bottom: -16px;
+            margin-right: 5px;
         }
     }
     .box-quotes {
@@ -395,8 +415,12 @@
 }
 
 .services-image {
-
+    max-width: 416px;
+    height: 240px;
     img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
         border-radius: 16px;
     }
 }
@@ -408,7 +432,7 @@
 
 .featured-works-item {
     background-color: var(--neutral-100);
-    border-radius: 12px;
+    border-radius: 40px;
     padding: 12px;
     box-shadow: 
     0px -8px 0px 0px #EAEAEA inset,
@@ -449,7 +473,7 @@
         }
     }
     .content {
-        padding: 32px 40px;
+        padding: 32px 40px 16px;
         .pagi-dot {
             display: flex;
             gap: 10px;
@@ -503,9 +527,10 @@
 
 .process-heading {
     align-content: center;
-    .group-btn-slider {
+}
 
-    }
+.process-slide {
+    margin-left: -16px;
 }
 
 .process-card {
@@ -562,6 +587,11 @@
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
+        .time {
+            padding: 7px 16px;
+            border-radius: 99px;
+            border: 1px solid var(--neutral-300);
+        }
         .number {
             display: flex;
             gap: 4px;
@@ -1940,32 +1970,32 @@
     .img-1 {
         position: absolute;
         top: 181px;
-        left: 320px;
+        left: 22.22%;
     }
     .img-2 {
         position: absolute;
         top: 357px;
-        left: 221px;
+        left: 15.347%;
     }
     .img-3 {
         position: absolute;
         top: 506px;
-        left: 327px;
+        left: 22.7%;
     }
     .img-4 {
         position: absolute;
         top: 235px;
-        right: 324px;
+        right: 22.5%;
     }
     .img-5 {
         position: absolute;
         top: 397px;
-        right: 244px;
+        right: 16.95%;
     }
     .img-6 {
         position: absolute;
         top: 505px;
-        right: 330px;
+        right: 22.92%;
     }
     .text {
         margin-bottom: 32px;
@@ -2010,6 +2040,9 @@
 .section-statistic {
     position: relative;
     padding: 64px 0;
+    .heading-section {
+        margin-left: 4px;
+    }
     &::before {
         position: absolute;
         content: '';
@@ -2041,6 +2074,8 @@
         background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
     }
     .statistic-slider {
+        max-width: 526px;
+        margin-left: 37px;
         .text {
             min-height: 228px;
         }
@@ -2057,10 +2092,82 @@
             display: flex;
             font-size: 240px;
             line-height: 240px;
-            letter-spacing: -0.03px;
+            letter-spacing: -0.03em;
             .prefix {
                 font-size: 232px;
             }
         }
+    }
+}
+
+.section-contact {
+    position: relative;
+    padding: 48px;
+    .form-contact {
+        margin-left: 8px;
+        margin-right: -8px;
+    }
+    .contact-image {
+        position: absolute;
+        inset: 0 16px;
+        border-radius: 40px;
+        background-image: url(./../images/section/contact-image-bg.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 40px;
+        }
+    }
+    .col-left {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 72px 0;
+    }
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+            font-size: 24px;
+            border-radius: 24px;
+            background: linear-gradient(0deg, #F5F5F5, #F5F5F5),
+            radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+            box-shadow: 0px -3px 0px 0px #E9E9E9 inset,
+            0px 1px 0px 0px #FFFFFFB2 inset,
+            0px 2.77px 2.21px 0px #0000001F,
+            0px 3px 3px 0px #00000024;
+        }
+    }
+}
+
+.features-wrap {
+    display: flex;
+    align-items: center;
+    .features-col {
+        display: grid;
+        gap: 32px;
+        width: 32.4%;
+    }
+}
+
+.section-testimonials {
+
+    .col-left {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 }

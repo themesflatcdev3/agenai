@@ -41,8 +41,16 @@
     margin-bottom: 16px !important;
 }
 
+.mb-18 {
+    margin-bottom: 18px !important;
+}
+
 .mb-20 {
     margin-bottom: 20px;
+}
+
+.mb-21 {
+    margin-bottom: 21px !important;
 }
 
 .mb-24 {
@@ -254,6 +262,13 @@
     }
 }
 
+.link1 {
+    @include transition3;
+    &:hover {
+        color: var(--brand) !important;
+    }
+}
+
 .cl-line-2 {
     border-color: var(--line-2) !important;
 }
@@ -261,10 +276,10 @@
 .link-underline {
     @include transition3;
     text-decoration: underline;
-    text-decoration-color: transparent;
+    text-decoration-color: var(--primary);
 
     &:hover {
-        text-decoration-color: var(--primary);
+        text-decoration-color: var(--brand);
     }
 }
 

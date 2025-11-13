@@ -37,7 +37,7 @@
     <button id="goTop">
         <span class="border-progress"></span>
         <span class="ic-wrap">
-            <span class="icon icon-arrow-caret-right"></span>
+            <span class="icon icon-long-arrow-alt-up-solid"></span>
         </span>
     </button>
     <!-- /Scroll Top -->
@@ -58,21 +58,24 @@
                 <div class="box-navigation">
                     <ul class="nav-menu-main">
                         <li class="menu-item">
-                            <a href="#" class="item-link active">About</a>
+                            <a href="#about" class="item-link active">About</a>
                         </li>
                         <li class="menu-item">
-                            <a href="#" class="item-link">Services</a>
+                            <a href="#services" class="item-link">Services</a>
                         </li>
                         <li class="menu-item">
-                            <a href="#" class="item-link">Works</a>
+                            <a href="#works" class="item-link">Works</a>
                         </li>
                         <li class="menu-item">
-                            <a href="#" class="item-link">Pricing</a>
+                            <a href="#pricing" class="item-link">Pricing</a>
                         </li>
                     </ul>
                 </div>
-                <a href="#" class="tf-btn">
+                <a href="#" class="tf-btn d-lg-flex d-none">
                     Start a Project
+                </a>
+                <a href="#" class="tf-btn open-mb-menu mobile-menu d-lg-none d-flex">
+                    <i class="icon icon-grip-lines-solid"></i>
                 </a>
             </div>
         </header>
@@ -80,7 +83,6 @@
         <!-- Hero Banner -->
         <div class="section-hero-v1">
             <div class="hero-image">
-                <img src="assets/images/section/hero-1.jpg" alt="">
             </div>
             <div class="container">
                 <div class="content-wrap text-center">
@@ -112,9 +114,9 @@
                         AI-Driven Agency
                     </div>
                     <div class="title text-display-2">
-                        <span class="fw-semibold text-gradient-1">Your AI Sprint Team</span>
+                        <span class="title1 fw-semibold text-gradient-1">Your AI Sprint Team</span>
                         <br>
-                        <div class="d-flex gap-20 justify-content-center">
+                        <div class="title2 d-flex gap-20 justify-content-center">
                             <span class="fw-semibold text-gradient-1">on Demand</span>
                             <div class="title-icon">
                                 <div class="box"></div>
@@ -137,14 +139,14 @@
                     </div>
                 </div>
             </div>
-            <a href="#about-us" class="scroll-more">
+            <a href="#about" class="scroll-more">
                 <span class="fw-semibold">Scroll for more</span>
                 <i class="icon icon-long-arrow-alt-down-solid"></i>
             </a>
         </div>
         <!-- /Hero Banner -->
         <!-- Select Work -->
-        <div class="section-about-us flat-spacing" id="about-us">
+        <div class="section-about-us flat-spacing" id="about">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -153,7 +155,7 @@
                             <div class="heading-title text-gradient-2">Human-Centered AI, <br> Built for Production</div>
                         </div>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-lg-7">
                         <div class="col-left">
                             <div class="sub text-white">
                                 <span class="dot"></span>
@@ -166,7 +168,7 @@
                             <img src="assets/images/item/earth.png" alt="">
                         </div>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-lg-5">
                         <div class="review-box mb-24">
                             <div class="desc fw-semibold text-body-1">Trusted by 120+ clients across 4 industries - <br> shipping AI from idea to production in 8–10 weeks</div>
                             <div class="d-flex justify-content-between align-items-end">
@@ -200,7 +202,7 @@
                                         </svg>
                                     </div>
                                 </div>
-                                <div class="text-display-1 number text-neutral-200">120+</div>
+                                <div class="number text-neutral-200">120+</div>
                             </div>
                         </div>
                         <div class="box-quotes">
@@ -252,12 +254,12 @@
 
         <div class="box-white">
             <!-- section-services -->
-            <div class="section-services flat-spacing">
+            <div id="services" class="section-services flat-spacing">
                 <div class="container">
                     <div class="row justify-content-between">
-                        <div class="col-md-4">
+                        <div class="col-lg-4">
                             <div class="d-flex flex-column justify-content-between h-100">
-                                <div>
+                                <div class="mb-24">
                                     <div class="heading-section mb-48">
                                         <div class="heading-sub fw-semibold">Services</div>
                                         <div class="heading-title text-gradient-3">End-to-End <br> AI Services</div>
@@ -269,10 +271,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-lg-6">
                             <div class="accordion-faq_list" id="accordion-services">
                                 <div class="accordion-faq_item" role="presentation">
-                                    <div class="accordion-action" data-bs-target="#faq-1" role="button"
+                                    <div class="accordion-action services-image-btn" data-img="assets/images/section/service-1.jpg" data-bs-target="#faq-1" role="button"
                                         data-bs-toggle="collapse" aria-controls="faq-1" aria-expanded="true">
                                         <div class="accordion-title">
                                             AI Strategy <br> & Mapping
@@ -291,7 +293,7 @@
                                     </div>
                                 </div>
                                 <div class="accordion-faq_item" role="presentation">
-                                    <div class="accordion-action collapsed" data-bs-target="#faq-2" role="button"
+                                    <div class="accordion-action services-image-btn collapsed" data-img="assets/images/section/service-2.jpg" data-bs-target="#faq-2" role="button"
                                         data-bs-toggle="collapse" aria-controls="faq-2" aria-expanded="false">
                                         <div class="accordion-title">
                                             AI UX <br> & Product Design
@@ -310,7 +312,7 @@
                                     </div>
                                 </div>
                                 <div class="accordion-faq_item" role="presentation">
-                                    <div class="accordion-action collapsed" data-bs-target="#faq-3" role="button"
+                                    <div class="accordion-action services-image-btn collapsed" data-img="assets/images/section/service-3.jpg" data-bs-target="#faq-3" role="button"
                                         data-bs-toggle="collapse" aria-controls="faq-3" aria-expanded="false">
                                         <div class="accordion-title">
                                             LLM / Agent <br> Development
@@ -329,7 +331,7 @@
                                     </div>
                                 </div>
                                 <div class="accordion-faq_item" role="presentation">
-                                    <div class="accordion-action collapsed" data-bs-target="#faq-4" role="button"
+                                    <div class="accordion-action services-image-btn collapsed" data-img="assets/images/section/service-4.jpg" data-bs-target="#faq-4" role="button"
                                         data-bs-toggle="collapse" aria-controls="faq-4" aria-expanded="false">
                                         <div class="accordion-title">
                                             Data Engineering <br> & Pipelines
@@ -353,8 +355,8 @@
                 </div>
             </div>
             <!-- /section-services -->
-            <!-- section-featured -->
-            <div class="section-featured-works flat-spacing pt-0 stack-element">
+            <!-- section-featured-works -->
+            <div id="works" class="section-featured-works flat-spacing pt-0 stack-element">
                 <div class="container">
                     <div class="heading-section mb-0">
                         <div class="heading-sub fw-semibold mx-auto">Featured Works</div>
@@ -385,11 +387,11 @@
                                             </div>
                                             <div class="item">
                                                 <div class="title text-secondary">DELIVERABLES</div>
-                                                <div class="text-body-3 fw-semibold">AI strategy, AI UX flows, LLM agent, RAG</div>
+                                                <div class="fw-semibold">AI strategy, AI UX flows, LLM agent, RAG</div>
                                             </div>
                                             <div class="item">
                                                 <div class="title text-secondary">INDUSTRY</div>
-                                                <div class="text-body-3 fw-semibold">SaaS</div>
+                                                <div class="fw-semibold">SaaS</div>
                                             </div>
                                         </div>
                                     </div>
@@ -421,11 +423,11 @@
                                             </div>
                                             <div class="item">
                                                 <div class="title text-secondary">DELIVERABLES</div>
-                                                <div class="text-body-3 fw-semibold">Use-case mapping, Prompt & UI patterns</div>
+                                                <div class="fw-semibold">Use-case mapping, Prompt & UI patterns</div>
                                             </div>
                                             <div class="item">
                                                 <div class="title text-secondary">INDUSTRY</div>
-                                                <div class="text-body-3 fw-semibold">Fintech</div>
+                                                <div class="fw-semibold">Fintech</div>
                                             </div>
                                         </div>
                                     </div>
@@ -457,11 +459,11 @@
                                             </div>
                                             <div class="item">
                                                 <div class="title text-secondary">DELIVERABLES</div>
-                                                <div class="text-body-3 fw-semibold">PHI-safe RAG, HIPAA-aligned workflows</div>
+                                                <div class="fw-semibold">PHI-safe RAG, HIPAA-aligned workflows</div>
                                             </div>
                                             <div class="item">
                                                 <div class="title text-secondary">INDUSTRY</div>
-                                                <div class="text-body-3 fw-semibold">Healthcare</div>
+                                                <div class="fw-semibold">Healthcare</div>
                                             </div>
                                         </div>
                                     </div>
@@ -493,11 +495,11 @@
                                             </div>
                                             <div class="item">
                                                 <div class="title text-secondary">DELIVERABLES</div>
-                                                <div class="text-body-3 fw-semibold">Data cleaning & embeddings</div>
+                                                <div class="fw-semibold">Data cleaning & embeddings</div>
                                             </div>
                                             <div class="item">
                                                 <div class="title text-secondary">INDUSTRY</div>
-                                                <div class="text-body-3 fw-semibold">Ecommerce/Retail</div>
+                                                <div class="fw-semibold">Ecommerce/Retail</div>
                                             </div>
                                         </div>
                                     </div>
@@ -507,12 +509,12 @@
                     </div>
                 </div>
             </div>
-            <!-- /section-featured -->
+            <!-- /section-featured-works -->
             <!-- section-process -->
             <div class="section-process flat-spacing pt-0">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-5">
+                        <div class="col-lg-5">
                             <div class="process-heading h-100">
                                 <div class="heading-section mb-80">
                                     <div class="heading-sub fw-semibold">Process</div>
@@ -528,54 +530,56 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-7">
-                            <div dir="ltr" class="swiper tf-swiper swiper-box-shadow" data-preview="2" data-tablet="2" data-mobile-sm="1.5" data-mobile="1.2"
-                                data-loop="false" data-center="false" data-space-lg="24" data-space-md="24" data-space="15" >
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="process-card">
-                                            <i class="icon icon-search-solid"></i>
-                                            <div class="content">
-                                                <h4 class="title fw-semibold">Discover & Scope</h4>
-                                                <p class="text text-secondary">Align on problems, data reality, and success metrics. Opportunity brief, KPI model, phased roadmap, effort/cost ranges.</p>
-                                            </div>
-                                            <div class="bot">
-                                                <div class="time fw-semibold">3-7 DAYS</div>
-                                                <div class="number">
-                                                    <span class="text-neutral-400">01</span>
-                                                    <span class="text-neutral-200">/03</span>
+                        <div class="col-lg-7">
+                            <div class="process-slide">
+                                <div dir="ltr" class="swiper tf-swiper swiper-box-shadow" data-preview="1.78" data-tablet="1.78" data-mobile-sm="1.5" data-mobile="1.2"
+                                    data-loop="false" data-center="false" data-space-lg="24" data-space-md="24" data-space="15" >
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="process-card">
+                                                <i class="icon icon-search-solid"></i>
+                                                <div class="content">
+                                                    <h4 class="title fw-semibold">Discover & Scope</h4>
+                                                    <p class="text text-secondary">Align on problems, data reality, and success metrics. Opportunity brief, KPI model, phased roadmap, effort/cost ranges.</p>
+                                                </div>
+                                                <div class="bot">
+                                                    <div class="time fw-semibold">3-7 DAYS</div>
+                                                    <div class="number">
+                                                        <span class="text-neutral-400">01</span>
+                                                        <span class="text-neutral-200">/03</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="process-card">
-                                            <i class="icon icon-bolt-solid"></i>
-                                            <div class="content">
-                                                <h4 class="title fw-semibold">Prototype</h4>
-                                                <p class="text text-secondary">De-risk unknowns and validate value quickly. Clickable UX, tech spike repo, initial eval rubric, demo.</p>
-                                            </div>
-                                            <div class="bot">
-                                                <div class="time fw-semibold">1-2 WEEKS</div>
-                                                <div class="number">
-                                                    <span class="text-neutral-400">02</span>
-                                                    <span class="text-neutral-200">/03</span>
+                                        <div class="swiper-slide">
+                                            <div class="process-card">
+                                                <i class="icon icon-bolt-solid"></i>
+                                                <div class="content">
+                                                    <h4 class="title fw-semibold">Prototype</h4>
+                                                    <p class="text text-secondary">De-risk unknowns and validate value quickly. Clickable UX, tech spike repo, initial eval rubric, demo.</p>
+                                                </div>
+                                                <div class="bot">
+                                                    <div class="time fw-semibold">1-2 WEEKS</div>
+                                                    <div class="number">
+                                                        <span class="text-neutral-400">02</span>
+                                                        <span class="text-neutral-200">/03</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="process-card">
-                                            <i class="icon icon-user-check-solid-1"></i>
-                                            <div class="content">
-                                                <h4 class="title fw-semibold">Validate & Evals</h4>
-                                                <p class="text text-secondary">Prove accuracy, usability, safety, and cost. Eval dashboard, acceptance thresholds, decision to iterate/ship.</p>
-                                            </div>
-                                            <div class="bot">
-                                                <div class="time fw-semibold">1 WEEKS</div>
-                                                <div class="number">
-                                                    <span class="text-neutral-400">03</span>
-                                                    <span class="text-neutral-200">/03</span>
+                                        <div class="swiper-slide">
+                                            <div class="process-card">
+                                                <i class="icon icon-user-check-solid-1"></i>
+                                                <div class="content">
+                                                    <h4 class="title fw-semibold">Validate & Evals</h4>
+                                                    <p class="text text-secondary">Prove accuracy, usability, safety, and cost. Eval dashboard, acceptance thresholds, decision to iterate/ship.</p>
+                                                </div>
+                                                <div class="bot">
+                                                    <div class="time fw-semibold">1 WEEKS</div>
+                                                    <div class="number">
+                                                        <span class="text-neutral-400">03</span>
+                                                        <span class="text-neutral-200">/03</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -595,7 +599,7 @@
                         <div class="heading-title text-gradient-3">Why Choose Us</div>
                     </div>
                     <div class="row mb-24">
-                        <div class="col-md-7">
+                        <div class="col-lg-7">
                             <div class="benefits-box benefits-progress">
                                 <div class="benefits-progress-inner">
                                     <div class="benefits-progress-item">
@@ -633,7 +637,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-5">
+                        <div class="col-lg-5">
                             <div class="benefits-box benefits-step">
                                 <div class="benefits-step-inner">
                                     <div class="line-step"></div>
@@ -655,7 +659,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-5">
+                        <div class="col-lg-5">
                             <div class="benefits-box benefits-secure">
                                 <div class="benefits-secure-inner text-center">
                                     <img src="assets/images/item/benefits-1.png" alt="">
@@ -666,7 +670,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-7">
+                        <div class="col-lg-7">
                             <div class="benefits-box benefits-design">
                                 <div class="benefits-design-inner">
                                     <img src="assets/images/item/benefits-2.png" alt="">
@@ -681,7 +685,6 @@
                 </div>
             </div>
             <!-- /section-benefits -->
-
             <!-- section-features -->
             <div class="section-features flat-spacing pt-0">
                 <div class="container">
@@ -690,53 +693,56 @@
                         <div class="heading-title text-gradient-3">All Features in One</div>
                     </div>
                     <div class="features-wrap">
-
-                        <div class="features-item">
-                            <i class="icon icon-robot-solid"></i>
-                            <h6 class="title fw-semibold">Agent-Powered Workflows</h6>
-                            <p class="text-secondary">
-                                Turn repetitive tasks into autonomous flows—agents plan, execute, and report with guardrails, audit trails, and clear handoff to humans.
-                            </p>
+                        <div class="features-col col-left">
+                            <div class="features-item">
+                                <i class="icon icon-robot-solid"></i>
+                                <h6 class="title fw-semibold">Agent-Powered Workflows</h6>
+                                <p class="text-secondary">
+                                    Turn repetitive tasks into autonomous flows—agents plan, execute, and report with guardrails, audit trails, and clear handoff to humans.
+                                </p>
+                            </div>
+                            <div class="features-item">
+                                <i class="icon icon-clipboard-check-solid"></i>
+                                <h6 class="title fw-semibold">Eval-First Quality</h6>
+                                <p class="text-secondary">
+                                    Measure accuracy, latency, safety, and cost from day one. Our evals and dashboards keep models reliable and budgets predictable.
+                                </p>
+                            </div>
+                            <div class="features-item">
+                                <i class="icon icon-book-solid"></i>
+                                <h6 class="title fw-semibold">Private Knowledge RAG</h6>
+                                <p class="text-secondary">
+                                    Make your docs, tickets, and wikis instantly useful with retrieval augmented generation—freshness, citations, and explainability built in.
+                                </p>
+                            </div>
                         </div>
-                        <div class="features-item">
-                            <i class="icon icon-clipboard-check-solid"></i>
-                            <h6 class="title fw-semibold">Eval-First Quality</h6>
-                            <p class="text-secondary">
-                                Measure accuracy, latency, safety, and cost from day one. Our evals and dashboards keep models reliable and budgets predictable.
-                            </p>
-                        </div>
-                        <div class="features-item">
-                            <i class="icon icon-book-solid"></i>
-                            <h6 class="title fw-semibold">Private Knowledge RAG</h6>
-                            <p class="text-secondary">
-                                Make your docs, tickets, and wikis instantly useful with retrieval augmented generation—freshness, citations, and explainability built in.
-                            </p>
-                        </div>
-
-                        <div class="features-item">
-                            <i class="icon icon-user-check-solid"></i>
-                            <h6 class="title fw-semibold">Human-Centered AI UX</h6>
-                            <p class="text-secondary">
-                                Interfaces, prompts, and error states designed for trust and adoption—so the smart thing is also the obvious thing to do.
-                            </p>
-                        </div>
-                        <div class="features-item">
-                            <i class="icon icon-shield-alt-solid"></i>
-                            <h6 class="title fw-semibold">Secure by Design</h6>
-                            <p class="text-secondary">
-                                PII handling, SSO/SAML, RBAC, secrets management, and compliance workflows—ship AI that’s safe, auditable, and enterprise-ready.
-                            </p>
-                        </div>
-                        <div class="features-item">
-                            <i class="icon icon-plug-solid"></i>
-                            <h6 class="title fw-semibold">Seamless Integrations</h6>
-                            <p class="text-secondary">
-                                Plug into your stack (CRM, helpdesk, ERP, data warehouse) with webhooks and APIs to turn insights into action—fast.
-                            </p>
-                        </div>
-
-                        <div class="features-center">
+                        <img src="assets/images/item/line-2.png" alt="">
+                        <div class="features-center flex-shrink">
                             <img src="assets/images/logo/logo-1.svg" alt="">
+                        </div>
+                        <img src="assets/images/item/line-3.png" alt="">
+                        <div class="features-col col-right">
+                            <div class="features-item">
+                                <i class="icon icon-user-check-solid"></i>
+                                <h6 class="title fw-semibold">Human-Centered AI UX</h6>
+                                <p class="text-secondary">
+                                    Interfaces, prompts, and error states designed for trust and adoption—so the smart thing is also the obvious thing to do.
+                                </p>
+                            </div>
+                            <div class="features-item">
+                                <i class="icon icon-shield-alt-solid"></i>
+                                <h6 class="title fw-semibold">Secure by Design</h6>
+                                <p class="text-secondary">
+                                    PII handling, SSO/SAML, RBAC, secrets management, and compliance workflows—ship AI that’s safe, auditable, and enterprise-ready.
+                                </p>
+                            </div>
+                            <div class="features-item">
+                                <i class="icon icon-plug-solid"></i>
+                                <h6 class="title fw-semibold">Seamless Integrations</h6>
+                                <p class="text-secondary">
+                                    Plug into your stack (CRM, helpdesk, ERP, data warehouse) with webhooks and APIs to turn insights into action—fast.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -784,13 +790,13 @@
                         <div class="heading-title text-white">The Squad Shipping <br> Your AI</div>
                     </div>
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-lg-4">
                             <div class="team-item">
                                 <div class="image">
                                     <img src="assets/images/team/team-1.jpg" alt="">
                                 </div>
-                                <a href="#" class="name text-body-1 fw-semibold">Ava Collins</a>
-                                <div class="sub text-body-3">AgenAI’s Design Lead</div>
+                                <a href="#" class="name h6 fw-semibold">Ava Collins</a>
+                                <div class="sub text-body-1">AgenAI’s Design Lead</div>
                                 <div class="tf-social justify-content-center">
                                     <a href="#" class="social-item">
                                         <i class="icon icon-twitter-x"></i>
@@ -804,7 +810,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-lg-4">
                             <div class="team-item style-1 mb-24">
                                 <div class="top">
                                     <div class="image">
@@ -820,7 +826,7 @@
                                     </div>
                                 </div>
                                 <a href="#" class="name text-body-1 fw-semibold">Noah Reed</a>
-                                <div class="sub text-body-3">ML/Agent Lead. Builds domain agents</div>
+                                <div class="sub">ML/Agent Lead. Builds domain agents</div>
                             </div>
                             <div class="team-item style-1">
                                 <div class="top">
@@ -837,10 +843,10 @@
                                     </div>
                                 </div>
                                 <a href="#" class="name text-body-1 fw-semibold">Lucas Hayes</a>
-                                <div class="sub text-body-3">Solutions Architect. Connects AI to your stack</div>
+                                <div class="sub">Solutions Architect. Connects AI to your stack</div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-lg-4">
                             <div class="team-item style-1 mb-24">
                                 <div class="top">
                                     <div class="image">
@@ -856,7 +862,7 @@
                                     </div>
                                 </div>
                                 <a href="#" class="name text-body-1 fw-semibold">Jordan Brooks</a>
-                                <div class="sub text-body-3">Data Engineer. Secure access policies</div>
+                                <div class="sub">Data Engineer. Secure access policies</div>
                             </div>
                             <div class="team-item style-1">
                                 <div class="top">
@@ -873,7 +879,7 @@
                                     </div>
                                 </div>
                                 <a href="#" class="name text-body-1 fw-semibold">Erin Park</a>
-                                <div class="sub text-body-3">MLOps Engineer. Productionizes with CI/CD</div>
+                                <div class="sub">MLOps Engineer. Productionizes with CI/CD</div>
                             </div>
                         </div>
                     </div>
@@ -885,15 +891,15 @@
                 <div class="line"></div>
                 <div class="container">
                     <div class="row justify-content-between">
-                        <div class="col-md-6">
+                        <div class="col-lg-6">
                             <div class="heading-section mb-48">
                                 <div class="heading-sub fw-semibold style-1">Statistic</div>
-                                <div class="heading-title text-white">Human-centered AI, built for production</div>
+                                <div class="heading-title text-white">Human-centered <br> AI, built for <br> production</div>
                             </div>
                         </div>
-                        <div class="col-md-5">
+                        <div class="col-lg-6">
                             <div class="statistic-slider">
-                                <div class="text text-neutral-400">
+                                <div class="text text-body-1 text-neutral-400">
                                     We shipped our first copilot in 7 weeks and cut support tickets by 31%. The eval dashboards made every decision obvious.
                                 </div>
                                 <div dir="ltr" class="swiper swiper-progressbar pagination-style-progressbar">
@@ -941,7 +947,7 @@
             <!-- section-awards -->
             <div class="section-awards flat-spacing">
                 <div class="container">
-                    <div class="heading-section mb-48">
+                    <div class="heading-section center mb-48">
                         <div class="heading-sub fw-semibold style-1 mb-0">Awards</div>
                     </div>
                     <div class="d-grid gap-16">
@@ -985,87 +991,89 @@
             <div class="section-testimonials flat-spacing pt-0">
                 <div class="container">
                     <div class="row justify-content-between">
-                        <div class="col-md-5">
-                            <div class="heading-section mb-48">
-                                <div class="heading-sub fw-semibold style-1">Testimonials</div>
-                                <div class="heading-title text-white">What Our <br> Clients Says</div>
-                            </div>
-                            <div class="swiper-testimonial_wrap">
-                                <div dir="ltr" class="swiper tf-swiper swiper-testimonial">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <div>
-                                                <div class="top-icon d-flex gap-4">
-                                                    <i class="icon icon-star-solid"></i>
-                                                    <i class="icon icon-star-solid"></i>
-                                                    <i class="icon icon-star-solid"></i>
-                                                    <i class="icon icon-star-solid"></i>
-                                                    <i class="icon icon-star-solid"></i>
-                                                </div>
-                                                <div class="text-body-1 text-white desc">
-                                                    We shipped our first copilot in 7 weeks and cut support tickets by 31%. The eval dashboards made every decision obvious.
-                                                </div>
-                                                <div class="cite">
-                                                    <img class="line-left" src="assets/images/item/line-1.png" alt="">
-                                                    <div class="name text-body-3 text-neutral-400 fw-semibold">Elena Ruiz</div>
-                                                    <div class="line"></div>
-                                                    <div class="sub text-body-3 text-neutral-400">Cantos SaaS’s VP Product</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div>
-                                                <div class="top-icon">
-                                                    <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M12.9375 20V10.3597C12.9375 7.72182 13.824 5.51559 15.5969 3.74101C17.4177 1.91847 19.8854 0.671463 23 0V6.40288C21.8021 6.78657 21.0115 7.26619 20.6281 7.84173C20.2448 8.3693 20.0292 9.04077 19.9813 9.85612H23V20H12.9375ZM0 20V10.3597C0 7.72182 0.886459 5.51559 2.65938 3.74101C4.48021 1.91847 6.94792 0.671463 10.0625 0V6.40288C8.9125 6.78657 8.12187 7.26619 7.69062 7.84173C7.30729 8.3693 7.09167 9.04077 7.04375 9.85612H10.0625V20H0Z" fill="#FD3A25"/>
-                                                    </svg>
-                                                </div>
-                                                <div class="text-body-1 text-white desc">
-                                                    SSO/SAML and RBAC landed smoothly. Latency stayed &lt;300 ms on p95—huge win for our agents.
-                                                </div>
-                                                <div class="cite">
-                                                    <img class="line-left" src="assets/images/item/line-1.png" alt="">
-                                                    <div class="name text-body-3 text-neutral-400 fw-semibold">Marcus Tan</div>
-                                                    <div class="line"></div>
-                                                    <div class="sub text-body-3 text-neutral-400">VectorPay’s CTO</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div>
-                                                <div class="top-icon">
-                                                    <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M12.9375 20V10.3597C12.9375 7.72182 13.824 5.51559 15.5969 3.74101C17.4177 1.91847 19.8854 0.671463 23 0V6.40288C21.8021 6.78657 21.0115 7.26619 20.6281 7.84173C20.2448 8.3693 20.0292 9.04077 19.9813 9.85612H23V20H12.9375ZM0 20V10.3597C0 7.72182 0.886459 5.51559 2.65938 3.74101C4.48021 1.91847 6.94792 0.671463 10.0625 0V6.40288C8.9125 6.78657 8.12187 7.26619 7.69062 7.84173C7.30729 8.3693 7.09167 9.04077 7.04375 9.85612H10.0625V20H0Z" fill="#FD3A25"/>
-                                                    </svg>
-                                                </div>
-                                                <div class="text-body-1 text-white desc">
-                                                    The best partner for agentic work. Multi-step planning, tool use, and audit trails—done right the first time.
-                                                </div>
-                                                <div class="cite">
-                                                    <img class="line-left" src="assets/images/item/line-1.png" alt="">
-                                                    <div class="name text-body-3 text-neutral-400 fw-semibold">David Kim</div>
-                                                    <div class="line"></div>
-                                                    <div class="sub text-body-3 text-neutral-400">Northway's Ecommerce Director</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <div class="col-lg-5">
+                            <div class="col-left">
+                                <div class="heading-section mb-48">
+                                    <div class="heading-sub fw-semibold style-1">Testimonials</div>
+                                    <div class="heading-title text-white">What Our <br> Clients Says</div>
                                 </div>
-                                <div class="group-slider">
-                                    <div class="group-btn-slider">
-                                        <div class="btn-slider nav-prev-swiper testimonials-prev">
-                                            <i class="icon icon-angle-left-solid"></i>
-                                        </div>
-                                        <div class="btn-slider nav-next-swiper testimonials-next">
-                                            <i class="icon icon-angle-right-solid"></i>
+                                <div class="swiper-testimonial_wrap">
+                                    <div dir="ltr" class="swiper tf-swiper swiper-testimonial">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div>
+                                                    <div class="top-icon d-flex gap-4">
+                                                        <i class="icon icon-star-solid"></i>
+                                                        <i class="icon icon-star-solid"></i>
+                                                        <i class="icon icon-star-solid"></i>
+                                                        <i class="icon icon-star-solid"></i>
+                                                        <i class="icon icon-star-solid"></i>
+                                                    </div>
+                                                    <div class="text-body-1 text-white desc">
+                                                        We shipped our first copilot in 7 weeks and cut support tickets by 31%. The eval dashboards made every decision obvious.
+                                                    </div>
+                                                    <div class="cite">
+                                                        <img class="line-left" src="assets/images/item/line-1.png" alt="">
+                                                        <div class="name text-body-3 text-neutral-400 fw-semibold">Elena Ruiz</div>
+                                                        <div class="line"></div>
+                                                        <div class="sub text-body-3 text-neutral-400">Cantos SaaS’s VP Product</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div>
+                                                    <div class="top-icon">
+                                                        <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M12.9375 20V10.3597C12.9375 7.72182 13.824 5.51559 15.5969 3.74101C17.4177 1.91847 19.8854 0.671463 23 0V6.40288C21.8021 6.78657 21.0115 7.26619 20.6281 7.84173C20.2448 8.3693 20.0292 9.04077 19.9813 9.85612H23V20H12.9375ZM0 20V10.3597C0 7.72182 0.886459 5.51559 2.65938 3.74101C4.48021 1.91847 6.94792 0.671463 10.0625 0V6.40288C8.9125 6.78657 8.12187 7.26619 7.69062 7.84173C7.30729 8.3693 7.09167 9.04077 7.04375 9.85612H10.0625V20H0Z" fill="#FD3A25"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="text-body-1 text-white desc">
+                                                        SSO/SAML and RBAC landed smoothly. Latency stayed &lt;300 ms on p95—huge win for our agents.
+                                                    </div>
+                                                    <div class="cite">
+                                                        <img class="line-left" src="assets/images/item/line-1.png" alt="">
+                                                        <div class="name text-body-3 text-neutral-400 fw-semibold">Marcus Tan</div>
+                                                        <div class="line"></div>
+                                                        <div class="sub text-body-3 text-neutral-400">VectorPay’s CTO</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div>
+                                                    <div class="top-icon">
+                                                        <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M12.9375 20V10.3597C12.9375 7.72182 13.824 5.51559 15.5969 3.74101C17.4177 1.91847 19.8854 0.671463 23 0V6.40288C21.8021 6.78657 21.0115 7.26619 20.6281 7.84173C20.2448 8.3693 20.0292 9.04077 19.9813 9.85612H23V20H12.9375ZM0 20V10.3597C0 7.72182 0.886459 5.51559 2.65938 3.74101C4.48021 1.91847 6.94792 0.671463 10.0625 0V6.40288C8.9125 6.78657 8.12187 7.26619 7.69062 7.84173C7.30729 8.3693 7.09167 9.04077 7.04375 9.85612H10.0625V20H0Z" fill="#FD3A25"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="text-body-1 text-white desc">
+                                                        The best partner for agentic work. Multi-step planning, tool use, and audit trails—done right the first time.
+                                                    </div>
+                                                    <div class="cite">
+                                                        <img class="line-left" src="assets/images/item/line-1.png" alt="">
+                                                        <div class="name text-body-3 text-neutral-400 fw-semibold">David Kim</div>
+                                                        <div class="line"></div>
+                                                        <div class="sub text-body-3 text-neutral-400">Northway's Ecommerce Director</div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="testimonials-pagination"></div>
+                                    <div class="group-slider">
+                                        <div class="group-btn-slider">
+                                            <div class="btn-slider nav-prev-swiper testimonials-prev">
+                                                <i class="icon icon-angle-left-solid"></i>
+                                            </div>
+                                            <div class="btn-slider nav-next-swiper testimonials-next">
+                                                <i class="icon icon-angle-right-solid"></i>
+                                            </div>
+                                        </div>
+                                        <div class="testimonials-pagination"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div dir="ltr" class="swiper sw-main-image effectFade fadeRight no-div">
+                        <div class="col-lg-6">
+                            <div dir="ltr" class="swiper sw-main-image">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="testimonial-image">
@@ -1092,7 +1100,7 @@
         </div>
 
         <!-- section-pricing -->
-        <div class="section-pricing flat-spacing">
+        <div id="pricing" class="section-pricing flat-spacing">
             <div class="container">
                 <div class="heading-section mb-80">
                     <div class="heading-sub fw-semibold">Pricing Plans</div>
@@ -1106,7 +1114,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-lg-6">
                         <div class="pricing-item">
                             <div class="top d-flex gap-12 align-items-center">
                                 <div class="d-flex gap-8 align-items-center">
@@ -1154,7 +1162,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-lg-6">
                         <div class="pricing-item style-black">
                             <div class="top d-flex gap-12 align-items-center">
                                 <div class="d-flex gap-8 align-items-center">
@@ -1209,65 +1217,66 @@
 
         <!-- section-faqs -->
         <div class="section-faqs flat-spacing pt-0">
-        <div class="container">
-            <div class="heading-section center mb-64">
-                <div class="heading-sub fw-semibold">FAQs</div>
-                <div class="heading-title text-gradient-3">
-                    Frequently Asked <br>Questions
+            <div class="container">
+                <div class="heading-section center mb-64">
+                    <div class="heading-sub fw-semibold">FAQs</div>
+                    <div class="heading-title text-gradient-3">
+                        Frequently Asked <br>Questions
+                    </div>
                 </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="accordion-asked" id="accordion-asked">
-                        <div class="accordion-asked-item">
-                            <div class="accordion-asked-title" id="asked1">
-                                <button class="accordion-button text-body-1 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                                    What’s the typical timeline from idea to v1?
-                                    <span class="right-icon"></span>
-                                </button>
-                            </div>
-                            <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="asked1" data-bs-parent="#accordion-asked">
-                                <div class="accordion-body">
-                                    A clear problem statement, success metrics, access to sample data, and a stakeholder who can make decisions. We’ll run a kickoff workshop to align scope.
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="accordion-asked" id="accordion-asked">
+                            <div class="accordion-asked-item">
+                                <div class="accordion-asked-title" id="asked1">
+                                    <button class="accordion-button text-body-1 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                        What’s the typical timeline from idea to v1?
+                                        <span class="right-icon"></span>
+                                    </button>
+                                </div>
+                                <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="asked1" data-bs-parent="#accordion-asked">
+                                    <div class="accordion-body">
+                                        A clear problem statement, success metrics, access to sample data, and a stakeholder who can make decisions. We’ll run a kickoff workshop to align scope.
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="accordion-asked-item">
-                            <div class="accordion-asked-title" id="asked2">
-                                <button class="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                    What do we need to start?
-                                    <span class="right-icon"></span>
-                                </button>
-                            </div>
-                            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="asked2" data-bs-parent="#accordion-asked">
-                                <div class="accordion-body">
-                                    A clear problem statement, success metrics, access to sample data, and a stakeholder who can make decisions. We’ll run a kickoff workshop to align scope.
+                            <div class="accordion-asked-item">
+                                <div class="accordion-asked-title" id="asked2">
+                                    <button class="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                        What do we need to start?
+                                        <span class="right-icon"></span>
+                                    </button>
+                                </div>
+                                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="asked2" data-bs-parent="#accordion-asked">
+                                    <div class="accordion-body">
+                                        A clear problem statement, success metrics, access to sample data, and a stakeholder who can make decisions. We’ll run a kickoff workshop to align scope.
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="accordion-asked-item">
-                            <div class="accordion-asked-title" id="asked3">
-                                <button class="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                    Which models/stack do you use?
-                                    <span class="right-icon"></span>
-                                </button>
-                            </div>
-                            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="asked3" data-bs-parent="#accordion-asked">
-                                <div class="accordion-body">
-                                    A clear problem statement, success metrics, access to sample data, and a stakeholder who can make decisions. We’ll run a kickoff workshop to align scope.
+                            <div class="accordion-asked-item">
+                                <div class="accordion-asked-title" id="asked3">
+                                    <button class="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                        Which models/stack do you use?
+                                        <span class="right-icon"></span>
+                                    </button>
+                                </div>
+                                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="asked3" data-bs-parent="#accordion-asked">
+                                    <div class="accordion-body">
+                                        A clear problem statement, success metrics, access to sample data, and a stakeholder who can make decisions. We’ll run a kickoff workshop to align scope.
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="accordion-asked-item">
-                            <div class="accordion-asked-title" id="asked4">
-                                <button class="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                    Are model/API costs included in pricing?
-                                    <span class="right-icon"></span>
-                                </button>
-                            </div>
-                            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="asked4" data-bs-parent="#accordion-asked">
-                                <div class="accordion-body">
-                                    A clear problem statement, success metrics, access to sample data, and a stakeholder who can make decisions. We’ll run a kickoff workshop to align scope.
+                            <div class="accordion-asked-item">
+                                <div class="accordion-asked-title" id="asked4">
+                                    <button class="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                        Are model/API costs included in pricing?
+                                        <span class="right-icon"></span>
+                                    </button>
+                                </div>
+                                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="asked4" data-bs-parent="#accordion-asked">
+                                    <div class="accordion-body">
+                                        A clear problem statement, success metrics, access to sample data, and a stakeholder who can make decisions. We’ll run a kickoff workshop to align scope.
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1276,7 +1285,129 @@
             </div>
         </div>
         <!-- /section-faqs -->
-        
+        <!-- section-contact -->
+        <div class="flat-spacing pt-0">
+            <div class="section-contact">
+                <div class="contact-image">
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="col-left">
+                                <div class="heading-section mb-48">
+                                    <div class="heading-sub fw-semibold">Contact</div>
+                                    <div class="heading-title text-gradient-3">
+                                        Let’s Build <br> Intelligent Things
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="contact-item mb-20">
+                                        <i class="icon icon-envelope-solid"></i>
+                                        <div class="content">
+                                            <div class="title fw-semibold mb-2">E-mail address</div>
+                                            <div class="text">hello@youraiagency.com</div>
+                                        </div>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="icon icon-headset-solid"></i>
+                                        <div class="content">
+                                            <div class="title fw-semibold mb-2">Phone number</div>
+                                            <div class="text">+1 (647) 555 0172</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <form class="form-contact">
+                                <h4 class="heading fw-semibold">Fill this form below</h4>
+                                <fieldset class="mb-21">
+                                    <label class="fw-semibold text-body-3 mb-20">Your Name</label>
+                                    <input class="" type="text" placeholder="Enter your full name" required>
+                                </fieldset>
+                                <fieldset class="mb-21">
+                                    <label class="fw-semibold text-body-3 mb-20">Your Phone</label>
+                                    <input class="" type="text" placeholder="Enter the e-mail" required>
+                                </fieldset>
+                                <fieldset class="mb-18">
+                                    <label class="fw-semibold text-body-3 mb-0">More About The Project</label>
+                                    <textarea name="" class=""></textarea>
+                                </fieldset>
+                                <div class="attachment d-flex gap-8 align-items-center">
+                                    <i class="icon icon-paperclip-solid fs-24"></i>
+                                    <div class="fw-semibold text-body-3">Add an Attachment</div>
+                                </div>
+                                <button type="submit" class="tf-btn w-100">Submit Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /section-contact -->
+        <!-- footer -->
+        <footer>
+            <div class="footer-image">
+                <img src="assets/images/logo/logo-footer.png" alt="">
+            </div>
+            <div class="container">
+                <div class="footer-content">
+                    <a href="#" class="footer-logo">
+                        <img src="assets/images/logo/logo-2.svg" alt="">
+                    </a>
+                    <div class="title h6 fw-semibold">Get connected <br> with AgenAI on social</div>
+                    <div class="text">Don’t miss our new updates!</div>
+                    <ul class="tf-social-1 justify-content-center">
+                        <li class="text-body-1 fw-semibold">
+                            Twitter / X
+                            <a href="#" class="social-item">
+                                <i class="icon icon-twitter-x"></i>
+                            </a>
+                        </li>
+                        <li class="text-body-1 fw-semibold">
+                            Facebook
+                            <a href="#" class="social-item">
+                                <i class="icon icon-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="text-body-1 fw-semibold">
+                            Instagram
+                            <a href="#" class="social-item">
+                                <i class="icon icon-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="text-body-1 fw-semibold">
+                            Linkedin
+                            <a href="#" class="social-item">
+                                <i class="icon icon-linkedin-in"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-bottom">
+                    <ul class="footer-links d-flex gap-24 align-items-center">
+                        <li>
+                            <a href="#about" class="fw-semibold link-underline link1">About</a>
+                        </li>
+                        <li>
+                            <a href="#services" class="fw-semibold link-underline link1">Services</a>
+                        </li>
+                        <li>
+                            <a href="#works" class="fw-semibold link-underline link1">Works</a>
+                        </li>
+                        <li>
+                            <a href="#pricing" class="fw-semibold link-underline link1">Pricing</a>
+                        </li>
+                    </ul>
+                    <p class="text-secondary coppy-rights text-center">© 2025 AgenAI. All Rights Reserved.</p>
+                    <a href="#" class="action-go-top d-flex gap-8 align-items-center justify-content-end link1">
+                        <span class="fw-semibold">Back to top</span>
+                        <i class="icon icon-long-arrow-alt-up-solid fs-20"></i>
+                    </a>    
+                </div>
+            </div>
+        </footer>
+        <!-- /footer -->
     </main>
     <!-- /wrapper -->
 

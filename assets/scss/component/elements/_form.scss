@@ -24,19 +24,14 @@ form {
         -moz-box-shadow: none;
         box-shadow: none;
         width: 100%;
-        padding: 16px 12px 3px 0px;
+        padding: 0 0 11px 0px;
         border: 0;
+        border-bottom: 1px solid var(--neutral-300);
         background-color: transparent;
-        border-bottom: 1px solid var(--white-16);
-        color: var(--white);
+        color: var(--primary);
         @include transition3;
-
         &::placeholder {
-            color: var(--text-2);
-        }
-
-        &:focus {
-            border-color: var(--primary);
+            color: var(--secondary);
         }
     }
 
@@ -278,7 +273,6 @@ select {
     }
 }
 
-
 .form-search {
     position: relative;
 
@@ -291,5 +285,26 @@ select {
         right: 5px;
         top: 50%;
         transform: translateY(-50%) rotateY(180deg);
+    }
+}
+
+.form-contact {
+    padding: 56px;
+    border-radius: 40px;
+    background-color: var(--neutral-100);
+    box-shadow: 0px 7.77px 16px 0px #0000000F,
+    0px 3px 3px 0px #0000001A,
+    0px -8px 0px 0px #0000000D inset,
+    0px 4px 0px 0px #FFFFFF99 inset;
+    .heading {
+        margin-bottom: 35px;
+    }
+    textarea {
+        height: 114px;
+        border-radius: 0;
+    }
+    .attachment {
+        padding: 16px 0;
+        margin-bottom: 38px;
     }
 }

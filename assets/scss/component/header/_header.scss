@@ -29,24 +29,20 @@ header {
         backdrop-filter: blur(44px);
     }
 
-    &.style-2 {
-        margin-bottom: -148px;
-
-        .text-utc {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .tf-list {
-            li {
-                display: flex;
-            }
-        }
+    .mobile-menu {
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        font-size: 20px;
     }
 
-    @include res(xl) {
-       
+    @include res(lg) {
+        .box-navigation {
+            display: none;
+        }
+        .mobile-menu {
+
+        }
     }
 
     @include res(md) {

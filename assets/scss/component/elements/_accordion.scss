@@ -43,7 +43,7 @@
         font-weight: 600;
         font-size: 36px;
         line-height: 48px;
-        letter-spacing: -0.01px;
+        letter-spacing: -0.01em;
         color: var(--secondary);
         display: flex;
         justify-content: space-between;
@@ -82,6 +82,9 @@
         }
         &:not(.collapsed) {
             .accordion-title {
+                font-size: 48px;
+                line-height: 56px;
+                letter-spacing: -0.02em;
                 br {
                     display: block;
                 }
@@ -171,8 +174,8 @@
         }
         span {
             position: relative;
-            width: 40px;
-            height: 40px;
+            width: 32px;
+            height: 32px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -206,7 +209,7 @@
                 @include transition3;
             }
         }
-        &.collapsed {
+        &:not(.collapsed) {
             span {
                 &::after {
                     opacity: 0;
