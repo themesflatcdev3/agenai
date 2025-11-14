@@ -255,15 +255,17 @@
     -------------------------------------------------------------------------*/
     var services_btn = () => {
         $('.services-image-btn').on('click', function(){
-            $('.services-image-btn').removeClass('active');
-            $(this).addClass('active');
-
-            const newImg = $(this).data('img');
-            $('.services-image').find('img').css('opacity', 0);
-            setTimeout(() => {
-              $('.services-image').find('img').attr('src', newImg).css('opacity', 1);
-            }, 200);
-          });
+            if(!$(this).hasClass('active-img')) {
+                $('.services-image-btn').removeClass('active-img');
+                $(this).addClass('active-img');
+    
+                const newImg = $(this).data('img');
+                $('.services-image').find('img').css('opacity', 0);
+                setTimeout(() => {
+                  $('.services-image').find('img').attr('src', newImg).css('opacity', 1);
+                }, 200);
+            }
+        });
     };
 
     // Dom Ready

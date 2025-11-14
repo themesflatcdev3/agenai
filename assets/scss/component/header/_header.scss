@@ -45,10 +45,15 @@ header {
         }
     }
 
-    @include res(md) {
-        &.style-2 {
-            margin-bottom: -74px;
+    @include res(lg) {
+        margin-bottom: -104px;
+        .header-inner {
+            max-width: unset;
+            margin: 0 32px;
         }
+    }
+    @include res(md) {
+      
     }
 }
 
@@ -186,7 +191,7 @@ header {
     display: flex;
     align-items: center;
     gap: 6px;
-
+    color: var(--white);
     .icon {
         aspect-ratio: 1;
     }
@@ -229,6 +234,7 @@ header {
     }
 
     .text {
+        color: var(--white);
         @include transition3;
     }
 

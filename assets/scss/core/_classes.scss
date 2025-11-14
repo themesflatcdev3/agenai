@@ -152,6 +152,11 @@
         padding-top: 60px;
         padding-bottom: 60px;
     }
+
+    @include res(md) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
 }
 
 .flat-spacing-2 {
@@ -408,4 +413,8 @@
     }
 }
 
-@include res(xxl, min) {}
+@include res(lg) {
+    .lg-mb-24 {
+        margin-bottom: 24px;
+    }
+}
