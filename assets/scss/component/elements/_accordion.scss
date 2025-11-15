@@ -37,7 +37,6 @@
     0px -8px 0px 0px #0000000D inset,
     0px 4px 0px 0px #FFFFFF99 inset;
     overflow: hidden;
-
     .accordion-title {
         width: 100%;
         font-weight: 600;
@@ -54,7 +53,6 @@
             display: none;
         }
     }
-
     .accordion-action {
         padding-top: 0;
         margin-bottom: 0;
@@ -86,8 +84,12 @@
                 font-size: clamp(26px, 3.5vw, 48px);
                 line-height: clamp(34px, 4vw, 56px);
                 letter-spacing: -0.02em;
+                color: var(--white);
                 br {
                     display: block;
+                }
+                .icon {
+                    transform: rotate(45deg);
                 }
             }
             &::before {
@@ -95,12 +97,6 @@
             }
         }
     }
-
-    .ic-wrap {
-        justify-content: end;
-        padding-right: 9px;
-    }
-
     .accordion-content {
         position: relative;
         z-index: 1;
@@ -109,18 +105,58 @@
             padding-bottom: 96px;
         }
     }
-
-    .accordion-order,
-    .ic-wrap {
-        width: 100%;
-        max-width: 97px;
-    }
-
     .accordion-text {
         width: 100%;
         max-width: 642px;
     }
-
+    &.style-1 {
+        .accordion-title {
+            .icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 48px;
+                height: 48px;
+                font-size: 18px;
+                border-radius: 50%;
+                border: 1px solid var(--neutral-700);
+                @include transition3;
+            }
+        }
+        .accordion-content {
+            display: flex;
+            gap: 50px;
+            padding-top: 40px;
+            border-top: 1px solid var(--neutral-600);
+            margin-top: 40px;
+            .image {    
+                width: 47.2%;
+                flex-shrink: 0;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 16px;
+                }
+            }
+            .content {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                justify-content: space-between;
+                .text {
+                    padding: 0;
+                }
+                .num {
+                    font-weight: 600;
+                    font-size: 48px;
+                    line-height: 56px;
+                    letter-spacing: -0.02em;
+                    color: var(--neutral-700);
+                }
+            }
+        }
+    }
     @include res(xxl) {
         padding: 30px;
         .accordion-content .text {
@@ -128,7 +164,6 @@
             padding-bottom: 36px;
         }
     }
-
     @include res(sm) {
         padding: 24px;
     }
@@ -137,6 +172,9 @@
 .accordion-faq_list {
     display: grid;
     gap: 8px;
+    &.gap-32 {
+        gap: 32px;
+    }
 }
 
 .accordion-asked {

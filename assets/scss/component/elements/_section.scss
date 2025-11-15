@@ -86,9 +86,9 @@
     }
 }
 
-.section-hero-v1 {
+.section-hero {
     padding: 16px 16px 0;
-    min-height: 820px;
+    min-height: 100vh;
     position: relative;
 
     .hero-image {
@@ -208,16 +208,22 @@
         }
     }
 
+    &.v1 {
+        min-height: unset;
+        .content-wrap {
+            padding: 180px 0 76px;
+            .title {
+                margin-bottom: 5px;
+            }
+        }
+    }
+
     @include res(xl, min) {
         .col-right {
             .top {
                 padding-top: 24px;
             }
         }
-    }
-
-    @include res(xxxl) {
-        min-height: 100vh;
     }
 
     @include res(md) {
@@ -229,6 +235,11 @@
         }
         .hero-image {
             border-radius: 24px;
+        }
+        &.v1 {
+            .content-wrap {
+                padding: 125px 0 35px;
+            }
         }
     }
 }
@@ -319,8 +330,6 @@
             font-weight: 600;
             font-size: clamp(65px, 10vw, 144px);
             line-height: clamp(65px, 10vw, 144px);
-            // font-size: 144px;
-            // line-height: 144px;
             letter-spacing: -0.03em;
             margin-bottom: -16px;
             margin-right: 5px;
@@ -373,10 +382,28 @@
             }
         }
     }
+    .mission-box {
+        background-color: var(--neutral-100);
+        border-radius: 40px;
+        padding: 40px 40px 45px;
+        box-shadow: 
+        0px 7.77px 2.21px 0px #0000000F,
+        0px 3px 3px 0px #0000001A,
+        0px -8px 0px 0px #0000000D inset,
+        0px 4px 0px 0px #FFFFFF99 inset;
+        .line  {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            height: 1px;
+            width: 100%;
+            background: linear-gradient(90deg, rgba(212, 212, 216, 0) 0%, #D4D4D8 50%, rgba(212, 212, 216, 0) 100%);
+        }
+    }
     @include res(xxl) {
         min-height: 100vh;
     }
     @include res(md) {
+        .mission-box,
         .review-box {
             padding-left: 24px;
             padding-right: 24px;
@@ -2130,20 +2157,30 @@
         top: 505px;
         right: 22.92%;
     }
+    &.v2 {
+        padding-top: 120px;
+        padding-bottom: 196px;
+    }
     .text {
         margin-bottom: 32px;
     }
 
     @include res(xl) {
-        padding: 100px 0;
+        padding: 100px 0 !important;
     }
     @include res(lg) {
-        img {
+        >img {
             display: none;
         }
     }
     @include res(md) {
-        padding: 50px 0;
+        padding: 50px 0 !important;
+    }
+    @include res(md,min) {
+        &.v2 .image {
+            margin-top: -167px;
+            margin-bottom: -132px;
+        }
     }
 }
 

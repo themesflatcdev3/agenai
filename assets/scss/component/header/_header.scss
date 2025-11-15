@@ -35,7 +35,11 @@ header {
         padding: 0;
         font-size: 20px;
     }
-
+    &.header2 {
+        .header-inner {
+            max-width: 807px;
+        }
+    }
     @include res(lg) {
         .box-navigation {
             display: none;
@@ -44,16 +48,12 @@ header {
 
         }
     }
-
     @include res(lg) {
         margin-bottom: -104px;
         .header-inner {
-            max-width: unset;
+            max-width: unset !important;
             margin: 0 32px;
         }
-    }
-    @include res(md) {
-      
     }
 }
 
