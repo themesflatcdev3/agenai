@@ -954,12 +954,20 @@ h6,
   margin-bottom: 24px !important;
 }
 
+.mb-30 {
+  margin-bottom: 30px !important;
+}
+
 .mb-32 {
   margin-bottom: 32px !important;
 }
 
 .mb-40 {
   margin-bottom: 40px !important;
+}
+
+.mb-80 {
+  margin-bottom: 80px !important;
 }
 
 .mt-30 {
@@ -4542,6 +4550,15 @@ button.animate-btn::after,
 .section-hero.v1 .content-wrap .title {
   margin-bottom: 5px;
 }
+.section-hero.v2 {
+  min-height: unset;
+}
+.section-hero.v2 .content-wrap {
+  padding: 180px 0 446px;
+}
+.section-hero.v2 .content-wrap .title {
+  margin-bottom: 5px;
+}
 @media (min-width: 1200px) {
   .section-hero .col-right .top {
     padding-top: 24px;
@@ -4559,6 +4576,9 @@ button.animate-btn::after,
   }
   .section-hero.v1 .content-wrap {
     padding: 125px 0 35px;
+  }
+  .section-hero.v2 .content-wrap {
+    padding: 125px 0 100px;
   }
 }
 
@@ -6408,6 +6428,40 @@ button.animate-btn::after,
   margin-bottom: 59px;
 }
 
+.section-services-single {
+  margin-top: -100px;
+}
+.section-services-single .heading {
+  font-size: clamp(32px, 4.5vw, 48px);
+  line-height: clamp(40px, 5vw, 56px);
+  letter-spacing: -0.02em;
+}
+.section-services-single .top-image {
+  background-color: var(--white);
+  border-radius: 19px;
+  padding: 10px;
+}
+.section-services-single .top-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 19px;
+}
+.section-services-single .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 32px;
+}
+@media (min-width: 768px) {
+  .section-services-single {
+    margin-top: -371px;
+  }
+  .section-services-single .bot-image {
+    margin-left: -11px;
+  }
+}
+
 /* ---------------------------------------------------------
     * Name: AgenAI - AI Agency
     * Version: 1.0.0
@@ -7938,8 +7992,8 @@ button.animate-btn::after,
   font-size: 14px;
   line-height: 20px;
 }
-.pricing-item .content > div {
-  width: 56.4%;
+.pricing-item .content > * {
+  width: 50%;
 }
 .pricing-item.style-black {
   background: linear-gradient(0deg, var(--neutral-900, #18181B), var(--neutral-900, #18181B)), radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
@@ -7978,7 +8032,7 @@ button.animate-btn::after,
   .pricing-item .content {
     flex-direction: column;
   }
-  .pricing-item .content > div {
+  .pricing-item .content > * {
     width: 100%;
   }
 }
@@ -8493,10 +8547,14 @@ button.animate-btn::after,
   width: 100%;
   max-width: 642px;
 }
+.accordion-faq_item.style-1 .accordion-title {
+  gap: 10px;
+}
 .accordion-faq_item.style-1 .accordion-title .icon {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   width: 48px;
   height: 48px;
   font-size: 18px;
@@ -8545,11 +8603,27 @@ button.animate-btn::after,
 }
 @media (max-width: 1439px) {
   .accordion-faq_item {
+    border-radius: 24px;
     padding: 30px;
   }
   .accordion-faq_item .accordion-content .text {
     padding-top: 14px;
     padding-bottom: 36px;
+  }
+}
+@media (max-width: 991px) {
+  .accordion-faq_item.style-1 .accordion-content {
+    gap: 30px;
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .accordion-faq_item.style-1 .accordion-content {
+    flex-direction: column;
+  }
+  .accordion-faq_item.style-1 .accordion-content .image {
+    width: 100%;
   }
 }
 @media (max-width: 575px) {

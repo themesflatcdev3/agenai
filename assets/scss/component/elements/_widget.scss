@@ -1126,8 +1126,8 @@
             font-size: 14px;
             line-height: 20px;
         }
-        > div {
-            width: 56.4%;
+        > * {
+            width: 50%;
         }
     }
     &.style-black {
@@ -1176,7 +1176,7 @@
         }
         .content {
             flex-direction: column;
-            > div {
+            > * {
                 width: 100%;
             }
         }

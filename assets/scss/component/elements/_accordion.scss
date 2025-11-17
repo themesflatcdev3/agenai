@@ -113,10 +113,12 @@
     }
     &.style-1 {
         .accordion-title {
+            gap: 10px;
             .icon {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                flex-shrink: 0;
                 width: 48px;
                 height: 48px;
                 font-size: 18px;
@@ -162,10 +164,26 @@
         }
     }
     @include res(xxl) {
+        border-radius: 24px;
         padding: 30px;
         .accordion-content .text {
             padding-top: 14px;
             padding-bottom: 36px;
+        }
+    }
+    @include res(lg) {
+        &.style-1 .accordion-content {
+            gap: 30px;
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+    }
+    @include res(md) {
+        &.style-1 .accordion-content {
+            flex-direction: column;
+            .image {
+                width: 100%;
+            }
         }
     }
     @include res(sm) {
