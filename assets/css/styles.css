@@ -4963,8 +4963,10 @@ button.animate-btn::after,
 .process-heading {
   align-content: center;
 }
-.process-heading .group-btn-slider {
-  margin-bottom: 24px;
+@media (max-width: 991px) {
+  .process-heading .group-btn-slider {
+    margin-bottom: 24px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -6400,6 +6402,10 @@ button.animate-btn::after,
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.section-services .top {
+  margin-bottom: 59px;
 }
 
 /* ---------------------------------------------------------
@@ -8469,6 +8475,8 @@ button.animate-btn::after,
 }
 .accordion-faq_item .accordion-action:not(.collapsed) .accordion-title .icon {
   transform: rotate(45deg);
+  color: var(--white);
+  border-color: var(--neutral-700);
 }
 .accordion-faq_item .accordion-action:not(.collapsed)::before {
   bottom: 0;
@@ -8493,7 +8501,8 @@ button.animate-btn::after,
   height: 48px;
   font-size: 18px;
   border-radius: 50%;
-  border: 1px solid var(--neutral-700);
+  color: var(--secondary);
+  border: 1px solid var(--secondary);
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -8522,6 +8531,7 @@ button.animate-btn::after,
   flex-direction: column;
   gap: 16px;
   justify-content: space-between;
+  padding: 3px 0;
 }
 .accordion-faq_item.style-1 .accordion-content .content .text {
   padding: 0;

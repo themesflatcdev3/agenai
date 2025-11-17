@@ -90,6 +90,8 @@
                 }
                 .icon {
                     transform: rotate(45deg);
+                    color: var(--white);
+                    border-color: var(--neutral-700);
                 }
             }
             &::before {
@@ -119,7 +121,8 @@
                 height: 48px;
                 font-size: 18px;
                 border-radius: 50%;
-                border: 1px solid var(--neutral-700);
+                color: var(--secondary);
+                border: 1px solid var(--secondary);
                 @include transition3;
             }
         }
@@ -144,6 +147,7 @@
                 flex-direction: column;
                 gap: 16px;
                 justify-content: space-between;
+                padding: 3px 0;
                 .text {
                     padding: 0;
                 }
