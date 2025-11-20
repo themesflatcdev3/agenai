@@ -9,7 +9,7 @@
         color: var(--brand);
         padding: 6px 16px 6px 30px;
         background: linear-gradient(0deg, #F5F5F5, #F5F5F5),
-        radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+        radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%) ;
         box-shadow: 
         0px -3px 0px 0px #E9E9E9 inset,
         0px 1px 0px 0px #FFFFFFB2 inset,
@@ -101,6 +101,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
+        video,
         img {
             width: 100%;
             height: 100%;
@@ -120,7 +121,7 @@
             color: var(--brand);
             border-radius: 8px;
             background: linear-gradient(0deg, #F5F5F5, #F5F5F5),
-            radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+            radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%) ;
             box-shadow: 
             0px -3px 0px 0px #E9E9E9 inset,
             0px 1px 0px 0px #FFFFFFB2 inset,
@@ -1858,7 +1859,12 @@
 
 .section-page-title {
     padding-top: 60px;
-
+    padding: 180px 0 120px;
+    background-image: url(./../images/section/hero-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     .page-title {
         margin-bottom: 20px;
     }
@@ -1872,6 +1878,7 @@
 }
 
 .section-404 {
+    padding: 180px 0 120px;
     .title {
         margin-bottom: 40px;
     }
@@ -2321,7 +2328,7 @@
             font-size: 24px;
             border-radius: 24px;
             background: linear-gradient(0deg, #F5F5F5, #F5F5F5),
-            radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+            radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%) ;
             box-shadow: 0px -3px 0px 0px #E9E9E9 inset,
             0px 1px 0px 0px #FFFFFFB2 inset,
             0px 2.77px 2.21px 0px #0000001F,
@@ -2501,7 +2508,7 @@
     padding: 50px;
     border-radius: 40px;
     background: linear-gradient(0deg, #18181B, #18181B),
-    radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%) ;
     box-shadow: 0px 7.77px 2.21px 0px #0000000F,
     0px 3px 3px 0px #0000001A,
     0px -8px 0px 0px #111111 inset,
@@ -2607,7 +2614,7 @@
         margin-bottom: 32px;
         border-radius: 16px;
         background: linear-gradient(0deg, #272727, #272727),
-        radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+        radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%) ;
         box-shadow: 0px -3px 0px 0px #080808 inset,
         0px 1px 0px 0px #FFFFFF4D inset,
         0px 2.77px 2.21px 0px #0000001F,

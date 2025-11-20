@@ -7,7 +7,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Davies - Personal Portfolio HTML Template</title>
+    <title>AgenAI - AI Agency</title>
     <meta name="author" content="themesflat.com">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description"
@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/css/odometer.min.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick.theme.css">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 
     <!-- Favicon and Touch Icons  -->
@@ -35,71 +37,89 @@
     <button id="goTop">
         <span class="border-progress"></span>
         <span class="ic-wrap">
-            <span class="icon icon-arrow-caret-right"></span>
+            <span class="icon icon-long-arrow-alt-up-solid"></span>
         </span>
     </button>
     <!-- /Scroll Top -->
 
+    <!-- Preload -->
+    
+    <!-- /Preload -->
+
+    <!-- #wrapper -->
     <main id="wrapper">
+
         <!-- Header -->
-        <header class="tf-header m-0">
+        <header class="tf-header header2">
             <div class="header-inner">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-6 col-md-1">
-                            <a href="index.html" class="logo-site">
-                                <i class="icon icon-davies-logo"></i>
-                            </a>
-                        </div>
-                        <div class="col-7 d-none d-md-block">
-                            <div class="box-navigation">
-                                <ul class="nav-menu-main">
-                                    <li class="menu-item"><a href="index.html" class="item-link link text-caption"><span>01 /</span>HOME</a></li>
-                                    <li class="menu-item has-child">
-                                        <a href="#" class="item-link link text-caption"><span>02 /</span>BLOG</a>
-                                        <ul class="sub-menu">
-                                            <li class="sub-menu-item"><a href="blog-standard.html" class="item-link link text-caption">BLOG
-                                                    STANDARD</a></li>
-                                            <li class="sub-menu-item"><a href="blog-two-columns.html" class="item-link link text-caption">BLOG GRID
-                                                    2</a></li>
-                                            <li class="sub-menu-item"><a href="blog-three-columns.html" class="item-link link text-caption">BLOG GRID
-                                                    3</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item"><a href="index.html" class="item-link link text-caption"><span>03
-                                                /</span>ABOUT</a></li>
-                                    <li class="menu-item"><a href="index.html" class="item-link link text-caption"><span>04
-                                                /</span>CONTACT</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-3 col-md-2 d-none d-sm-block">
-                            <div class="header-contact">
-                                <a href="mailto:davies@gmail.com" class="link text-caption">DAVIES@GMAIL.COM</a>
-                                <p class="text-caption">
-                                    CUP <span class="clock"></span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-6 col-sm-3 col-md-2 d-flex justify-content-end align-items-start">
-                            <a href="#mobileMenu" data-bs-toggle="offcanvas" class="btn-mobile-menu text-caption link d-md-none">
-                                <i class="icon icon-menu"></i>
-                                MENU
-                            </a>
-                            <a href="index.html" class="tf-btn d-none d-md-flex">
-                                <span class="text-caption">
-                                    CONTACT
-                                </span>
-                            </a>
-                        </div>
-                    </div>
+                <a href="index.html" class="logo-site">
+                    <img src="assets/images/logo/logo.svg" alt="">
+                </a>
+                <div class="box-navigation">
+                    <ul class="nav-menu-main">
+                        <li class="menu-item">
+                            <a href="index.html" class="item-link link1">Home</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="about.html" class="item-link link1">About</a>
+                        </li>
+                        <li class="menu-item has-child">
+                            <a href="#" class="item-link link1">Services</a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="service.html" class="item-link link1">Services</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="service-single.html" class="item-link link1">Services single</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item has-child">
+                            <a href="#" class="item-link link1">Works</a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="work.html" class="item-link link1">Works</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="work-single.html" class="item-link link1">Works single</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item has-child">
+                            <a href="#" class="item-link link1 active">Blog</a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="blog-standard.html" class="item-link link1">Blog standard</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="blog-two-columns.html" class="item-link link1">Blog grid 2</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="blog-three-columns.html" class="item-link link1 active">Blog grid 3</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="blog-single.html" class="item-link link1">Blog single</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item">
+                            <a href="contact.html" class="item-link link1">Contact</a>
+                        </li>
+                    </ul>
                 </div>
+                <a href="#" class="tf-btn d-lg-flex d-none">
+                    Start a Project
+                </a>
+                <a href="#" class="tf-btn open-mb-menu mobile-menu d-lg-none d-flex">
+                    <i class="icon icon-grip-lines-solid"></i>
+                </a>
             </div>
         </header>
         <!-- /Header -->
+        <!-- page-title -->
         <div class="section-page-title">
             <div class="container text-center">
-                <h1 class="page-title fw-semibold effectFade fadeZoom">Davies</h1>
+                <h1 class="page-title fw-semibold effectFade fadeZoom">AgenAI</h1>
                 <div class="breadcrumbs effectFade fadeUp">
                     <a href="index.html" class="link">Home</a>
                     <div>/</div>
@@ -107,7 +127,8 @@
                 </div>
             </div>
         </div>
-        <!-- Blog Grid 3 -->
+        <!-- /page-title -->
+        <!-- Blog Grid 2 -->
         <section class="section-blog flat-spacing">
             <div class="container">
                 <div class="tf-grid-layout sm-col-2 xl-col-3">
@@ -117,16 +138,17 @@
                         </a>
                         <div class="blog-content">
                             <div class="infor">
-                                <p class="infor_sub text-white-64">
+                                <p class="infor_sub text-secondary">
                                     Website Design
                                 </p>
-                                <h6>
-                                    <a href="blog-single.html" class="link infor_name">
+                                <h6 class="fw-semibold">
+                                    <a href="blog-single.html" class="link1 infor_name">
                                         Helve Tica Website Redesign
                                     </a>
                                 </h6>
                             </div>
-                            <a href="blog-single.html" class="btn-action">
+                            <a href="blog-single.html" class="tf-btn-2">
+                                Read more
                                 <i class="icon icon-arrow-top-right"></i>
                             </a>
                         </div>
@@ -137,16 +159,17 @@
                         </a>
                         <div class="blog-content">
                             <div class="infor">
-                                <p class="infor_sub text-white-64">
+                                <p class="infor_sub text-secondary">
                                     Website Design
                                 </p>
-                                <h6>
-                                    <a href="blog-single.html" class="link infor_name">
+                                <h6 class="fw-semibold">
+                                    <a href="blog-single.html" class="link1 infor_name">
                                         Helve Tica Website Redesign
                                     </a>
                                 </h6>
                             </div>
-                            <a href="blog-single.html" class="btn-action">
+                            <a href="blog-single.html" class="tf-btn-2">
+                                Read more
                                 <i class="icon icon-arrow-top-right"></i>
                             </a>
                         </div>
@@ -157,37 +180,38 @@
                         </a>
                         <div class="blog-content">
                             <div class="infor">
-                                <p class="infor_sub text-white-64">
+                                <p class="infor_sub text-secondary">
                                     Website Design
                                 </p>
-                                <h6>
-                                    <a href="blog-single.html" class="link infor_name">
+                                <h6 class="fw-semibold">
+                                    <a href="blog-single.html" class="link1 infor_name">
                                         Helve Tica Website Redesign
                                     </a>
                                 </h6>
                             </div>
-                            <a href="blog-single.html" class="btn-action">
+                            <a href="blog-single.html" class="tf-btn-2">
+                                Read more
                                 <i class="icon icon-arrow-top-right"></i>
                             </a>
                         </div>
                     </div>
-
                     <div class="article-blog hover-img effectFade fadeUp no-div">
                         <a href="blog-single.html" class="blog-image img-style">
                             <img loading="lazy" width="426" height="307" src="assets/images/blog/blog-4.jpg" alt="Image">
                         </a>
                         <div class="blog-content">
                             <div class="infor">
-                                <p class="infor_sub text-white-64">
+                                <p class="infor_sub text-secondary">
                                     Website Design
                                 </p>
-                                <h6>
-                                    <a href="blog-single.html" class="link infor_name">
+                                <h6 class="fw-semibold">
+                                    <a href="blog-single.html" class="link1 infor_name">
                                         Helve Tica Website Redesign
                                     </a>
                                 </h6>
                             </div>
-                            <a href="blog-single.html" class="btn-action">
+                            <a href="blog-single.html" class="tf-btn-2">
+                                Read more
                                 <i class="icon icon-arrow-top-right"></i>
                             </a>
                         </div>
@@ -198,16 +222,17 @@
                         </a>
                         <div class="blog-content">
                             <div class="infor">
-                                <p class="infor_sub text-white-64">
+                                <p class="infor_sub text-secondary">
                                     Website Design
                                 </p>
-                                <h6>
-                                    <a href="blog-single.html" class="link infor_name">
+                                <h6 class="fw-semibold">
+                                    <a href="blog-single.html" class="link1 infor_name">
                                         Helve Tica Website Redesign
                                     </a>
                                 </h6>
                             </div>
-                            <a href="blog-single.html" class="btn-action">
+                            <a href="blog-single.html" class="tf-btn-2">
+                                Read more
                                 <i class="icon icon-arrow-top-right"></i>
                             </a>
                         </div>
@@ -218,16 +243,17 @@
                         </a>
                         <div class="blog-content">
                             <div class="infor">
-                                <p class="infor_sub text-white-64">
+                                <p class="infor_sub text-secondary">
                                     Website Design
                                 </p>
-                                <h6>
-                                    <a href="blog-single.html" class="link infor_name">
+                                <h6 class="fw-semibold">
+                                    <a href="blog-single.html" class="link1 infor_name">
                                         Helve Tica Website Redesign
                                     </a>
                                 </h6>
                             </div>
-                            <a href="blog-single.html" class="btn-action">
+                            <a href="blog-single.html" class="tf-btn-2">
+                                Read more
                                 <i class="icon icon-arrow-top-right"></i>
                             </a>
                         </div>
@@ -235,71 +261,73 @@
                 </div>
             </div>
         </section>
-        <!-- /Blog Grid 3 -->
-        <!-- Footer -->
-        <footer class="tf-footer">
+        <!-- /Blog Grid 2 -->
+        <!-- footer -->
+        <footer>
+            <div class="footer-image">
+                <img src="assets/images/logo/logo-footer.png" alt="">
+            </div>
             <div class="container">
-                <div class="br-line"></div>
-            </div>
-            <div class="footer-inner">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <p class="title text-has-dot text-caption fw-medium mb-md-0">
-                                <span class="br-dot"></span>
-                                WORKING GLOBALLY
-                            </p>
-                        </div>
-                        <div class="col-6 col-sm-2 col-md-1">
-                            <p class="footer-heading text-caption fw-medium text-white-64">
-                                SITEMAP
-                            </p>
-                        </div>
-                        <div class="col-6 col-sm-4 col-md-3">
-                            <ul class="footer-menu-list mb-sm-0">
-                                <li><a href="index.html" class="link letter-space--2 h5">About</a></li>
-                                <li><a href="index.html" class="link letter-space--2 h5">Contact</a></li>
-                                <li><a href="index.html" class="link letter-space--2 h5">Service</a></li>
-                                <li><a href="blog-standard.html" class="link letter-space--2 h5">Blog</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-6 col-sm-2 col-md-1">
-                            <p class="footer-heading text-caption fw-medium text-white-64">
-                                SOCIALS
-                            </p>
-                        </div>
-                        <div class="col-6 col-sm-4 col-md-3">
-                            <ul class="footer-menu-list mb-0">
-                                <li><a href="#" class="link letter-space--2 h5">Twitter (X)</a></li>
-                                <li><a href="#" class="link letter-space--2 h5">Dribbble</a></li>
-                                <li><a href="#" class="link letter-space--2 h5">LinkedIn</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="container">
-                    <div class="img-agency">
-                        <img class="effectFade fadeZoom" loading="lazy" width="1293" height="269" src="assets/images/logo/agency.png" alt="Image">
-                    </div>
-                    <div class="bottom">
-                        <p class="text-nocopy text-caption fw-medium letter-space--1">
-                            © DAVIES'S PERSONAL PORTFOLIO
-                        </p>
-
-                        <a href="#" class="action-go-top tf-link-icon link text-caption fw-medium letter-space--1">
-                            BACK TO TOP
-                            <i class="icon icon-arrow-long-right"></i>
+                <div class="footer-content">
+                    <a href="#" class="footer-logo">
+                        <img src="assets/images/logo/logo-2.svg" alt="">
+                    </a>
+                    <div class="title h6 fw-semibold">Get connected <br> with AgenAI on social</div>
+                    <div class="text">Don’t miss our new updates!</div>
+                    <div class="tf-social-1 justify-content-center">
+                        <a href="#" class="text-body-1 fw-semibold">
+                            Twitter / X
+                            <div class="social-item">
+                                <i class="icon icon-twitter-x"></i>
+                            </div>
+                        </a>
+                        <a href="#" class="text-body-1 fw-semibold">
+                            Facebook
+                            <div class="social-item">
+                                <i class="icon icon-facebook-f"></i>
+                            </div>
+                        </a>
+                        <a href="#" class="text-body-1 fw-semibold">
+                            Instagram
+                            <div class="social-item">
+                                <i class="icon icon-instagram"></i>
+                            </div>
+                        </a>
+                        <a href="#" class="text-body-1 fw-semibold">
+                            Linkedin
+                            <div class="social-item">
+                                <i class="icon icon-linkedin-in"></i>
+                            </div>
                         </a>
                     </div>
                 </div>
+                <div class="footer-bottom">
+                    <ul class="footer-links d-flex gap-24 align-items-center">
+                        <li>
+                            <a href="#about" class="fw-semibold link-underline link1">About</a>
+                        </li>
+                        <li>
+                            <a href="#services" class="fw-semibold link-underline link1">Services</a>
+                        </li>
+                        <li>
+                            <a href="#works" class="fw-semibold link-underline link1">Works</a>
+                        </li>
+                        <li>
+                            <a href="#pricing" class="fw-semibold link-underline link1">Pricing</a>
+                        </li>
+                    </ul>
+                    <p class="text-secondary coppy-rights text-center">© 2025 AgenAI. All Rights Reserved.</p>
+                    <a href="#" class="action-go-top d-flex gap-8 align-items-center justify-content-end link1">
+                        <span class="fw-semibold">Back to top</span>
+                        <i class="icon icon-long-arrow-alt-up-solid fs-20"></i>
+                    </a>    
+                </div>
             </div>
         </footer>
-        <!-- /Footer -->
+        <!-- /footer -->
     </main>
     <!-- Mobile Menu -->
-    <div class="offcanvas offcanvas-bottom offcanvas-menu" id="mobileMenu">
+    <div class="offcanvas-menu">
         <div class="offcanvas-content">
             <div class="container h-100">
                 <div class="offcanvas-content_wrapin">
@@ -307,13 +335,13 @@
                         <a href="index.html" class="logo-site">
                             <i class="icon icon-davies-logo"></i>
                         </a>
-                        <a href="#" data-bs-dismiss="offcanvas" class="btn-mobile-menu text-caption link">
+                        <div class="btn-mobile-menu close-mb-menu text-caption link">
                             <i class="icon icon-close"></i>
                             CLOSE
-                        </a>
+                        </div>
                     </div>
                     <div class="canvas_center">
-                        <ul class="nav-ul-mb">
+                        <ul class="nav-ul-mb" id="mobile-menu">
                             <li>
                                 <div class="item">
                                     <a href="index.html" class="mb-menu-link text-display-1">
@@ -336,37 +364,7 @@
                             </li>
                             <li>
                                 <div class="item">
-                                    <div class="has-sub-menu">
-                                        <a href="#dropdown-menu-1" class="mb-menu-link text-display-1 collapsed" data-bs-toggle="collapse"
-                                            aria-expanded="false" aria-controls="dropdown-menu-1">
-                                            <span class="text">Blog</span>
-                                            <div class="infiniteSlide_text_main">
-                                                <div class="infiniteSlide infiniteSlide_text" data-clone="5">
-                                                    <p class="text-body-2 letter-space--1">
-                                                        <span class="text-primary">//</span> View Blog
-                                                    </p>
-                                                    <p class="text-body-2 letter-space--1">
-                                                        <span class="text-primary">//</span> View Blog
-                                                    </p>
-                                                    <p class="text-body-2 letter-space--1">
-                                                        <span class="text-primary">//</span> View Blog
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <div id="dropdown-menu-1" class="collapse">
-                                            <ul class="sub-nav-menu">
-                                                <li><a href="blog-standard.html" class="sub-nav-link">Blog Standard</a></li>
-                                                <li><a href="blog-two-columns.html" class="sub-nav-link">Blog Grid 2</a></li>
-                                                <li><a href="blog-three-columns.html" class="sub-nav-link">Blog Grid 3</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="item">
-                                    <a href="index.html" class="mb-menu-link text-display-1">
+                                    <a href="about.html" class="mb-menu-link text-display-1">
                                         <span class="text">About</span>
                                         <div class="infiniteSlide_text_main">
                                             <div class="infiniteSlide infiniteSlide_text" data-clone="5">
@@ -386,7 +384,96 @@
                             </li>
                             <li>
                                 <div class="item">
-                                    <a href="index.html" class="mb-menu-link text-display-1">
+                                    <div class="has-sub-menu">
+                                        <a href="#dropdown-menu-1" class="mb-menu-link text-display-1 collapsed" data-bs-toggle="collapse"
+                                            aria-expanded="false" aria-controls="dropdown-menu-1">
+                                            <span class="text">Works</span>
+                                            <div class="infiniteSlide_text_main">
+                                                <div class="infiniteSlide infiniteSlide_text" data-clone="5">
+                                                    <p class="text-body-2 letter-space--1">
+                                                        <span class="text-primary">//</span> View Works
+                                                    </p>
+                                                    <p class="text-body-2 letter-space--1">
+                                                        <span class="text-primary">//</span> View Works
+                                                    </p>
+                                                    <p class="text-body-2 letter-space--1">
+                                                        <span class="text-primary">//</span> View Works
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div id="dropdown-menu-1" class="collapse" data-bs-parent="#mobile-menu">
+                                            <ul class="sub-nav-menu">
+                                                <li><a href="work.html" class="sub-nav-link text-white">Works</a></li>
+                                                <li><a href="work-single.html" class="sub-nav-link text-white">Works Single</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <div class="has-sub-menu">
+                                        <a href="#dropdown-menu-2" class="mb-menu-link text-display-1 collapsed" data-bs-toggle="collapse"
+                                            aria-expanded="false" aria-controls="dropdown-menu-2">
+                                            <span class="text">Services</span>
+                                            <div class="infiniteSlide_text_main">
+                                                <div class="infiniteSlide infiniteSlide_text" data-clone="5">
+                                                    <p class="text-body-2 letter-space--1">
+                                                        <span class="text-primary">//</span> View Services
+                                                    </p>
+                                                    <p class="text-body-2 letter-space--1">
+                                                        <span class="text-primary">//</span> View Services
+                                                    </p>
+                                                    <p class="text-body-2 letter-space--1">
+                                                        <span class="text-primary">//</span> View Services
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div id="dropdown-menu-2" class="collapse" data-bs-parent="#mobile-menu">
+                                            <ul class="sub-nav-menu">
+                                                <li><a href="service.html" class="sub-nav-link text-white">Services</a></li>
+                                                <li><a href="service-single.html" class="sub-nav-link text-white">Services Single</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <div class="has-sub-menu">
+                                        <a href="#dropdown-menu-3" class="mb-menu-link text-display-1 collapsed" data-bs-toggle="collapse"
+                                            aria-expanded="false" aria-controls="dropdown-menu-3">
+                                            <span class="text">Blog</span>
+                                            <div class="infiniteSlide_text_main">
+                                                <div class="infiniteSlide infiniteSlide_text" data-clone="5">
+                                                    <p class="text-body-2 letter-space--1">
+                                                        <span class="text-primary">//</span> View Blog
+                                                    </p>
+                                                    <p class="text-body-2 letter-space--1">
+                                                        <span class="text-primary">//</span> View Blog
+                                                    </p>
+                                                    <p class="text-body-2 letter-space--1">
+                                                        <span class="text-primary">//</span> View Blog
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div id="dropdown-menu-3" class="collapse" data-bs-parent="#mobile-menu">
+                                            <ul class="sub-nav-menu">
+                                                <li><a href="blog-standard.html" class="sub-nav-link text-white">Blog Standard</a></li>
+                                                <li><a href="blog-two-columns.html" class="sub-nav-link text-white">Blog Grid 2</a></li>
+                                                <li><a href="blog-three-columns.html" class="sub-nav-link text-white">Blog Grid 3</a></li>
+                                                <li><a href="blog-single.html" class="sub-nav-link text-white">Blog Single</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <a href="contact.html" class="mb-menu-link text-display-1">
                                         <span class="text">Contact</span>
                                         <div class="infiniteSlide_text_main">
                                             <div class="infiniteSlide infiniteSlide_text" data-clone="5">
@@ -408,21 +495,21 @@
                     </div>
                     <div class="canvas_foot">
                         <div class="left">
-                            <a href="mailto:davies@gmail.com" class="link text-caption">DAVIES@GMAIL.COM</a>
-                            <p class="text-caption">
+                            <a href="mailto:agenai@gmail.com" class="text-caption text-neutral-200">agenai@gmail.com</a>
+                            <p class="text-caption text-neutral-200">
                                 CUP <span class="clock"></span>
                             </p>
                         </div>
                         <div class="right">
-                            <a href="#" class="tf-link-icon text-caption link">
+                            <a href="#" class="tf-link-icon text-caption text-neutral-200">
                                 <i class="icon icon-arrow-top-right"></i>
                                 TWITTER (X)
                             </a>
-                            <a href="#" class="tf-link-icon text-caption link">
+                            <a href="#" class="tf-link-icon text-caption text-neutral-200">
                                 <i class="icon icon-arrow-top-right"></i>
                                 DRIBBBLE
                             </a>
-                            <a href="#" class="tf-link-icon text-caption link">
+                            <a href="#" class="tf-link-icon text-caption text-neutral-200">
                                 <i class="icon icon-arrow-top-right"></i>
                                 LINKEDIN
                             </a>
@@ -433,10 +520,6 @@
         </div>
     </div>
     <!-- /Mobile Menu -->
-    <!-- Left Bar -->
-    <!-- <div class="tf-left-bar">
-        <a class="btn-setting-color" data-bs-toggle="offcanvas" href="#settingColorMenu"><i class="icon-gear"></i></a>
-    </div> -->
     <!-- Setting Color -->
     <div class="offcanvas offcanvas-end offcanvas-color" id="settingColorMenu">
         <div class="offcanvas-content">
@@ -462,21 +545,27 @@
         </div>
     </div>
     <!-- /Setting Color -->
-    <!-- Javascript -->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/carousel.js"></script>
 
+    <!-- Javascript -->
+    <script src="assets/js/jquery.min.js"></script>
+
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/odometer.min.js"></script>
+    <script src="assets/js/carousel.js"></script>
     <script src="assets/js/infinityslide.js"></script>
     <script src="assets/js/ScrollSmooth.js"></script>
     <script src="assets/js/gsap.min.js"></script>
-    <script src="assets/js/gsapAnimation.js"></script>
     <script src="assets/js/SplitText.min.js"></script>
     <script src="assets/js/ScrollTrigger.min.js"></script>
-    <script src="assets/js/odometer.min.js"></script>
-    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/ScrollToPlugin.min.js"></script>
+    <script src="assets/js/gsapAnimation.js"></script>
+
     <script src="assets/js/main.js"></script>
+
 </body>
 
 </html>
