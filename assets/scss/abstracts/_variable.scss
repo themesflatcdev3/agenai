@@ -27,47 +27,34 @@ $fontIcon: "icomoon";
 
 }
 
-// [data-color-primary="color-primary-1"] {
-//     --primary: #07C42C;
-// }
+[data-color-primary="color-primary-1"] {
+    --brand: #FD3A25;
+}
 
-// [data-color-primary="color-primary-2"] {
-//     --primary: #f8c736;
-//     --primary-rgb: 248, 199, 54;
-// }
+[data-color-primary="color-primary-2"] {
+    --brand: #f8c736;
+}
 
-// [data-color-primary="color-primary-3"] {
-//     --primary: #f5772e;
-//     --primary-rgb: 245, 119, 46;
+[data-color-primary="color-primary-3"] {
+    --brand: #f5772e;
+}
 
-// }
+[data-color-primary="color-primary-4"] {
+    --brand: #2ac6f8;
+}
 
-// [data-color-primary="color-primary-4"] {
-//     --primary: #2ac6f8;
-//     --primary-rgb: 42, 198, 248;
+[data-color-primary="color-primary-5"] {
+    --brand: #8dca37;
+}
 
-// }
+[data-color-primary="color-primary-6"] {
+    --brand: #6c34fa;
+}
 
-// [data-color-primary="color-primary-5"] {
-//     --primary: #8dca37;
-//     --primary-rgb: 141, 202, 55;
+[data-color-primary="color-primary-7"] {
+    --brand: #f14444;
+}
 
-// }
-
-// [data-color-primary="color-primary-6"] {
-//     --primary: #6c34fa;
-//     --primary-rgb: 108, 52, 250;
-
-// }
-
-// [data-color-primary="color-primary-7"] {
-//     --primary: #f14444;
-//     --primary-rgb: 241, 68, 68;
-
-// }
-
-// [data-color-primary="color-primary-8"] {
-//     --primary: #e14392;
-//     --primary-rgb: 225, 67, 146;
-
-// }
+[data-color-primary="color-primary-8"] {
+    --brand: #e14392;
+}

@@ -51,6 +51,38 @@
   --body: #EDECEC;
 }
 
+[data-color-primary=color-primary-1] {
+  --brand: #FD3A25;
+}
+
+[data-color-primary=color-primary-2] {
+  --brand: #f8c736;
+}
+
+[data-color-primary=color-primary-3] {
+  --brand: #f5772e;
+}
+
+[data-color-primary=color-primary-4] {
+  --brand: #2ac6f8;
+}
+
+[data-color-primary=color-primary-5] {
+  --brand: #8dca37;
+}
+
+[data-color-primary=color-primary-6] {
+  --brand: #6c34fa;
+}
+
+[data-color-primary=color-primary-7] {
+  --brand: #f14444;
+}
+
+[data-color-primary=color-primary-8] {
+  --brand: #e14392;
+}
+
 /*------------ Core CSS ---------------- */
 /* ---------------------------------------------------------
     * Name: AgenAI - AI Agency
@@ -3750,7 +3782,7 @@ header.header-sticky {
 }
 .offcanvas-color .offcanvas-content,
 .offcanvas-color .canvas-body {
-  background-color: #191919;
+  background-color: var(--neutral-950);
 }
 .offcanvas-color .icon-close-popup {
   color: var(--white);
@@ -4587,6 +4619,9 @@ button.animate-btn::after,
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 24px;
+}
+.section-hero .content-wrap .sub svg path {
+  fill: var(--brand);
 }
 .section-hero .content-wrap .title {
   margin-bottom: 33px;
@@ -7593,89 +7628,6 @@ button.animate-btn::after,
   }
 }
 
-.wg-plan {
-  padding: 48px;
-  padding-top: 0;
-  position: relative;
-}
-.wg-plan .br-line {
-  display: flex;
-  height: 2px;
-  margin-bottom: 26px;
-}
-.wg-plan .plan-name,
-.wg-plan .plan-desc,
-.wg-plan .btn-action {
-  margin-bottom: 40px;
-}
-.wg-plan .plan-price {
-  margin-bottom: 24px;
-  display: flex;
-  align-items: start;
-  gap: 6px;
-  letter-spacing: -0.8px;
-}
-.wg-plan .benefit-list {
-  gap: 16px;
-}
-.wg-plan .benefit-list li:not(.benefit_title) span {
-  color: var(--white-64);
-}
-.wg-plan .bg-img {
-  position: absolute;
-  inset: 0;
-}
-.wg-plan .bg-img.bg-img_1 {
-  background-image: url("./../../assets/images/item/start.png");
-  background-repeat: repeat-y;
-  background-position: center;
-  animation: moveUp 60s linear infinite;
-}
-.wg-plan .bg-img.bg-img_2 {
-  display: flex;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  overflow: hidden;
-}
-.wg-plan .bg-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.wg-plan.style-2 {
-  border: 1px solid rgba(var(--primary-rgb), 0.16);
-  backdrop-filter: blur(6px);
-  overflow: hidden;
-}
-.wg-plan.style-2.type-2 {
-  background-color: rgba(7, 196, 44, 0.0509803922);
-}
-.wg-plan.style-2.type-2 .bg-img {
-  overflow: hidden;
-  filter: blur(320px);
-}
-.wg-plan.style-2.type-2 .bg-img img {
-  transform: unset;
-  mix-blend-mode: overlay;
-  filter: blur(160px);
-}
-.wg-plan.style-2.type-3 {
-  border-color: rgba(255, 255, 255, 0.1019607843);
-  background-color: rgba(255, 255, 255, 0.0509803922);
-}
-@media (min-width: 1200px) {
-  .wg-plan .br-line {
-    margin-bottom: 46px;
-  }
-}
-@media (max-width: 1199px) {
-  .wg-plan {
-    padding: 20px 15px;
-    padding-top: 0;
-  }
-}
-
 .wg-work {
   box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.0509803922) inset;
   position: relative;
@@ -7853,17 +7805,19 @@ button.animate-btn::after,
   z-index: 1001;
 }
 .tf-left-bar .btn-setting-color {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  font-size: 20px;
-  background-color: var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--black);
-  animation: spin 10s infinite ease;
-  margin-bottom: 30px;
+  width: 50px;
+  height: 50px;
+  color: var(--white);
+  margin-bottom: 32px;
+  border-radius: 50%;
+  background-color: #272727;
+  box-shadow: 0px -3px 0px 0px #080808 inset, 0px 1px 0px 0px rgba(255, 255, 255, 0.3019607843) inset, 0px 2.77px 2.21px 0px rgba(0, 0, 0, 0.1215686275), 0px 3px 3px 0px rgba(0, 0, 0, 0.1411764706), 0px 12.52px 10.02px 0px rgba(0, 0, 0, 0.1333333333), 0px 22.34px 17.87px 0px rgba(0, 0, 0, 0.1411764706), 0px 41.78px 33.42px 0px rgba(0, 0, 0, 0.1490196078), 0px 100px 80px 0px rgba(0, 0, 0, 0.1490196078);
+}
+.tf-left-bar .btn-setting-color .icon {
+  animation: spin 10s infinite linear;
 }
 @media (max-width: 767px) {
   .tf-left-bar {
@@ -7884,7 +7838,7 @@ button.animate-btn::after,
   position: relative;
 }
 .settings-color .choose-item:nth-child(1) {
-  background: #07C42C;
+  background: #FD3A25;
 }
 .settings-color .choose-item:nth-child(2) {
   background: #f8c736;
@@ -8957,6 +8911,14 @@ button.animate-btn::after,
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.accordion-asked .accordion-button:hover {
+  color: var(--brand);
 }
 .accordion-asked .accordion-button::after {
   display: none;

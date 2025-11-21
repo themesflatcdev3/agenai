@@ -216,6 +216,10 @@
         align-items: center;
         justify-content: space-between;
         gap: 16px;
+        @include transition3;
+        &:hover {
+            color: var(--brand);
+        }
         &::after {
             display: none;
         }
