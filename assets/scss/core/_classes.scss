@@ -233,8 +233,6 @@
     -webkit-background-clip: text;
     -webkit-text-stroke: 0px transparent;
     -webkit-text-fill-color: transparent;
-    animation: bghover 5s linear infinite;
-    background-size: 400% 400%;
 }
 
 .text-gradient-2 {
@@ -242,8 +240,6 @@
     -webkit-background-clip: text;
     -webkit-text-stroke: 0px transparent;
     -webkit-text-fill-color: transparent;
-    animation: bghover 5s linear infinite;
-    background-size: 400% 400%;
 }
 
 .text-gradient-3 {
@@ -251,8 +247,6 @@
     -webkit-background-clip: text;
     -webkit-text-stroke: 0px transparent;
     -webkit-text-fill-color: transparent;
-    animation: bghover 5s linear infinite;
-    background-size: 400% 400%;
 }
 
 @keyframes bghover {
@@ -434,4 +428,73 @@
     .md-mb-24 {
         margin-bottom: 24px;
     }
+}
+
+@keyframes move1 {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+
+    50% {
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+
+    100% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+}
+
+.updown {
+    -webkit-animation-name: move1;
+    animation-name: move1;
+    animation: move1 10s infinite linear;
+}
+
+@keyframes move2 {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+
+    50% {
+        -webkit-transform: translateX(-30px);
+        transform: translateX(-30px);
+    }
+
+    100% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+}
+
+.leftright {
+    -webkit-animation-name: move2;
+    animation-name: move2;
+    animation: move2 10s infinite linear;
+}
+
+@keyframes move3 {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+
+    50% {
+        -webkit-transform: translateX(30px);
+        transform: translateX(30px);
+    }
+
+    100% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+}
+
+.rightleft {
+    -webkit-animation-name: move3;
+    animation-name: move3;
+    animation: move3 10s infinite linear;
 }
