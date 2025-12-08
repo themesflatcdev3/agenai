@@ -6765,6 +6765,7 @@ button.animate-btn::after,
 }
 .wg-map iframe {
   border-radius: 32px;
+  width: 100%;
 }
 
 .box-contact-item {
