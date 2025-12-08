@@ -40,8 +40,8 @@
     .accordion-title {
         width: 100%;
         font-weight: 600;
-        font-size: clamp(26px, 3.5vw, 36px);
-        line-height: clamp(34px, 4vw, 48px);
+        font-size: clamp(26px, 36px, 36px);
+        line-height: clamp(34px, 48px, 48px);
         letter-spacing: -0.01em;
         color: var(--secondary);
         display: flex;
@@ -81,8 +81,8 @@
         }
         &:not(.collapsed) {
             .accordion-title {
-                font-size: clamp(26px, 3.5vw, 48px);
-                line-height: clamp(34px, 4vw, 56px);
+                font-size: clamp(26px, 48px, 48px);
+                line-height: clamp(34px, 56px, 56px);
                 letter-spacing: -0.02em;
                 color: var(--white);
                 br {
@@ -92,6 +92,9 @@
                     transform: rotate(45deg);
                     color: var(--white);
                     border-color: var(--neutral-700);
+                }
+                .num {
+                    letter-spacing: 0;
                 }
             }
             &::before {
@@ -275,7 +278,7 @@
         &::before {
             position: absolute;
             content: '';
-            top: 16px;
+            top: 14px;
             left: 0;
             right: 0;
             height: 1px; 

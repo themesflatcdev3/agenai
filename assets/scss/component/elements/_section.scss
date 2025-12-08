@@ -8,8 +8,9 @@
         border-radius: 8px;
         color: var(--brand);
         padding: 6px 16px 6px 30px;
-        background: linear-gradient(0deg, #F5F5F5, #F5F5F5),
-        radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%) ;
+        background: 
+        radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%) ,
+        linear-gradient(0deg, #F5F5F5, #F5F5F5);
         box-shadow: 
         0px -3px 0px 0px #E9E9E9 inset,
         0px 1px 0px 0px #FFFFFFB2 inset,
@@ -28,8 +29,8 @@
         }
         &.style-1 {
             background: 
-            linear-gradient(0deg, var(--neutral-900, #18181B), var(--Neutral-900, #18181B)),
-            radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+            radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%),
+            linear-gradient(0deg, var(--neutral-900, #18181B), var(--Neutral-900, #18181B));
             box-shadow: 0px 3px 3px 0px #00000024,
             0px -3px 0px 0px #080808 inset,
             0px 1px 0px 0px #FFFFFF4D inset;
@@ -38,8 +39,8 @@
     }
     .heading-title {
         font-weight: 600;
-        font-size: clamp(40px, 5vw, 72px);
-        line-height: clamp(48px, 5.5vw, 72px);
+        font-size: clamp(40px, 72px, 72px);
+        line-height: clamp(48px, 72px, 72px);
         letter-spacing: -0.03em;
     }
     &.center {
@@ -285,13 +286,13 @@
         overflow: hidden;
         .sub {
             display: flex;
-            gap: 8px;
+            gap: 13px;
             align-items: center;
             justify-content: center;
             border: 1px solid var(--neutral-700);
             border-radius: 99px;
             width: max-content;
-            padding: 5px 15px;
+            padding: 6px 15px 5px 15px;
             margin-left: auto;
             margin-right: auto;
             margin-bottom: 12px;
@@ -347,8 +348,8 @@
         }
         .number {
             font-weight: 600;
-            font-size: clamp(65px, 10vw, 144px);
-            line-height: clamp(65px, 10vw, 144px);
+            font-size: clamp(65px, 144px, 144px);
+            line-height: clamp(65px, 144px, 144px);
             letter-spacing: -0.03em;
             margin-bottom: -16px;
             margin-right: 5px;
@@ -399,6 +400,9 @@
                 height: 16px;
                 background-color: var(--neutral-400);
             }
+        }
+        .content {
+            margin-top: -13px;
         }
     }
     .mission-box {
@@ -572,27 +576,39 @@
     0px 3px 3px 0px #0000001A;
     .image {
         position: relative;
+        border-radius: 32px;
+        overflow: hidden;
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 32px;
+            transition: all 1s;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            width: 200%;
+            height: 0%;
+            left: 50%;
+            top: 50%;
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%) rotate(-45deg);
+            z-index: 1;
+            pointer-events: none;
         }
         .view-project {
             position: absolute;
             bottom: 190px;
             right: 153px;
-
             display: flex;
             align-items: center;
             gap: 12px;
+            letter-spacing: 0.01em;
             color: var(--white);
             padding: 16px 24px;
             border-radius: 99px;
             background: #00000033;
             backdrop-filter: blur(44px);
-
-
             opacity: 0;
             visibility: hidden;
             .icon {
@@ -648,6 +664,15 @@
     }
     &:hover {
         .image {
+            &:after {
+                height: 250%;
+                transition: all 600ms linear;
+                background-color: transparent;
+            }
+
+            img {
+                transform: scale(1.1);
+            }
             .view-project {
                 opacity: 1;
                 visibility: visible;
@@ -760,9 +785,10 @@
         justify-content: space-between;
         flex-wrap: wrap;
         .time {
-            padding: 7px 16px;
+            padding: 8px 15px 7px 15px;
             border-radius: 99px;
             border: 1px solid var(--neutral-300);
+            letter-spacing: 0.03em;
         }
         .number {
             display: flex;
@@ -790,138 +816,6 @@
 
 
 
-
-.section-hero-v2 {
-    padding-top: 100px;
-    position: relative;
-
-    .image-wrap {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        position: relative;
-        margin-bottom: 60px;
-
-        .img-item {
-            overflow: hidden;
-            display: flex;
-            z-index: 1;
-
-
-        }
-
-        .image-child {
-            opacity: 0.32;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
-
-            img {
-                width: 100%;
-                object-fit: cover;
-            }
-        }
-    }
-
-    .img-item-2 {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 0;
-
-        img {
-            object-fit: cover;
-        }
-
-        &::after {
-            display: none;
-            content: "";
-            position: absolute;
-            background-color: var(--primary);
-            bottom: 0;
-            right: 0;
-            width: clamp(32px, 10.8vw, 140px);
-            height: clamp(7px, 2.4vw, 31px);
-        }
-    }
-
-    .overlay {
-        position: absolute;
-        inset: 0;
-        background: #000000B8;
-        z-index: -1;
-    }
-
-    .bg-video {
-        position: absolute;
-        inset: 0;
-        z-index: -2;
-    }
-
-    .bottom {
-        display: flex;
-        justify-content: space-between;
-        align-items: end;
-        gap: 24px 32px;
-        flex-wrap: wrap;
-    }
-
-    .image {
-        margin-bottom: 60px;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-
-    .tf-list {
-        flex-wrap: wrap;
-        gap: 12px 24px;
-    }
-
-    .img-item-2 {
-        &::after {
-            display: block;
-        }
-    }
-
-    @include res(xl, min) {
-        padding-top: 71px;
-
-
-
-        .tf-list {
-            gap: 40px;
-        }
-
-        .image,
-        .image-wrap {
-            margin-bottom: 94px;
-        }
-    }
-
-    @include res(sm) {
-        .image-wrap {
-            .img-item {
-                width: 300px;
-            }
-        }
-    }
-
-    @include res(ssm) {
-        .image-wrap {
-            .img-item {
-                width: 280px;
-            }
-        }
-    }
-}
 
 .cursor-trail {
     position: fixed;
@@ -2264,11 +2158,11 @@
         }
         .statistic-number {
             display: flex;
-            font-size: clamp(70px, 11vw, 240px);
-            line-height: clamp(70px, 11vw, 240px);
+            font-size: clamp(70px, 240px, 240px);
+            line-height: clamp(70px, 240px, 240px);
             letter-spacing: -0.03em;
             .prefix {
-                font-size: clamp(67px, 10vw, 232px);
+                font-size: clamp(67px, 232px, 232px);
             }
         }
     }
@@ -2328,8 +2222,8 @@
             justify-content: center;
             width: 64px;
             height: 64px;
-            font-size: 24px;
-            border-radius: 24px;
+            font-size: 28px;
+            border-radius: 16px;
             background: linear-gradient(0deg, #F5F5F5, #F5F5F5),
             radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%) ;
             box-shadow: 0px -3px 0px 0px #E9E9E9 inset,
@@ -2411,8 +2305,8 @@
 .section-services-single {
     margin-top: -100px;
     .heading {
-        font-size: clamp(32px, 4.5vw, 48px);
-        line-height: clamp(40px, 5vw, 56px);
+        font-size: clamp(32px, 48px, 48px);
+        line-height: clamp(40px, 56px, 56px);
         letter-spacing: -0.02em;
     }
     .top-image {
@@ -2552,8 +2446,8 @@
 .section-work-single {
     margin-top: -100px;
     .heading {
-        font-size: clamp(32px, 4.5vw, 48px);
-        line-height: clamp(40px, 5vw, 56px);
+        font-size: clamp(32px, 48px, 48px);
+        line-height: clamp(40px, 56px, 56px);
         letter-spacing: -0.02em;
     }
     .wrap-image {

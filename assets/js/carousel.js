@@ -173,6 +173,11 @@ if ($(".section-testimonials").length > 0) {
         // speed: 800,
         spaceBetween: 10,
         centeredSlides: true,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+        speed: 700,
     });
 
     const mainSwiper = new Swiper(".swiper-testimonial", {

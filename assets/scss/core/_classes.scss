@@ -125,6 +125,10 @@
     gap: 13px !important;
 }
 
+.gap-14 {
+    gap: 14px !important;
+}
+
 .gap-15 {
     gap: 15px;
 }
@@ -247,6 +251,8 @@
     -webkit-background-clip: text;
     -webkit-text-stroke: 0px transparent;
     -webkit-text-fill-color: transparent;
+    padding-bottom: 7px;
+    margin-bottom: -7px;
 }
 
 @keyframes bghover {
@@ -497,4 +503,8 @@
     -webkit-animation-name: move3;
     animation-name: move3;
     animation: move3 10s infinite linear;
+}
+
+.overflow-hidden {
+    overflow: visible !important;
 }
