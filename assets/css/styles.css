@@ -7895,6 +7895,7 @@ button.animate-btn::after,
   margin-bottom: 8px;
 }
 .benefits-box.benefits-secure img {
+  transform: rotateY(0deg);
   -webkit-transition: all 0.8s ease-in-out;
   -moz-transition: all 0.8s ease-in-out;
   -ms-transition: all 0.8s ease-in-out;
@@ -7902,7 +7903,7 @@ button.animate-btn::after,
   transition: all 0.8s ease-in-out;
 }
 .benefits-box.benefits-secure:hover img {
-  transform: rotateY(360deg) !important;
+  transform: rotateY(180deg);
 }
 @media (max-width: 991px) {
   .benefits-box {

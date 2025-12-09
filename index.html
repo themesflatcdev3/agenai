@@ -1638,3 +1638,204 @@
 </body>
 
 </html>
+<!-- 
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Slider với Progress Bar</title>
+<style>
+    body {
+        margin: 0;
+        background: #050505;
+        font-family: system-ui, sans-serif;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .slider {
+        position: relative;
+        width: 800px;
+        padding: 40px;
+        background: #050505;
+    }
+
+    /* --- PROGRESS BAR --- */
+    .slider-progress {
+        position: relative;
+        width: 100%;
+        height: 4px;
+        background: #222;
+        overflow: hidden;
+        border-radius: 999px;
+        margin-bottom: 32px;
+    }
+
+    .slider-progress-fill {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 0%;
+        background: #ff3b2d;
+        box-shadow: 0 0 12px rgba(255,59,45,0.7);
+        border-radius: inherit;
+        transition: width 0.06s linear; /* mượt chút */
+    }
+
+    /* --- SLIDES --- */
+    .slides {
+        position: relative;
+        overflow: hidden;
+        height: 260px;
+    }
+
+    .slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transform: translateX(40px);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 80px;
+        font-weight: 700;
+    }
+
+    .slide.active {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* --- ARROWS --- */
+    .slider-arrow {
+        position: absolute;
+        top: 20px;
+        right: 0;
+        display: flex;
+        gap: 4px;
+    }
+
+    .slider-arrow button {
+        border: none;
+        background: transparent;
+        color: #fff;
+        font-size: 18px;
+        width: 28px;
+        height: 28px;
+        cursor: pointer;
+        border-radius: 999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .slider-arrow button:hover {
+        background: #ff3b2d;
+        color: #000;
+    }
+
+    .label {
+        text-transform: uppercase;
+        letter-spacing: .15em;
+        font-size: 11px;
+        opacity: .7;
+        margin-bottom: 4px;
+    }
+</style>
+</head>
+<body>
+
+<div class="slider">
+    <div class="slider-arrow">
+        <button id="prevBtn">&#10094;</button>
+        <button id="nextBtn">&#10095;</button>
+    </div>
+
+    <div class="slider-progress">
+        <div class="slider-progress-fill" id="progressFill"></div>
+    </div>
+
+    <div class="label">Our Growth</div>
+
+    <div class="slides" id="slides">
+        <div class="slide active">230K</div>
+        <div class="slide">480K</div>
+        <div class="slide">720K</div>
+        <div class="slide">1M</div>
+    </div>
+</div>
+
+<script>
+    const slides = document.querySelectorAll('.slide');
+    const progressFill = document.getElementById('progressFill');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+
+    let currentIndex = 0;
+    const DURATION = 5000; // thời gian 1 slide (ms)
+    let startTime = null;
+    let animationFrameId = null;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
+        });
+    }
+
+    function resetProgress() {
+        progressFill.style.width = '0%';
+        startTime = performance.now();
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+        resetProgress();
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(currentIndex);
+        resetProgress();
+    }
+
+    function animateProgress(timestamp) {
+        if (!startTime) startTime = timestamp;
+        const elapsed = timestamp - startTime;
+        let percent = (elapsed / DURATION) * 100;
+
+        if (percent >= 100) {
+            percent = 100;
+            progressFill.style.width = percent + '%';
+            // chuyển sang slide tiếp theo
+            nextSlide();
+        } else {
+            progressFill.style.width = percent + '%';
+        }
+
+        animationFrameId = requestAnimationFrame(animateProgress);
+    }
+
+    // Event cho nút
+    nextBtn.addEventListener('click', () => {
+        nextSlide();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        prevSlide();
+    });
+
+    // Bắt đầu
+    showSlide(currentIndex);
+    resetProgress();
+    animationFrameId = requestAnimationFrame(animateProgress);
+</script>
+
+</body>
+</html> -->
