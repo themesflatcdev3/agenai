@@ -5073,11 +5073,13 @@ button.animate-btn::after,
 }
 .featured-works-item .image .view-project {
   position: absolute;
-  bottom: 190px;
-  right: 153px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   gap: 12px;
+  width: max-content;
   letter-spacing: 0.01em;
   color: var(--white);
   padding: 16px 24px;
@@ -7036,13 +7038,36 @@ button.animate-btn::after,
   align-items: center;
 }
 .group-slider .swiper-pagination {
-  position: unset;
+  position: relative;
+  width: 100%;
   height: 2px;
-  background-color: rgba(255, 255, 255, 0.2);
+  bottom: unset;
+  top: unset;
+  left: unset;
+  background: rgba(255, 255, 255, 0.2);
 }
-.group-slider .swiper-pagination .swiper-pagination-progressbar-fill {
-  background-color: var(--brand);
-  box-shadow: 0px 2px 12px 0px #FD3A25;
+.group-slider .swiper-pagination .swiper-pagination-bullet {
+  position: absolute;
+  inset: 0;
+  width: unset;
+  height: unset;
+  opacity: 1;
+  margin: 0;
+  background: transparent;
+}
+.group-slider .swiper-pagination .swiper-pagination-bullet::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 0%;
+  transition: all 1s ease-in-out;
+}
+.group-slider .swiper-pagination .swiper-pagination-bullet-active::after {
+  width: 100%;
+  background: var(--brand);
 }
 .group-slider .group-btn-slider {
   display: flex;
@@ -7156,6 +7181,34 @@ button.animate-btn::after,
   }
 }
 
+.progressbar-line {
+  position: relative;
+  flex-grow: 1;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.progressbar-line .progressbar-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  background-color: var(--brand);
+  box-shadow: 0px 2px 12px 0px #FD3A25;
+  animation: progressbar 2s infinite;
+}
+
+@keyframes progressbar {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+  }
+}
 /* ---------------------------------------------------------
     * Name: AgenAI - AI Agency
     * Version: 1.0.0
@@ -7840,6 +7893,16 @@ button.animate-btn::after,
 }
 .benefits-box .content .title {
   margin-bottom: 8px;
+}
+.benefits-box.benefits-secure img {
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  -ms-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+}
+.benefits-box.benefits-secure:hover img {
+  transform: rotateY(360deg) !important;
 }
 @media (max-width: 991px) {
   .benefits-box {

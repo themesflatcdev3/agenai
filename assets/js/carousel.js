@@ -140,30 +140,35 @@ $(window).on("load", function () {
     });
 });
 
-if($('.swiper-progressbar').length > 0) {
-    var swiper = new Swiper(".swiper-progressbar", {
-        spaceBetween: 28,
-        slidesPerView: 'auto',
-        observer: true,
-        observeParents: true,
-        pagination: {
-          el: ".statistic-pagination",
-          type: "progressbar",
-        },
-        navigation: {
-          nextEl: ".statistic-next",
-          prevEl: ".statistic-prev",
-        },
-        breakpoints: {
-            0: {
-                slidesPerView: 1,
-            },
-            600: {
-                slidesPerView: 'auto',
-            }
-        },
-    });
-}    
+// if($('.swiper-progressbar').length > 0) {
+//     var swiper = new Swiper(".swiper-progressbar", {
+//         spaceBetween: 28,
+//         slidesPerView: 'auto',
+//         observer: true,
+//         observeParents: true,
+//         pagination: {
+//           el: ".progressbar-pagination",
+//           type: "progressbar",
+//         },
+//         speed: 1000,
+//         autoplay: {
+//             delay: 1000,
+//             disableOnInteraction: false,
+//         },
+//         navigation: {
+//           nextEl: ".progressbar-next",
+//           prevEl: ".progressbar-prev",
+//         },
+//         breakpoints: {
+//             0: {
+//                 slidesPerView: 1,
+//             },
+//             600: {
+//                 slidesPerView: 'auto',
+//             }
+//         },
+//     });
+// }    
 
 if ($(".section-testimonials").length > 0) {
     const thumbSwiper = new Swiper(".sw-main-image", {
@@ -197,67 +202,77 @@ if ($(".section-testimonials").length > 0) {
     mainSwiper.controller.control = thumbSwiper;
 }
 
-/*-- Slick Slide --*/
-window.onload = function () {
-    if (window.jQuery) {
-        jQuery.event.special.touchstart = {
-            setup: function (_, ns, handle) {
-                this.addEventListener("touchstart", handle, { passive: true });
+if ($(".swiper-progressbar").length > 0) {
+    const swiperMain = new Swiper(".swiper-progressbar", {
+        spaceBetween: 28,
+        slidesPerView: 1,
+        observer: true,
+        observeParents: true,
+        navigation: {
+          nextEl: ".progressbar-next",
+          prevEl: ".progressbar-prev",
+        },
+        speed: 1000,
+        autoplay: {
+            delay: 1000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".progressbar-pagination.swiper-pagination",
+            clickable: false,
+            renderBullet: function (index, className) {
+                return `<span class="${className}"></span>`;
             },
-        };
-        jQuery.event.special.touchmove = {
-            setup: function (_, ns, handle) {
-                this.addEventListener("touchmove", handle, { passive: true });
+        },
+       
+        on: {
+            slideChange: function () {
+                // updatePagination(swiperMain);
+
+                if (swiperMain.previousIndex === swiperMain.slides.length - 1 && swiperMain.activeIndex === 0) {
+                    swiperMain.params.autoplay.delay = 2000;
+                } else {
+                    swiperMain.params.autoplay.delay = 1000;
+                }
+                swiperMain.autoplay.start();
             },
-        };
-    }
+            slideChangeTransitionStart: function () {
+                if (this.realIndex === 0 && this.previousIndex === this.slides.length - 1) {
+                    $(".progressbar-pagination .swiper-pagination-bullet")
+                        .eq(0)
+                        .removeClass("swiper-pagination-bullet-active");
+                }
+            },
+            slideChangeTransitionEnd: function () {
+                if (this.realIndex === 0) {
+                    $(".progressbar-pagination .swiper-pagination-bullet")
+                        .eq(0)
+                        .addClass("swiper-pagination-bullet-active");
+                }
+            },
+        },
+    });
 
-    if (document.querySelector(".section-selected-work")) {
-        const $for = $(".slick-for").slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            fade: true,
-            asNavFor: ".slick-nav",
-            infinite: true,
-            autoplay: true,
-            autoplaySpeed: 2000,
-        });
+    function updatePagination(swiper) {
+        const bullets = $(".progressbar-pagination .swiper-pagination-bullet");
+        const activeIndex = swiper.activeIndex;
 
-        const $nav = $(".slick-nav").slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            asNavFor: ".slick-for",
-            vertical: true,
-            verticalSwiping: true,
-            centerMode: true,
-            arrows: false,
-            dots: false,
-            infinite: true,
-            focusOnSelect: true,
-        });
-
-        $(".section-selected-work .nav-prev-swiper").on("click", function () {
-            $for.slick("slickPrev");
-        });
-        $(".section-selected-work .nav-next-swiper").on("click", function () {
-            $for.slick("slickNext");
-        });
-
-        const $tags = $(".work-tag li");
-        $for.on("beforeChange", function (event, slick, currentSlide, nextSlide) {
-            $tags.removeClass("active");
-            $tags.eq(nextSlide).addClass("active");
-
-            const $award = $(".image-award");
-            if ((nextSlide + 1) % 3 === 0) {
-                $award.addClass("active");
+        bullets.each(function (index) {
+            if (index <= activeIndex) {
+                $(this).addClass("swiper-pagination-bullet-active");
             } else {
-                $award.removeClass("active");
+                $(this).removeClass("swiper-pagination-bullet-active");
             }
         });
-
-        $tags.eq(0).addClass("active");
-        $nav.trigger("afterChange", [$nav.slick("getSlick"), 0]);
     }
-};
+
+    $(".swiper-progressbar").hover(
+        function () {
+            swiperMain.autoplay.stop();
+        },
+        function () {
+            swiperMain.autoplay.start();
+        }
+    );
+
+}

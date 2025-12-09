@@ -650,6 +650,20 @@
             margin-bottom: 8px;
         }
     }
+    &.benefits-secure {
+        img {
+            -webkit-transition: all 0.8s ease-in-out;
+            -moz-transition: all 0.8s ease-in-out;
+            -ms-transition: all 0.8s ease-in-out;
+            -o-transition: all 0.8s ease-in-out;
+            transition: all 0.8s ease-in-out;
+        }
+        &:hover {
+            img {
+                transform: rotateY(360deg) !important;
+            }
+        }
+    }
     @include res(lg) {
         margin-bottom: 24px;
         height: unset;
@@ -662,6 +676,7 @@
 .benefits-secure-inner {
     margin-top: -15px;
     margin-bottom: -26px;
+
 }
 
 .benefits-progress-inner {

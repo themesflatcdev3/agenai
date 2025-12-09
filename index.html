@@ -52,7 +52,7 @@
     <main id="wrapper">
 
         <!-- Header -->
-        <header class="tf-header">
+        <header class="tf-header header2">
             <div class="header-inner">
                 <a href="index.html" class="logo-site">
                     <img src="assets/images/logo/logo.svg" alt="">
@@ -60,16 +60,52 @@
                 <div class="box-navigation">
                     <ul class="nav-menu-main">
                         <li class="menu-item">
-                            <a href="#about" class="item-link">About</a>
+                            <a href="index.html" class="item-link link1 active">Home</a>
                         </li>
                         <li class="menu-item">
-                            <a href="#services" class="item-link">Services</a>
+                            <a href="about.html" class="item-link link1">About</a>
+                        </li>
+                        <li class="menu-item has-child">
+                            <a href="#" class="item-link link1">Services</a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="service.html" class="item-link link1">Services</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="service-single.html" class="item-link link1">Services single</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item has-child">
+                            <a href="#" class="item-link link1">Works</a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="work.html" class="item-link link1">Works</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="work-single.html" class="item-link link1">Works single</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item has-child">
+                            <a href="#" class="item-link link1">Blog</a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="blog-standard.html" class="item-link link1">Blog standard</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="blog-two-columns.html" class="item-link link1">Blog grid 2</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="blog-three-columns.html" class="item-link link1">Blog grid 3</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="blog-single.html" class="item-link link1">Blog single</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="menu-item">
-                            <a href="#works" class="item-link">Works</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#contact" class="item-link">Contact</a>
+                            <a href="contact.html" class="item-link link1">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -369,9 +405,9 @@
                     <div class="featured-works-list position-relative">
                         <div class="sticky-top">
                             <div class="featured-works-item effectFade fadeUp no-div">
-                                <div class="image">
+                                <div class="image main-mouse-hover">
                                     <img src="assets/images/section/featured-works-1.jpg" alt="">
-                                    <a href="#" class="view-project h6">
+                                    <a href="#" class="tf-mouse view-project h6">
                                         View Project
                                         <i class="icon icon-arrow-top-right"></i>
                                     </a>
@@ -405,9 +441,9 @@
                         </div>
                         <div class="sticky-top">
                             <div class="featured-works-item">
-                                <div class="image">
+                                <div class="image main-mouse-hover">
                                     <img src="assets/images/section/featured-works-2.jpg" alt="">
-                                    <a href="#" class="view-project h6">
+                                    <a href="#" class="tf-mouse view-project h6">
                                         View Project
                                         <i class="icon icon-arrow-top-right"></i>
                                     </a>
@@ -441,9 +477,9 @@
                         </div>
                         <div class="sticky-top">
                             <div class="featured-works-item">
-                                <div class="image">
+                                <div class="image main-mouse-hover">
                                     <img src="assets/images/section/featured-works-3.jpg" alt="">
-                                    <a href="#" class="view-project h6">
+                                    <a href="#" class="tf-mouse view-project h6">
                                         View Project
                                         <i class="icon icon-arrow-top-right"></i>
                                     </a>
@@ -477,9 +513,9 @@
                         </div>
                         <div class="sticky-top">
                             <div class="featured-works-item">
-                                <div class="image">
+                                <div class="image main-mouse-hover">
                                     <img src="assets/images/section/featured-works-4.jpg" alt="">
-                                    <a href="#" class="view-project h6">
+                                    <a href="#" class="tf-mouse view-project h6">
                                         View Project
                                         <i class="icon icon-arrow-top-right"></i>
                                     </a>
@@ -665,7 +701,7 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-5">
-                            <div class="benefits-box benefits-secure effectFade fadeUp">
+                            <div class="benefits-box benefits-secure ">
                                 <div class="benefits-secure-inner text-center">
                                     <img src="assets/images/item/benefits-1.png" alt="">
                                 </div>
@@ -907,14 +943,17 @@
                                 <div class="text text-body-1 text-neutral-400 effectFade fadeUp">
                                     We shipped our first copilot in 7 weeks and cut support tickets by 31%. The eval dashboards made every decision obvious.
                                 </div>
-                                <div dir="ltr" class="swiper swiper-progressbar pagination-style-progressbar effectFade fadeUp">
+                                <div class="swiper swiper-progressbar pagination-style-progressbar effectFade fadeUp">
                                     <div class="group-slider">
-                                        <div class="swiper-pagination statistic-pagination"></div>
+                                        <!-- <div class="progressbar-line">
+                                            <div class="progressbar-inner"></div>
+                                        </div> -->
+                                        <div class="swiper-pagination progressbar-pagination"></div>
                                         <div class="group-btn-slider">
-                                            <div class="btn-slider statistic-prev">
+                                            <div class="btn-slider progressbar-prev">
                                                 <i class="icon icon-angle-left-solid"></i>
                                             </div>
-                                            <div class="btn-slider statistic-next">
+                                            <div class="btn-slider progressbar-next">
                                                 <i class="icon icon-angle-right-solid"></i>
                                             </div>
                                         </div>
