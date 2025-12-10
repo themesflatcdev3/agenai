@@ -456,6 +456,40 @@
         });
     };
 
+    // animationGrow
+    const animationGrow = () => {
+        if (!$(".img-transform")) return;
+        var grow = document.querySelectorAll(".img-transform");
+        grow.forEach((item) => {
+            gsap.to(item, {
+                x: 20,
+                y: 20,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: item,
+                    scrub: 2,
+                    start: "top 60%",
+                    end: "top center",
+                },
+            });
+        });
+        if (!$(".img-transform-2")) return;
+        var grow = document.querySelectorAll(".img-transform-2");
+        grow.forEach((item) => {
+            gsap.to(item, {
+                x: 20,
+                y: -20,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: item,
+                    scrub: 2,
+                    start: "top 60%",
+                    end: "top center",
+                },
+            });
+        });
+    };
+
     var runAnimations = () => {
         stackElement();
         scrollSmooth();
@@ -466,6 +500,7 @@
         mouseHover();
         animateBox();
         techProgress();
+        animationGrow();
     };
 
     $(function () {

@@ -157,9 +157,9 @@
                             <span class="fw-semibold text-gradient-1">on Demand</span>
                             <div class="title-icon">
                                 <div class="box"></div>
-                                <img src="assets/images/item/item-1.png" alt="" class="img-1">
-                                <img src="assets/images/item/item-2.png" alt="" class="img-2">
-                                <img src="assets/images/item/item-3.png" alt="" class="img-3">
+                                <img src="assets/images/item/item-1.png" alt="" class="img-1 img-transform">
+                                <img src="assets/images/item/item-2.png" alt="" class="img-2 img-transform">
+                                <img src="assets/images/item/item-3.png" alt="" class="img-3 img-transform-2">
                             </div>
                         </div>
                     </div>
@@ -714,7 +714,9 @@
                         <div class="col-lg-7">
                             <div class="benefits-box benefits-design effectFade fadeUp">
                                 <div class="benefits-design-inner">
-                                    <img src="assets/images/item/benefits-2.png" alt="">
+                                    <img class="item-img-1" src="assets/images/item/benefits-2.png" alt="">
+                                    <img class="item-img-2 rightleft" src="assets/images/item/benefits-3.png" alt="">
+                                    <img class="item-img-3 updown" src="assets/images/item/benefits-4.png" alt="">
                                 </div>
                                 <div class="content">
                                     <h6 class="fw-semibold title">Design-Led AI Experiences</h6>
@@ -733,56 +735,82 @@
                         <div class="heading-sub fw-semibold effectFade fadeUp">Features</div>
                         <div class="heading-title text-gradient-3 effectFade fadeRotateX">All Features in One</div>
                     </div>
-                    <div class="features-wrap">
-                        <div class="features-col col-left lg-mb-24">
-                            <div class="features-item effectFade fadeUp">
-                                <i class="icon icon-robot-solid"></i>
-                                <h6 class="title fw-semibold">Agent-Powered Workflows</h6>
-                                <p class="text-secondary">
-                                    Turn repetitive tasks into autonomous flows—agents plan, execute, and report with guardrails, audit trails, and clear handoff to humans.
-                                </p>
+                </div>
+                <div class="position-relative">
+                    <div class="container z-5">
+                        <div class="features-wrap justify-content-between">
+                            <div class="features-col col-left lg-mb-24">
+                                <div class="features-item effectFade fadeUp">
+                                    <i class="icon icon-robot-solid"></i>
+                                    <h6 class="title fw-semibold">Agent-Powered Workflows</h6>
+                                    <p class="text-secondary">
+                                        Turn repetitive tasks into autonomous flows—agents plan, execute, and report with guardrails, audit trails, and clear handoff to humans.
+                                    </p>
+                                </div>
+                                <div class="features-item effectFade fadeUp">
+                                    <i class="icon icon-clipboard-check-solid"></i>
+                                    <h6 class="title fw-semibold">Eval-First Quality</h6>
+                                    <p class="text-secondary">
+                                        Measure accuracy, latency, safety, and cost from day one. Our evals and dashboards keep models reliable and budgets predictable.
+                                    </p>
+                                </div>
+                                <div class="features-item effectFade fadeUp">
+                                    <i class="icon icon-book-solid"></i>
+                                    <h6 class="title fw-semibold">Private Knowledge RAG</h6>
+                                    <p class="text-secondary">
+                                        Make your docs, tickets, and wikis instantly useful with retrieval augmented generation—freshness, citations, and explainability built in.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="features-item effectFade fadeUp">
-                                <i class="icon icon-clipboard-check-solid"></i>
-                                <h6 class="title fw-semibold">Eval-First Quality</h6>
-                                <p class="text-secondary">
-                                    Measure accuracy, latency, safety, and cost from day one. Our evals and dashboards keep models reliable and budgets predictable.
-                                </p>
+                            <div class="features-center flex-shrink">
+                                <img src="assets/images/logo/logo-1.svg" alt="">
                             </div>
-                            <div class="features-item effectFade fadeUp">
-                                <i class="icon icon-book-solid"></i>
-                                <h6 class="title fw-semibold">Private Knowledge RAG</h6>
-                                <p class="text-secondary">
-                                    Make your docs, tickets, and wikis instantly useful with retrieval augmented generation—freshness, citations, and explainability built in.
-                                </p>
+                            <div class="features-col col-right">
+                                <div class="features-item effectFade fadeUp" data-delay="0.1">
+                                    <i class="icon icon-user-check-solid"></i>
+                                    <h6 class="title fw-semibold">Human-Centered AI UX</h6>
+                                    <p class="text-secondary">
+                                        Interfaces, prompts, and error states designed for trust and adoption—so the smart thing is also the obvious thing to do.
+                                    </p>
+                                </div>
+                                <div class="features-item effectFade fadeUp" data-delay="0.1">
+                                    <i class="icon icon-shield-alt-solid"></i>
+                                    <h6 class="title fw-semibold">Secure by Design</h6>
+                                    <p class="text-secondary">
+                                        PII handling, SSO/SAML, RBAC, secrets management, and compliance workflows—ship AI that’s safe, auditable, and enterprise-ready.
+                                    </p>
+                                </div>
+                                <div class="features-item effectFade fadeUp" data-delay="0.1">
+                                    <i class="icon icon-plug-solid"></i>
+                                    <h6 class="title fw-semibold">Seamless Integrations</h6>
+                                    <p class="text-secondary">
+                                        Plug into your stack (CRM, helpdesk, ERP, data warehouse) with webhooks and APIs to turn insights into action—fast.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <img src="assets/images/item/line-2.png" alt="">
-                        <div class="features-center flex-shrink">
-                            <img src="assets/images/logo/logo-1.svg" alt="">
-                        </div>
-                        <img src="assets/images/item/line-3.png" alt="">
-                        <div class="features-col col-right">
-                            <div class="features-item effectFade fadeUp" data-delay="0.1">
-                                <i class="icon icon-user-check-solid"></i>
-                                <h6 class="title fw-semibold">Human-Centered AI UX</h6>
-                                <p class="text-secondary">
-                                    Interfaces, prompts, and error states designed for trust and adoption—so the smart thing is also the obvious thing to do.
-                                </p>
-                            </div>
-                            <div class="features-item effectFade fadeUp" data-delay="0.1">
-                                <i class="icon icon-shield-alt-solid"></i>
-                                <h6 class="title fw-semibold">Secure by Design</h6>
-                                <p class="text-secondary">
-                                    PII handling, SSO/SAML, RBAC, secrets management, and compliance workflows—ship AI that’s safe, auditable, and enterprise-ready.
-                                </p>
-                            </div>
-                            <div class="features-item effectFade fadeUp" data-delay="0.1">
-                                <i class="icon icon-plug-solid"></i>
-                                <h6 class="title fw-semibold">Seamless Integrations</h6>
-                                <p class="text-secondary">
-                                    Plug into your stack (CRM, helpdesk, ERP, data warehouse) with webhooks and APIs to turn insights into action—fast.
-                                </p>
+                    </div>
+                    <div class="side-line-main d-none d-lg-block wow fadeIn">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-4 mx-auto">
+                                    <div class="side-line-wrap">
+                                        <div class="link-break-line left">
+                                            <div class="link-break-line">
+                                                <span class="item top"></span>
+                                                <span class="item bottom"></span>
+                                            </div>
+                                        </div>
+                                        <div class="link-break-center">
+                                            <span class="simu-electric left"></span>
+                                            <span class="simu-electric right"></span>
+                                        </div>
+                                        <div class="link-break-line right">
+                                            <span class="item top"></span>
+                                            <span class="item bottom"></span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -793,12 +821,12 @@
         
         <!-- section-tools -->
         <div class="section-tools flat-spacing">
-            <img class="img-1 updown" src="assets/images/item/item-4.png" alt="">
-            <img class="img-2 leftright" src="assets/images/item/item-5.png" alt="">
-            <img class="img-3 rightleft" src="assets/images/item/item-6.png" alt="">
-            <img class="img-4 updown" src="assets/images/item/item-7.png" alt="">
-            <img class="img-5 leftright" src="assets/images/item/item-8.png" alt="">
-            <img class="img-6 leftright" src="assets/images/item/item-9.png" alt="">
+            <img class="img-1" src="assets/images/item/item-4.png" alt="">
+            <img class="img-2" src="assets/images/item/item-5.png" alt="">
+            <img class="img-3" src="assets/images/item/item-6.png" alt="">
+            <img class="img-4" src="assets/images/item/item-7.png" alt="">
+            <img class="img-5" src="assets/images/item/item-8.png" alt="">
+            <img class="img-6" src="assets/images/item/item-9.png" alt="">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-5 col-md-8 text-center">
@@ -943,12 +971,11 @@
                                 <div class="text text-body-1 text-neutral-400 effectFade fadeUp">
                                     We shipped our first copilot in 7 weeks and cut support tickets by 31%. The eval dashboards made every decision obvious.
                                 </div>
-                                <div class="swiper swiper-progressbar pagination-style-progressbar effectFade fadeUp">
-                                    <div class="group-slider">
-                                        <!-- <div class="progressbar-line">
-                                            <div class="progressbar-inner"></div>
-                                        </div> -->
-                                        <div class="swiper-pagination progressbar-pagination"></div>
+                                <div class="swiper swiper-progressbar">
+                                    <div class="group-slider effectFade fadeUp">
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" id="progressBar"></div>
+                                        </div>
                                         <div class="group-btn-slider">
                                             <div class="btn-slider progressbar-prev">
                                                 <i class="icon icon-angle-left-solid"></i>
@@ -958,7 +985,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="swiper-wrapper">
+                                    <div class="swiper-wrapper effectFade fadeUp">
                                         <div class="swiper-slide">
                                             <div class="title fw-semibold text-body-1">OUR GROWTH</div>
                                             <div class="statistic-number">
@@ -1635,207 +1662,10 @@
 
     <script src="assets/js/main.js"></script>
 
+    <script>
+        
+    </script>
+
 </body>
 
 </html>
-<!-- 
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-<meta charset="UTF-8">
-<title>Slider với Progress Bar</title>
-<style>
-    body {
-        margin: 0;
-        background: #050505;
-        font-family: system-ui, sans-serif;
-        color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-    }
-
-    .slider {
-        position: relative;
-        width: 800px;
-        padding: 40px;
-        background: #050505;
-    }
-
-    /* --- PROGRESS BAR --- */
-    .slider-progress {
-        position: relative;
-        width: 100%;
-        height: 4px;
-        background: #222;
-        overflow: hidden;
-        border-radius: 999px;
-        margin-bottom: 32px;
-    }
-
-    .slider-progress-fill {
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 0%;
-        background: #ff3b2d;
-        box-shadow: 0 0 12px rgba(255,59,45,0.7);
-        border-radius: inherit;
-        transition: width 0.06s linear; /* mượt chút */
-    }
-
-    /* --- SLIDES --- */
-    .slides {
-        position: relative;
-        overflow: hidden;
-        height: 260px;
-    }
-
-    .slide {
-        position: absolute;
-        inset: 0;
-        opacity: 0;
-        transform: translateX(40px);
-        transition: opacity 0.4s ease, transform 0.4s ease;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 80px;
-        font-weight: 700;
-    }
-
-    .slide.active {
-        opacity: 1;
-        transform: translateX(0);
-    }
-
-    /* --- ARROWS --- */
-    .slider-arrow {
-        position: absolute;
-        top: 20px;
-        right: 0;
-        display: flex;
-        gap: 4px;
-    }
-
-    .slider-arrow button {
-        border: none;
-        background: transparent;
-        color: #fff;
-        font-size: 18px;
-        width: 28px;
-        height: 28px;
-        cursor: pointer;
-        border-radius: 999px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: background 0.2s ease, color 0.2s ease;
-    }
-
-    .slider-arrow button:hover {
-        background: #ff3b2d;
-        color: #000;
-    }
-
-    .label {
-        text-transform: uppercase;
-        letter-spacing: .15em;
-        font-size: 11px;
-        opacity: .7;
-        margin-bottom: 4px;
-    }
-</style>
-</head>
-<body>
-
-<div class="slider">
-    <div class="slider-arrow">
-        <button id="prevBtn">&#10094;</button>
-        <button id="nextBtn">&#10095;</button>
-    </div>
-
-    <div class="slider-progress">
-        <div class="slider-progress-fill" id="progressFill"></div>
-    </div>
-
-    <div class="label">Our Growth</div>
-
-    <div class="slides" id="slides">
-        <div class="slide active">230K</div>
-        <div class="slide">480K</div>
-        <div class="slide">720K</div>
-        <div class="slide">1M</div>
-    </div>
-</div>
-
-<script>
-    const slides = document.querySelectorAll('.slide');
-    const progressFill = document.getElementById('progressFill');
-    const nextBtn = document.getElementById('nextBtn');
-    const prevBtn = document.getElementById('prevBtn');
-
-    let currentIndex = 0;
-    const DURATION = 5000; // thời gian 1 slide (ms)
-    let startTime = null;
-    let animationFrameId = null;
-
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.classList.toggle('active', i === index);
-        });
-    }
-
-    function resetProgress() {
-        progressFill.style.width = '0%';
-        startTime = performance.now();
-    }
-
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % slides.length;
-        showSlide(currentIndex);
-        resetProgress();
-    }
-
-    function prevSlide() {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        showSlide(currentIndex);
-        resetProgress();
-    }
-
-    function animateProgress(timestamp) {
-        if (!startTime) startTime = timestamp;
-        const elapsed = timestamp - startTime;
-        let percent = (elapsed / DURATION) * 100;
-
-        if (percent >= 100) {
-            percent = 100;
-            progressFill.style.width = percent + '%';
-            // chuyển sang slide tiếp theo
-            nextSlide();
-        } else {
-            progressFill.style.width = percent + '%';
-        }
-
-        animationFrameId = requestAnimationFrame(animateProgress);
-    }
-
-    // Event cho nút
-    nextBtn.addEventListener('click', () => {
-        nextSlide();
-    });
-
-    prevBtn.addEventListener('click', () => {
-        prevSlide();
-    });
-
-    // Bắt đầu
-    showSlide(currentIndex);
-    resetProgress();
-    animationFrameId = requestAnimationFrame(animateProgress);
-</script>
-
-</body>
-</html> -->

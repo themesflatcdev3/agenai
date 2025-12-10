@@ -4670,13 +4670,13 @@ button.animate-btn::after,
 }
 .section-hero .content-wrap .title-icon .img-2 {
   position: absolute;
-  right: 42px;
-  top: 29px;
+  left: 136px;
+  top: 28px;
 }
 .section-hero .content-wrap .title-icon .img-3 {
   position: absolute;
-  left: 65px;
-  bottom: 0;
+  left: 66px;
+  top: 85px;
 }
 .section-hero .content-wrap .text {
   margin-bottom: 24px;
@@ -6288,33 +6288,69 @@ button.animate-btn::after,
 }
 .section-tools .img-1 {
   position: absolute;
-  top: 181px;
+  top: 22%;
   left: 22.22%;
+  animation: pulse 1.5s infinite 1s;
+}
+@media (max-width: 1439px) {
+  .section-tools .img-1 {
+    left: 12.22%;
+  }
 }
 .section-tools .img-2 {
   position: absolute;
-  top: 357px;
+  top: 44%;
   left: 15.347%;
+  animation: pulse 1.5s infinite 2s;
+}
+@media (max-width: 1439px) {
+  .section-tools .img-2 {
+    left: 5.347%;
+  }
 }
 .section-tools .img-3 {
   position: absolute;
-  top: 506px;
+  top: 62%;
   left: 22.7%;
+  animation: pulse 1.5s infinite 1s;
+}
+@media (max-width: 1439px) {
+  .section-tools .img-3 {
+    left: 12.7%;
+  }
 }
 .section-tools .img-4 {
   position: absolute;
-  top: 235px;
+  top: 28%;
   right: 22.5%;
+  animation: pulse 1.5s infinite 2s;
+}
+@media (max-width: 1439px) {
+  .section-tools .img-4 {
+    right: 12.5%;
+  }
 }
 .section-tools .img-5 {
   position: absolute;
-  top: 397px;
+  top: 49%;
   right: 16.95%;
+  animation: pulse 1.5s infinite 1s;
+}
+@media (max-width: 1439px) {
+  .section-tools .img-5 {
+    right: 6.95%;
+  }
 }
 .section-tools .img-6 {
   position: absolute;
-  top: 505px;
+  top: 63%;
   right: 22.92%;
+  animation: pulse 1.5s infinite 2s;
+}
+@media (max-width: 1439px) {
+  .section-tools .img-6 {
+    right: 12.92%;
+  }
 }
 .section-tools.v2 {
   padding-top: 120px;
@@ -6507,19 +6543,159 @@ button.animate-btn::after,
 .features-wrap .features-col {
   display: grid;
   gap: 32px;
-  width: 32.4%;
+  width: 32%;
 }
 @media (max-width: 991px) {
   .features-wrap {
     flex-direction: column;
   }
-  .features-wrap > img,
   .features-wrap .features-center {
     display: none;
   }
   .features-wrap .features-col {
     width: 100%;
     gap: 24px;
+  }
+}
+.side-line-main {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  right: 0;
+  bottom: 15%;
+  z-index: 0;
+}
+.side-line-main .side-line-wrap {
+  margin-left: -20px;
+  margin-right: -20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.side-line-main div:not(.link-break-center) {
+  height: 100%;
+}
+.side-line-main .link-break-line {
+  width: 66px;
+  border: 1px solid #D4D4D8;
+  height: 100%;
+  border-radius: 0px 20px 20px 0px;
+  border-left: 0;
+  position: relative;
+  overflow: hidden;
+}
+.side-line-main .link-break-line::after {
+  content: "";
+  position: absolute;
+  inset: 0 1px 1.5px 0px;
+  background: var(--neutral-50);
+  border-radius: 0px 20px 20px 0px;
+}
+.side-line-main .link-break-line.right {
+  transform: rotate(180deg);
+}
+.side-line-main .link-break-line .item {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-right: -1px;
+  width: 100%;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+  animation-delay: 1.3s;
+}
+.side-line-main .link-break-line .item.top {
+  background: radial-gradient(circle at top right, var(--brand) 0%, transparent 90%);
+  animation-name: lineRunTop;
+}
+.side-line-main .link-break-line .item.bottom {
+  background: radial-gradient(circle at bottom right, var(--brand) 0%, transparent 90%);
+  animation-name: lineRunBottom;
+}
+.side-line-main .link-break-center {
+  border: 1.5px solid #D4D4D8;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.side-line-main .link-break-center::before, .side-line-main .link-break-center::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50px;
+  background: #D5D0D4;
+  z-index: 2;
+}
+.side-line-main .link-break-center::before {
+  left: 60px;
+}
+.side-line-main .link-break-center::after {
+  right: 60px;
+}
+.side-line-main .simu-electric {
+  position: absolute;
+  height: 1.5px;
+  width: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.side-line-main .simu-electric.left {
+  background: linear-gradient(to right, var(--brand) 0%, transparent 100%);
+  animation-name: left50To0;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+.side-line-main .simu-electric.right {
+  background: linear-gradient(to left, var(--brand) 0%, transparent 100%);
+  animation-name: right50To0;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes lineRunBottom {
+  0% {
+    bottom: 50%;
+    height: 0px;
+  }
+  30% {
+    height: 66px;
+  }
+  100% {
+    bottom: -30%;
+  }
+}
+@keyframes lineRunTop {
+  0% {
+    top: 50%;
+    height: 0px;
+  }
+  30% {
+    height: 66px;
+  }
+  100% {
+    top: -30%;
+  }
+}
+@keyframes left50To0 {
+  0% {
+    left: 50%;
+  }
+  100% {
+    left: -10%;
+  }
+}
+@keyframes right50To0 {
+  0% {
+    right: 50%;
+  }
+  100% {
+    right: -10%;
   }
 }
 .section-testimonials .col-left {
@@ -7087,6 +7263,24 @@ button.animate-btn::after,
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+.progress-bar {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  overflow: visible;
+}
+
+.progress-fill {
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  background: var(--brand);
+  box-shadow: 0px 2px 12px 0px var(--brand);
+  transition: width 0.06s linear;
 }
 
 .swiper-testimonial_wrap .top-icon {
@@ -8026,21 +8220,43 @@ button.animate-btn::after,
 
 .benefits-design .benefits-design-inner {
   text-align: end;
-  margin-right: -48px;
-  margin-top: -13px;
+  margin-right: 16px;
+  margin-top: -12px;
+  position: relative;
+}
+.benefits-design .benefits-design-inner .item-img-2 {
+  position: absolute;
+  top: 24px;
+  right: 226px;
+}
+.benefits-design .benefits-design-inner .item-img-3 {
+  position: absolute;
+  bottom: -24px;
+  right: -65px;
 }
 .benefits-design .content {
   position: relative;
   width: 65%;
-  margin-top: -136px;
+  margin-top: -112px;
 }
 @media (max-width: 767px) {
   .benefits-design .benefits-design-inner {
-    margin-right: -28px;
+    margin-right: 30px;
   }
   .benefits-design .content {
     width: 100%;
     margin-top: 0px;
+  }
+}
+@media (max-width: 575px) {
+  .benefits-design .benefits-design-inner {
+    text-align: center;
+  }
+  .benefits-design .benefits-design-inner .item-img-2 {
+    display: none;
+  }
+  .benefits-design .benefits-design-inner .item-img-3 {
+    right: calc(50% - 180px);
   }
 }
 

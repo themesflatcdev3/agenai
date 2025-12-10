@@ -140,36 +140,6 @@ $(window).on("load", function () {
     });
 });
 
-// if($('.swiper-progressbar').length > 0) {
-//     var swiper = new Swiper(".swiper-progressbar", {
-//         spaceBetween: 28,
-//         slidesPerView: 'auto',
-//         observer: true,
-//         observeParents: true,
-//         pagination: {
-//           el: ".progressbar-pagination",
-//           type: "progressbar",
-//         },
-//         speed: 1000,
-//         autoplay: {
-//             delay: 1000,
-//             disableOnInteraction: false,
-//         },
-//         navigation: {
-//           nextEl: ".progressbar-next",
-//           prevEl: ".progressbar-prev",
-//         },
-//         breakpoints: {
-//             0: {
-//                 slidesPerView: 1,
-//             },
-//             600: {
-//                 slidesPerView: 'auto',
-//             }
-//         },
-//     });
-// }    
-
 if ($(".section-testimonials").length > 0) {
     const thumbSwiper = new Swiper(".sw-main-image", {
         slidesPerView: 1,
@@ -203,76 +173,47 @@ if ($(".section-testimonials").length > 0) {
 }
 
 if ($(".swiper-progressbar").length > 0) {
-    const swiperMain = new Swiper(".swiper-progressbar", {
-        spaceBetween: 28,
-        slidesPerView: 1,
-        observer: true,
-        observeParents: true,
-        navigation: {
-          nextEl: ".progressbar-next",
-          prevEl: ".progressbar-prev",
-        },
-        speed: 1000,
-        autoplay: {
-            delay: 1000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: ".progressbar-pagination.swiper-pagination",
-            clickable: false,
-            renderBullet: function (index, className) {
-                return `<span class="${className}"></span>`;
-            },
-        },
-       
-        on: {
-            slideChange: function () {
-                // updatePagination(swiperMain);
+    const progressFill = document.getElementById("progressBar");
+    
+    const SLIDE_DURATION = 5000;
+    let startTime = null;
+    let rafID = null;
 
-                if (swiperMain.previousIndex === swiperMain.slides.length - 1 && swiperMain.activeIndex === 0) {
-                    swiperMain.params.autoplay.delay = 2000;
-                } else {
-                    swiperMain.params.autoplay.delay = 1000;
-                }
-                swiperMain.autoplay.start();
-            },
-            slideChangeTransitionStart: function () {
-                if (this.realIndex === 0 && this.previousIndex === this.slides.length - 1) {
-                    $(".progressbar-pagination .swiper-pagination-bullet")
-                        .eq(0)
-                        .removeClass("swiper-pagination-bullet-active");
-                }
-            },
-            slideChangeTransitionEnd: function () {
-                if (this.realIndex === 0) {
-                    $(".progressbar-pagination .swiper-pagination-bullet")
-                        .eq(0)
-                        .addClass("swiper-pagination-bullet-active");
-                }
-            },
+    const swiper = new Swiper(".swiper-progressbar", {
+        loop: true,
+        speed: 600,
+        grabCursor: true,
+        allowTouchMove: true,
+        navigation: {
+        nextEl: ".progressbar-next",
+        prevEl: ".progressbar-prev",
         },
+        on: {
+            slideChange: () => resetProgress(),
+            touchStart: () => resetProgress(),
+        }
     });
 
-    function updatePagination(swiper) {
-        const bullets = $(".progressbar-pagination .swiper-pagination-bullet");
-        const activeIndex = swiper.activeIndex;
-
-        bullets.each(function (index) {
-            if (index <= activeIndex) {
-                $(this).addClass("swiper-pagination-bullet-active");
-            } else {
-                $(this).removeClass("swiper-pagination-bullet-active");
-            }
-        });
+    function resetProgress() {
+        progressFill.style.width = "0%";
+        startTime = performance.now();
     }
 
-    $(".swiper-progressbar").hover(
-        function () {
-            swiperMain.autoplay.stop();
-        },
-        function () {
-            swiperMain.autoplay.start();
-        }
-    );
+    function animateProgress(timestamp) {
+        if (!startTime) startTime = timestamp;
+        const elapsed = timestamp - startTime;
+        let percent = (elapsed / SLIDE_DURATION) * 100;
 
+        if (percent >= 100) {
+            percent = 100;
+            swiper.slideNext();
+            resetProgress();
+        }
+
+        progressFill.style.width = percent + "%";
+        rafID = requestAnimationFrame(animateProgress);
+    }
+
+    resetProgress();
+    animateProgress(performance.now());
 }
