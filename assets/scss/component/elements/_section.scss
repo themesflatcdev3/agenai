@@ -690,8 +690,12 @@
         }
         .image {
             .view-project {
-                bottom: 15px;
-                right: 15px;
+                // bottom: 15px;
+                // right: 15px;
+                top: 15px !important;
+                left: 15px !important;
+                transform: none;
+                padding: 10px 18px;
                 opacity: 1;
                 visibility: visible;
             }
