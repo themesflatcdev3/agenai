@@ -1901,12 +1901,10 @@ header.header-sticky {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   font-weight: 550;
-  letter-spacing: -0.03em;
   position: relative;
   width: 100%;
   pointer-events: none;
   overflow: hidden;
-  line-height: clamp(68px, 9vw, 108px);
 }
 .mb-menu-link > * {
   pointer-events: all;
@@ -6441,6 +6439,24 @@ button.animate-btn::after,
 .section-statistic .swiper .statistic-number .prefix {
   font-size: 232px;
 }
+@media (max-width: 1199px) {
+  .section-statistic .swiper .statistic-number {
+    font-size: 160px;
+    line-height: 160px;
+  }
+  .section-statistic .swiper .statistic-number .prefix {
+    font-size: 150px;
+  }
+}
+@media (max-width: 991px) {
+  .section-statistic .swiper .statistic-number {
+    font-size: 110px;
+    line-height: 110px;
+  }
+  .section-statistic .swiper .statistic-number .prefix {
+    font-size: 100px;
+  }
+}
 @media (max-width: 767px) {
   .section-statistic {
     padding: 34px 0;
@@ -9060,6 +9076,9 @@ button.animate-btn::after,
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+.accordion-faq_item.style-1 .accordion-title .icon:hover {
+  color: var(--brand);
 }
 .accordion-faq_item.style-1 .accordion-content {
   display: flex;

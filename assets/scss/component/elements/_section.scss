@@ -2194,6 +2194,24 @@
             }
         }
     }
+    @include res(xl) {
+        .swiper .statistic-number {
+            font-size: 160px;
+            line-height: 160px;
+            .prefix {
+                font-size: 150px;
+            }
+        }
+    }
+    @include res(lg) {
+        .swiper .statistic-number {
+            font-size: 110px;
+            line-height: 110px;
+            .prefix {
+                font-size: 100px;
+            }
+        }
+    }
     @include res(md) {
         padding: 34px 0;
         > .line {

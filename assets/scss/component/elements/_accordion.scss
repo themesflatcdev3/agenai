@@ -129,6 +129,9 @@
                 color: var(--secondary);
                 border: 1px solid var(--secondary);
                 @include transition3;
+                &:hover {
+                    color: var(--brand);
+                }
             }
         }
         .accordion-content {

@@ -198,12 +198,10 @@ header {
 .mb-menu-link {
     @include transition3;
     font-weight: 550;
-    letter-spacing: -0.03em;
     position: relative;
     width: 100%;
     pointer-events: none;
     overflow: hidden;
-    line-height: clamp(68px, 9vw, 108px);
 
     >* {
         pointer-events: all;
