@@ -202,7 +202,8 @@ header {
     width: 100%;
     pointer-events: none;
     overflow: hidden;
-
+    font-size: 40px;
+    line-height: 53px;
     >* {
         pointer-events: all;
     }
@@ -237,8 +238,6 @@ header {
 
         &:hover {
             .text {
-                // color: #FFFFFFA3;
-                // filter: blur(12px);
                 color: var(--brand)
             }
 
@@ -252,7 +251,6 @@ header {
 
 .nav-ul-mb {
     display: grid;
-    gap: 4px;
 
     li {
         text-align: end;
@@ -284,7 +282,7 @@ header {
             }
 
             &:not(.collapsed) {
-                margin-bottom: 20px;
+                margin-bottom: 5px;
 
                 .ic {
                     transform: rotate(180deg);
@@ -334,13 +332,12 @@ header {
         flex-direction: column;
         justify-content: center;
         overflow-y: auto;
-
+        padding-right: 5px;
         &::-webkit-scrollbar {
             width: 2px;
         }
-
         &::-webkit-scrollbar-thumb {
-            background-color: var(--primary);
+            background-color: var(--neutral-400);
         }
     }
 
