@@ -237,8 +237,9 @@ header {
 
         &:hover {
             .text {
-                color: #FFFFFFA3;
-                filter: blur(12px);
+                // color: #FFFFFFA3;
+                // filter: blur(12px);
+                color: var(--brand)
             }
 
             .infiniteSlide_text_main {

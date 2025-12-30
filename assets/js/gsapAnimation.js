@@ -120,7 +120,7 @@
                     const pinTrigger = ScrollTrigger.create({
                         trigger: element,
                         scrub: 1,
-                        start: "top top+=30",
+                        start: "top top+=0", // sticky top
                         end: `+=${containerHeight - elementHeight}`,
                         pin: true,
                         pinSpacing: false,
@@ -135,6 +135,22 @@
             };
 
             updateTotalHeight();
+
+            ScrollTrigger.create({
+                trigger: ".stack-element",
+                start: "top top",
+                end: "bottom top",
+                onLeave: () => {
+                    gsap.set(".stack-element .element", {
+                        clearProps: "all"
+                    });
+                },
+                onLeaveBack: () => {
+                    gsap.set(".stack-element .element", {
+                        clearProps: "all"
+                    });
+                }
+            });
 
             let resizeTimeout;
             window.addEventListener("resize", () => {
@@ -458,12 +474,11 @@
 
     // animationGrow
     const animationGrow = () => {
-        if (!$(".img-transform")) return;
-        var grow = document.querySelectorAll(".img-transform");
+        if (!$(".img-transform-3")) return;
+        var grow = document.querySelectorAll(".img-transform-3");
         grow.forEach((item) => {
             gsap.to(item, {
-                x: 20,
-                y: 20,
+                transform: "translate(-20px,-20px)",
                 ease: "none",
                 scrollTrigger: {
                     trigger: item,
@@ -473,17 +488,17 @@
                 },
             });
         });
-        if (!$(".img-transform-2")) return;
-        var grow = document.querySelectorAll(".img-transform-2");
-        grow.forEach((item) => {
+
+        if (!$(".img-grow")) return;
+        var grow1 = document.querySelectorAll(".img-grow");
+        grow1.forEach((item) => {
             gsap.to(item, {
-                x: 20,
-                y: -20,
+                transform: "scale(1.33)",
                 ease: "none",
                 scrollTrigger: {
                     trigger: item,
                     scrub: 2,
-                    start: "top 60%",
+                    start: "top 90%",
                     end: "top center",
                 },
             });

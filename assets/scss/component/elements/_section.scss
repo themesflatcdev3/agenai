@@ -39,8 +39,12 @@
     }
     .heading-title {
         font-weight: 600;
-        font-size: clamp(40px, 72px, 72px);
-        line-height: clamp(48px, 72px, 72px);
+        font-size: 72px;
+        line-height: 72px;
+        @include res(md) {
+            font-size: 40px;
+            line-height: 48px;
+        }
         letter-spacing: -0.03em;
     }
     &.center {
@@ -160,6 +164,14 @@
                 0px 14px 34px 0px #FF3B0040,
                 0px 1px 2px 0px #FF3B0066;
             }
+            .title-icon-wrap {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 255px;
+                height: 177px;
+                overflow: hidden;
+            }
             .img-1 {
                 position: absolute;
                 left: 49px;
@@ -173,7 +185,7 @@
             .img-3 {
                 position: absolute;
                 left: 66px;
-                top: 85px;
+                top: 83px;
             }
         }
         .text {
@@ -348,13 +360,21 @@
             font-size: 16px;
             line-height: 26px;
         }
-        .number {
+        .counter {
             font-weight: 600;
-            font-size: clamp(65px, 144px, 144px);
-            line-height: clamp(65px, 144px, 144px);
+            font-size: 144px;
+            line-height: 144px;
             letter-spacing: -0.03em;
             margin-bottom: -16px;
             margin-right: 5px;
+            @include res(xl) {
+                font-size: 100px;
+                line-height: 100px;
+            }
+            @include res(md) {
+                font-size: 65px;
+                line-height: 65px;
+            }
         }
     }
     .box-quotes {
@@ -562,12 +582,24 @@
     }
 }
 
+.stack-element {
+    position: relative;
+    z-index: 1;
+    + * {
+        position: relative;
+        z-index: 2;
+        background: var(--neutral-50);
+    }
+}
+
 .featured-works-list {
     display: grid;
     gap: 32px;
 }
 
 .featured-works-item {
+    display: flex;
+    flex-direction: column;
     background-color: var(--neutral-100);
     border-radius: 40px;
     padding: 12px;
@@ -576,6 +608,7 @@
     0px 4px 0px 0px #FFFFFF99 inset,
     0px 7.77px 2.21px 0px #0000000F,
     0px 3px 3px 0px #0000001A;
+    max-height: 100vh;
     .image {
         position: relative;
         border-radius: 32px;
@@ -624,6 +657,7 @@
         }
     }
     .content {
+        flex-shrink: 0;
         padding: 32px 40px 16px;
         .pagi-dot {
             display: flex;
@@ -637,6 +671,7 @@
                 height: 12px;
                 border-radius: 50%;
                 background-color: var(--neutral-300);
+                @include transition3;
                 &.active {
                     background-color: var(--brand);
                 }
@@ -683,15 +718,18 @@
             }
         }
     }
+    @include res(xl) {
+        .content {
+            padding: 32px 20px 16px;
+        }
+    }
     @include res(md) {
         border-radius: 24px;
-        .image img {
-            border-radius: 18px;
-        }
         .image {
+            img {
+                border-radius: 18px;
+            }
             .view-project {
-                // bottom: 15px;
-                // right: 15px;
                 top: 15px !important;
                 left: 15px !important;
                 transform: none;
@@ -2060,7 +2098,8 @@
         position: absolute;
         top: 22%;
         left: 22.22%;
-        animation: pulse 1.5s infinite 1s;
+        width: 123px;
+        height: 123px;
         @include res(xxl) {
             left: 12.22%;
         }
@@ -2069,7 +2108,8 @@
         position: absolute;
         top: 44%;
         left: 15.347%;
-        animation: pulse 1.5s infinite 2s;
+        width: 100px;
+        height: 100px;
         @include res(xxl) {
             left: 5.347%;
         }
@@ -2078,7 +2118,8 @@
         position: absolute;
         top: 62%;
         left: 22.7%;
-        animation: pulse 1.5s infinite 1s;
+        width: 112px;
+        height: 112px;
         @include res(xxl) {
             left: 12.7%;
         }
@@ -2087,7 +2128,8 @@
         position: absolute;
         top: 28%;
         right: 22.5%;
-        animation: pulse 1.5s infinite 2s;
+        width: 112px;
+        height: 112px;
         @include res(xxl) {
             right: 12.5%;
         }
@@ -2096,7 +2138,8 @@
         position: absolute;
         top: 49%;
         right: 16.95%;
-        animation: pulse 1.5s infinite 1s;
+        width: 100px;
+        height: 100px;
         @include res(xxl) {
             right: 6.95%;
         }
@@ -2105,7 +2148,8 @@
         position: absolute;
         top: 63%;
         right: 22.92%;
-        animation: pulse 1.5s infinite 2s;
+        width: 123px;
+        height: 123px;
         @include res(xxl) {
             right: 12.92%;
         }
@@ -2190,11 +2234,18 @@
         }
         .statistic-number {
             display: flex;
-            font-size: clamp(70px, 240px, 240px);
-            line-height: clamp(70px, 240px, 240px);
+            font-size: 240px;
+            line-height: 240px;
             letter-spacing: -0.03em;
             .prefix {
-                font-size: clamp(67px, 232px, 232px);
+                font-size: 232px;
+            }
+            @include res(md) {
+                font-size: 70px;
+                line-height: 70px;
+                .prefix {
+                    font-size: 67px;
+                }
             }
         }
     }
@@ -2507,9 +2558,13 @@
 .section-services-single {
     margin-top: -100px;
     .heading {
-        font-size: clamp(32px, 48px, 48px);
-        line-height: clamp(40px, 56px, 56px);
+        font-size: 48px;
+        line-height: 56px;
         letter-spacing: -0.02em;
+        @include res(md) {
+            font-size: 32px;
+            line-height: 40px;
+        }
     }
     .top-image {
         background-color: var(--white);
@@ -2648,9 +2703,13 @@
 .section-work-single {
     margin-top: -100px;
     .heading {
-        font-size: clamp(32px, 48px, 48px);
-        line-height: clamp(40px, 56px, 56px);
+        font-size: 48px;
+        line-height: 56px;
         letter-spacing: -0.02em;
+        @include res(md) {
+            font-size: 32px;
+            line-height: 40px;
+        }
     }
     .wrap-image {
         background-color: var(--white);

@@ -459,12 +459,6 @@
     }
 }
 
-@media only screen and (max-width: 767px) {
-    .preloader .site-name span {
-        font-size: 40px;
-    }
-}
-
 /*-- Button Go Top --*/
 #goTop {
     position: fixed;
@@ -1052,9 +1046,13 @@
         align-items: end;
         .price-number {
             font-weight: 700;
-            font-size: clamp(40px, 72px, 72px);
-            line-height: clamp(48px, 72px, 72px);
+            font-size: 72px;
+            line-height: 72px;
             letter-spacing: -0.03em;
+            @include res(md) {
+                font-size: 40px;
+                line-height: 48px;
+            }
         }
         .price-per {
             color: var(--secondary);

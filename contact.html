@@ -30,7 +30,7 @@
     <link rel="apple-touch-icon-precomposed" href="assets/images/logo/favicon.svg">
 </head>
 
-<body class="counter-scroll">
+<body class="">
     <canvas class="cursor-trail d-none d-xl-block" id="trail"></canvas>
 
     <!-- Scroll Top -->
@@ -41,12 +41,6 @@
         </span>
     </button>
     <!-- /Scroll Top -->
-
-    <!-- Preload -->
-    <div class="preloader overflow-hidden">
-        <div class="site-name"><span>AGENAI</span></div>
-    </div>
-    <!-- /Preload -->
 
     <!-- #wrapper -->
     <main id="wrapper">
@@ -131,9 +125,11 @@
                             <span class="fw-semibold text-gradient-1">Things</span>
                             <div class="title-icon">
                                 <div class="box"></div>
-                                <img src="assets/images/item/item-13.png" alt="" class="img-1 img-transform">
-                                <img src="assets/images/item/item-14.png" alt="" class="img-2 img-transform">
-                                <img src="assets/images/item/item-15.png" alt="" class="img-3 img-transform-2">
+                                <div class="title-icon-wrap">
+                                    <img src="assets/images/item/item-13.svg" alt="" class="img-1 img-transform-3">
+                                    <img src="assets/images/item/item-14.svg" alt="" class="img-2 img-transform-3">
+                                    <img src="assets/images/item/item-15.svg" alt="" class="img-3 img-transform-3">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -150,7 +146,7 @@
                 <div class="container">
                     <div class="row mb-60">
                         <div class="col-md-4 md-mb-24">
-                            <div class="box-contact-item text-center effectFade fadeRotateX">
+                            <div class="box-contact-item text-center effectFade fadeUp">
                                 <i class="icon icon-envelope-solid"></i>
                                 <h6 class="title fw-semibold">E-mail address</h6>
                                 <p class="text">
@@ -159,7 +155,7 @@
                             </div>
                         </div>
                         <div class="col-md-4 md-mb-24">
-                            <div class="box-contact-item text-center effectFade fadeRotateX" data-delay="0.1">
+                            <div class="box-contact-item text-center effectFade fadeUp" data-delay="0.1">
                                 <i class="icon icon-headset-solid"></i>
                                 <h6 class="title fw-semibold">Phone number</h6>
                                 <p class="text">
@@ -168,7 +164,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="box-contact-item text-center effectFade fadeRotateX" data-delay="0.2">
+                            <div class="box-contact-item text-center effectFade fadeUp" data-delay="0.2">
                                 <i class="icon icon-map-marker-solid"></i>
                                 <h6 class="title fw-semibold">Our Location</h6>
                                 <p class="text">
@@ -358,16 +354,16 @@
                 <div class="footer-bottom">
                     <ul class="footer-links d-flex gap-24 align-items-center">
                         <li>
-                            <a href="#about" class="fw-semibold link-underline link1">About</a>
+                            <a href="about.html" class="fw-semibold link-underline link1">About</a>
                         </li>
                         <li>
-                            <a href="#services" class="fw-semibold link-underline link1">Services</a>
+                            <a href="service.html" class="fw-semibold link-underline link1">Services</a>
                         </li>
                         <li>
-                            <a href="#works" class="fw-semibold link-underline link1">Works</a>
+                            <a href="work.html" class="fw-semibold link-underline link1">Works</a>
                         </li>
                         <li>
-                            <a href="#pricing" class="fw-semibold link-underline link1">Pricing</a>
+                            <a href="contact.html" class="fw-semibold link-underline link1">Contact</a>
                         </li>
                     </ul>
                     <p class="text-secondary coppy-rights text-center">© 2025 AgenAI. All Rights Reserved.</p>
@@ -402,19 +398,7 @@
                                 <div class="item close-mb-menu">
                                     <a href="#about" class="mb-menu-link text-display-1">
                                         <span class="text">About</span>
-                                        <div class="infiniteSlide_text_main">
-                                            <div class="infiniteSlide infiniteSlide_text" data-clone="5">
-                                                <p class="text-body-2 letter-space--1">
-                                                    <span class="text-primary">//</span> View About
-                                                </p>
-                                                <p class="text-body-2 letter-space--1">
-                                                    <span class="text-primary">//</span> View About
-                                                </p>
-                                                <p class="text-body-2 letter-space--1">
-                                                    <span class="text-primary">//</span> View About
-                                                </p>
-                                            </div>
-                                        </div>
+                                        
                                     </a>
                                 </div>
                             </li>
@@ -462,19 +446,7 @@
                                 <div class="item close-mb-menu">
                                     <a href="#contact" class="mb-menu-link text-display-1">
                                         <span class="text">Contact</span>
-                                        <div class="infiniteSlide_text_main">
-                                            <div class="infiniteSlide infiniteSlide_text" data-clone="5">
-                                                <p class="text-body-2 letter-space--1">
-                                                    <span class="text-primary">//</span> View Contact
-                                                </p>
-                                                <p class="text-body-2 letter-space--1">
-                                                    <span class="text-primary">//</span> View Contact
-                                                </p>
-                                                <p class="text-body-2 letter-space--1">
-                                                    <span class="text-primary">//</span> View Contact
-                                                </p>
-                                            </div>
-                                        </div>
+                                        
                                     </a>
                                 </div>
                             </li>
@@ -550,7 +522,7 @@
     <script src="assets/js/jquery.nice-select.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/slick.min.js"></script>
-    <script src="assets/js/odometer.min.js"></script>
+    
     <script src="assets/js/carousel.js"></script>
     <script src="assets/js/infinityslide.js"></script>
     <script src="assets/js/ScrollSmooth.js"></script>

@@ -267,6 +267,59 @@
             }
         });
     };
+    // counter
+    var counter = function () {
+        if ($(document.body).hasClass("counter-scroll")) {
+          var a = 0;
+          $(window).scroll(function () {
+            var oTop = $(".counter").offset().top - window.innerHeight;
+            if (a == 0 && $(window).scrollTop() > oTop) {
+              if ($().countTo) {
+                $(".counter")
+                  .find(".number")
+                  .each(function () {
+                    var to = $(this).data("to"),
+                      speed = $(this).data("speed");
+                    $(this).countTo({
+                      to: to,
+                      speed: speed,
+                    });
+                  });
+              }
+              a = 1;
+            }
+          });
+        }
+    };
+    // dot
+    var dot = function () {
+        $('.pagi-dot').each(function () {
+            var $wrap = $(this);
+            var $dots = $wrap.find('span');
+            var index = 0;
+            var timer = null;
+            var speed = 500;
+      
+            function run() {
+              $dots.removeClass('active');
+              $dots.eq(index).addClass('active');
+              index = (index + 1) % $dots.length;
+            }
+      
+            function start() {
+              timer = setInterval(run, speed);
+            }
+      
+            function stop() {
+              clearInterval(timer);
+            }
+      
+            start();
+      
+            $wrap.on('mouseenter', stop);
+            $wrap.on('mouseleave', start);
+        });
+    };
 
     // Dom Ready
     $(function () {
@@ -280,5 +333,7 @@
         clickActive();
         switchPrice();
         services_btn();
+        counter();
+        dot();
     });
 })(jQuery);
