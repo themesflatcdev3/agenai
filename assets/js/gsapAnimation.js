@@ -503,6 +503,21 @@
                 },
             });
         });
+
+        if (!$(".img-grow-1")) return;
+        var grow2 = document.querySelectorAll(".img-grow-1");
+        grow2.forEach((item) => {
+            gsap.to(item, {
+                transform: "scale(1.2)",
+                ease: "none",
+                scrollTrigger: {
+                    trigger: item,
+                    scrub: 2,
+                    start: "top 90%",
+                    end: "top center",
+                },
+            });
+        });
     };
 
     var runAnimations = () => {
