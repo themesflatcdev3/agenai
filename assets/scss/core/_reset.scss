@@ -411,6 +411,12 @@ p {
         0px 0px 6px 4px rgba(var(--primary-rgb), 0.2);
 }
 
+@include res(md) {
+    br {
+        display: none;
+    }
+}
+
 .line {
     border: 1px solid var(--white-16);
 }
